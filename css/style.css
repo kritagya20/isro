@@ -1,0 +1,994 @@
+/* -------------------Custom properties------------------- */
+
+:root {
+    /* colors */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+    
+    /* font-sizes */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+    
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+@media (min-width: 35em) {
+    :root {
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.25rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 2rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+    }
+}
+
+/*------------------- Reset -------------------*/
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* set up the body */
+body {
+    font-family: var(--ff-sans-normal);
+    font-size: var(--fs-400);
+    color: hsl( var(--clr-white) );
+    background-color: hsl( var(--clr-dark) );
+    line-height: 1.5;
+    min-height: 100vh;
+    
+    overflow-x: hidden;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*------------------- Utility classes-------------------     */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* colors */
+
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+/*------------------- Components -------------------*/
+
+.underline-indicators > * {
+    cursor: pointer;
+    padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+    color: hsl( var(--clr-white) / 1);
+    border-color: hsl( var(--clr-white) / 1); 
+}
+
+
+/* =====================FOR DESKTOP LARGE SCREEN SIZES========================  */
+.body-home {
+    display: block;
+    background-image: url(/assests/home/background-home-desktop.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.primary-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0 0 0 ;
+    padding: 1rem 0 0 2rem ;
+}
+
+.primary-header::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1.5px;
+    width: 100%;
+    margin-right: -1.5rem;
+    margin-top: 2.35rem;
+    background: hsl( var(--clr-white) / .25);
+    order: 1;
+}
+
+.primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 1.3rem;
+    list-style: none;
+    padding: 0 4rem;
+    margin: 0;
+    background: hsl( var(--clr-white) / 0.2);
+    backdrop-filter: blur(1.5rem);
+    font-weight: 700;
+}
+
+nav {
+    align-items:flex-end;
+    order: 2;
+}
+
+.primary-link {
+    font-size: 1.25rem;
+}
+
+.logo-isro {
+    max-width: 6.5rem;
+}
+
+.home-main {
+    margin: 0 1rem;
+    padding: 8rem 10rem 0 5rem ;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.home-h1 {
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+.home-h1  > span {
+    font-size: 10rem;
+    line-height: 8.5rem;
+    letter-spacing: 6px;
+    display: block;
+}
+
+.home-main p {
+    max-width: 50ch;
+    font-size: 1.1rem;
+}
+
+.large-button {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    place-items: center;
+    width: 15rem;
+    margin: 9rem 0 0 0;
+    padding: 0 1em;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--clr-white) / .1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+    
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+
+/* =====================FOR SMALL DESKTOP SCREEN SIZES========================  */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .body-home {
+        display: block;
+        background-image: url(/assests/home/background-home-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .primary-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 ;
+        padding: 2rem 0 0 2rem ;
+    }
+
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1.5px;
+        width: 100%;
+        margin-right: -1rem;
+        margin-top: 2.35rem;
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
+    }
+    
+    nav {
+       order: 2;
+    }
+   
+    .primary-navigation {
+        --gap: clamp(1.5rem, 5vw, 3.5rem);
+        --underline-gap: 1.3rem;
+        list-style: none;
+        padding: 0 3rem;
+        margin: 0;
+        background: hsl( var(--clr-white) / 0.2);
+        backdrop-filter: blur(1.5rem);
+        font-weight: 700;
+    }
+
+    .primary-link {
+        font-size: 1rem;
+    }
+    
+    .mobile-nav-toggle {
+        display: none;
+    }
+    .primary-link {
+        font-size: 1rem;
+    }
+
+    .logo-isro {
+        max-width: 5.3rem;
+    }
+
+    .home-main {
+        margin: 0 1rem;
+        padding: 8rem 10rem 0 5rem ;
+        text-align: justify;
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-around;
+    }
+
+    .home-h1 {
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    .home-h1  > span {
+        font-size: 7.5rem;
+        line-height: 8rem;
+        letter-spacing: 6px;
+    }
+
+    .home-main p {
+        max-width: 50ch;
+        font-size: 1.04rem;
+    }
+
+    .large-button {
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 1;
+        display: inline-grid;
+        place-items: center;
+        width: 13rem;
+        margin: 9rem 0 0 10rem;
+        padding: 0 1em;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        text-decoration: none;
+    }
+    
+    .large-button::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: hsl( var(--clr-white) / .1);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 500ms linear, transform 750ms ease-in-out;
+    }
+     
+    .large-button:hover::after,
+    .large-button:focus::after {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+}
+
+
+
+/* =====================FOR TABLETS SCREEN SIZES========================  */
+@media (min-width: 768px) and (max-width: 1023.9999px) {
+    
+    .body-home {
+        display: block;
+        background-image: url(/assests/home/background-home-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .primary-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 ;
+        padding: 1.5rem 0 0 2rem ;
+    }
+
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin-top: 1.8rem;
+        margin-right: .1rem;
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
+    }
+    
+    nav {
+       order: 2;
+    }
+
+    .primary-navigation {
+        --underline-gap: 1rem;
+        list-style: none;
+        padding: 0 2rem;
+        margin: 0;
+        background: hsl( var(--clr-white) / 0.2);
+        backdrop-filter: blur(1.5rem);
+        font-weight: 700;
+        line-height: 1.4rem;
+    }
+
+    .primary-link {
+        font-size: 1rem;
+    }
+
+    .mobile-nav-toggle {
+        display: none;
+    }
+
+    .logo-isro {
+        max-width: 5rem;
+    }
+
+    .home-main {
+        margin: 1.5rem;
+        padding: 6rem 0 0 0 ;
+        text-align: justify;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .home-h1 {
+        font-size: 1.4rem;
+        line-height: 3rem;
+    }
+    
+    .home-h1  > span {
+        font-size: 8rem;
+        line-height: 8.5rem;
+        letter-spacing: 6px;
+        display: block;
+    }
+    
+    .home-main p {
+        max-width: 45ch;
+        font-size: 1rem;
+    }
+    
+    .large-button {
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 1;
+        display: inline-grid;
+        place-items: center;
+        width: 12rem;
+        margin: 9rem 0 0 0;
+        padding: 0 1rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        text-decoration: none;
+    }
+    
+    .large-button::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: hsl( var(--clr-white) / .1);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 500ms linear, transform 750ms ease-in-out;
+    }
+     
+    .large-button:hover::after,
+    .large-button:focus::after {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+
+
+/* =====================FOR MOBILE SCREEN SIZES========================  */
+@media (min-width: 480px) and (max-width: 767.9999px) {
+    .body-home {
+        display: block;
+        background-image: url(/assests/home/background-home-tablet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .home-main {
+        margin: 1.5rem;
+        padding: 2rem 0 4rem 0 ;
+        text-align: center;
+    }
+    .primary-link {
+        font-size: 0.9rem;
+    }
+
+    .primary-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 ;
+        padding: 1rem 0 0 1.5rem ;
+    }
+
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin: 3rem .5rem 0 .5rem;
+
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
+    }
+    
+    nav {
+       order: 2;
+    }
+
+    .primary-navigation {
+        flex-direction: column;
+        --underline-gap: .5rem;
+        inset: 0 0 0 30%;
+        position: fixed;
+        z-index: 1000;
+        background-color: hsl( var(--clr-dark) / .9);
+        margin: 0;
+        padding: 6rem 1rem;
+        transform: translateX(100%);
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        top: 1.5rem;
+        right: 1rem;
+        background:transparent;
+        background-image: url(/assests/icons/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.8rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url(/assests/icons/icon-close.svg);
+    }
+
+    .logo-isro {
+        max-width: 4rem;
+    }
+
+    .home-main {
+        margin: 1.5rem;
+        padding: 4rem 0 4rem 0 ;
+        text-align: center;
+        display: flex;
+        place-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-div {
+        display: flex;
+        place-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-h1 {
+        font-size: 1.3rem;
+        line-height: 3rem;
+    }
+    
+    .home-h1  > span {
+        font-size: 7rem;
+        line-height: 6.5rem;
+        letter-spacing: 6px;
+        display: block;
+    }
+    
+    .home-main p {
+        max-width: none;
+        font-size: 1rem;
+    }
+    
+    .large-button {
+        font-size: 1.5rem;
+        position: relative;
+        z-index: 1;
+        display: inline-grid;
+        place-items: center;
+        width: 12rem;
+        margin: 4rem 0 0 0;
+        padding: 0 1rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        text-decoration: none;
+    }
+    
+    .large-button::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: hsl( var(--clr-white) / .1);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 500ms linear, transform 750ms ease-in-out;
+    }
+     
+    .large-button:hover::after,
+    .large-button:focus::after {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+
+/* =====================FOR MOBILE SCREEN SIZES========================  */
+@media (min-width: 320px) and (max-width: 479.9999px)  {
+    .body-home {
+        display: block;
+        background-image: url(/assests/home/background-home-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .home-main {
+        margin: 1.5rem;
+        padding: 2rem 0 4rem 0 ;
+        text-align: center;
+    }
+    .primary-link {
+        font-size: 0.9rem;
+    }
+
+    .primary-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 ;
+        padding: 1rem 0 0 1.5rem ;
+    }
+
+    .primary-header::after {
+        content: '';
+        height: 0;
+        width: 00;
+        margin: 0;
+        background: transparent;
+        order: 1;
+    }
+    
+    nav {
+       order: 2;
+    }
+
+    .primary-navigation {
+        flex-direction: column;
+        --underline-gap: .5rem;
+        inset: 0 0 0 30%;
+        position: fixed;
+        z-index: 1000;
+        background-color: hsl( var(--clr-dark) / .9);
+        margin: 0;
+        padding: 6rem 1rem;
+        transform: translateX(100%);
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        top: 1.5rem;
+        right: 1rem;
+        background:transparent;
+        background-image: url(/assests/icons/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.8rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url(/assests/icons/icon-close.svg);
+    }
+
+    .logo-isro {
+        max-width: 4rem;
+    }
+
+    .home-main {
+        margin: 1.5rem;
+        padding: 4rem 0 3rem 0 ;
+        text-align: center;
+        display: flex;
+        place-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-div {
+        display: flex;
+        place-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-h1 {
+        font-size: 0.95rem;
+        letter-spacing: 1.2px;
+        line-height: 3rem;
+    }
+    
+    .home-h1  > span {
+        font-size: 6rem;
+        line-height: 5.5rem;
+        letter-spacing: 6px;
+        display: block;
+    }
+    
+    .home-main p {
+        max-width: none;
+        font-size: .9rem;
+    }
+    
+    .large-button {
+        font-size: 1.4rem;
+        position: relative;
+        z-index: 1;
+        display: inline-grid;
+        place-items: center;
+        width: 11rem;
+        margin: 3.5rem 0 0 0;
+        padding: 0 .8rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        text-decoration: none;
+    }
+    
+    .large-button::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: hsl( var(--clr-white) / .1);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 500ms linear, transform 750ms ease-in-out;
+    }
+     
+    .large-button:hover::after,
+    .large-button:focus::after {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 319.999px) {
+    .body-home {
+        display: block;
+        background-image: url(/assests/home/background-home-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .primary-link {
+        font-size: 0.9rem;
+    }
+
+    .primary-header {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 ;
+        padding: 1rem 0 0 1.5rem ;
+    }
+
+    .primary-header::after {
+        content: '';
+        height: 0;
+        width: 00;
+        margin: 0;
+        background: transparent;
+        order: 1;
+    }
+    
+    nav {
+       order: 2;
+    }
+
+    .primary-navigation {
+        flex-direction: column;
+        --underline-gap: .5rem;
+        inset: 0 0 0 30%;
+        position: fixed;
+        z-index: 1000;
+        background-color: hsl( var(--clr-dark) / .9);
+        margin: 0;
+        padding: 6rem 1rem;
+        transform: translateX(100%);
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        top: 1.5rem;
+        right: 1rem;
+        background:transparent;
+        background-image: url(/assests/icons/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 1.8rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url(/assests/icons/icon-close.svg);
+    }
+
+    .logo-isro {
+        max-width: 3.3rem;
+    }
+
+    .home-main {
+        margin: 1.5rem;
+        padding: 4rem 0 3rem 0 ;
+        text-align: center;
+        display: flex;
+        place-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-div {
+        display: flex;
+        place-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home-h1 {
+        font-size: 0.95rem;
+        letter-spacing: 1.2px;
+        line-height: 3rem;
+    }
+    
+    .home-h1  > span {
+        font-size: 5rem;
+        line-height: 4.5rem;
+        letter-spacing: 6px;
+        display: block;
+    }
+    
+    .home-main p {
+        max-width: none;
+        font-size: .9rem;
+    }
+    
+    .large-button {
+        font-size: 1.2rem;
+        position: relative;
+        z-index: 1;
+        display: inline-grid;
+        place-items: center;
+        width: 10rem;
+        margin: 3.5rem 0 0 0;
+        padding: 0 .8rem;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        text-decoration: none;
+    }
+    
+    .large-button::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: hsl( var(--clr-white) / .1);
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 500ms linear, transform 750ms ease-in-out;
+    }
+     
+    .large-button:hover::after,
+    .large-button:focus::after {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
