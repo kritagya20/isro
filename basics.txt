@@ -1,0 +1,44 @@
+ISRO- INDIAN SPACE RESEARCH CENTER
+
+PAGE-1 : HOME
+
+PAGE-2 : MISSION
+			TAB-1 : MOON = Chandrayaan-1
+			TAB-2 : MARS = MOM
+			TAB-3 :	SUNS = Aditya-L1
+			TAB-4 : STAR = AstroSat
+			TAB-5 : VENUS = Shukrayaan-1
+
+PAGE-3 : SATELLITE
+			TAB-1 : EOS-03 = Earth Observation | GTO | 12/7/2021
+			TAB-2 : EOS-01 = Disaster Management System, Earth Observation | LEO | 7/11/2020
+			TAB-3 : SCATSAT-1 = Climate & Environment | SSPO | 26/9/2016
+			TAB-4 : INSAT = Communication Satellite Systems | GEO | 1983 
+			TAB-5 : IRNSS-1I = Navigation | GEO | 12/4/2018
+
+PAGE-4 : TECHNOLOGY
+			TAB-1 : SLV-3
+			TAB-2 : ASLV
+			TAB-3 : PSLV
+			TAB-4 : GSLV-2
+			TAB-5 : GSLV-3
+			TAB-6 : RLV-TD
+
+PAGE-5 : ABOUT
+			BRIEF :
+			HISTORY : 
+			ACHIEVEMENTS :
+			SUCCESSFUL-MISSIONS :
+			FUTURE-MISSIONS :
+
+-------------------------------------------------------------------------------------------------
+
+MOON = Chandrayaan-1
+
+Chandrayaan-1 was the first lunar space probe of the Indian Space Research Organisation (ISRO) and found water on the Moon. It mapped the Moon in infrared, visible, and X-ray light from lunar orbit and used reflected radiation to prospect for various elements, minerals, and ice. It operated in 2008–09. A Polar Satellite Launch Vehicle launched the 590-kg (1,300-pound) Chandrayaan-1 on October 22, 2008, from the Satish Dhawan Space Centre on Sriharikota Island, Andhra Pradesh state. The probe then was boosted into an elliptical polar orbit around the Moon, 504 km (312 miles) high at its closest to the lunar surface and 7,502 km (4,651 miles) at its farthest. After checkout, it descended to a 100-km (60-mile) orbit. On November 14, 2008, Chandrayaan-1 launched a small craft, the Moon Impact Probe (MIP), that was designed to test systems for future landings and study the thin lunar atmosphere before crashing on the Moon’s surface. MIP impacted near the south pole, but, before it crashed, it discovered small amounts of water in the Moon’s atmosphere.
+
+-------------------------------------------------------------------------------------------------
+
+MARS = MOM
+
+Mangalyaan is the Mars Orbiter Mission successfully Launched by Indian Space Research Organization (ISRO). India is the fourth country to accomplish a successful mission and first country to do so in the very first attempt. The Space Probe was launched successfully on November 5, 2013. The same was inserted into the orbit of Mars after a transit for 298  days, that is, on September 24, 2014. The whole project was executed with a vision to develop technologies of an interplanetary mission. The total cost of the mission is 454 Crore which is the cheapest mission to Mars ever.
