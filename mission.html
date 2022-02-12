@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Research in India</title>
     <!-- CSS -->
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/style.css">
      <!-- JS -->
     <script src="js/index.js" defer></script>
     <!-- GOOGLE-GONTS -->
@@ -32,15 +32,50 @@
         </nav>
     </header>
     <main class="mission-main">
-        <div class="mission-div">
-            <h1 class=" mission-h1 ff-sans-cond uppercase text-white letter-spacing-3">Indian Space Research Organisation<span class="ff-serif ">ISRO</span></h1>
-            <p class="ff-sans">ISRO was established in 1969. Since its founding, ISRO has been developing an Indian space program, launching more than 50 satellites for other countries. 
-                ISRO is responsible for the manufacturing and launch of satellites, as well as the research and development of space and planet related systems through space-based experiments.
-            </p>
-        </div>
-        <div class="mission-div-btn">
-            <button class="large-button ff-sans-cond uppercase">Explore</button>
-        </div>
+        <section class="mission-section-1">
+            <h1 class="mission-h1 ff-sans-cond uppercase text-white "><span aria-hidden="true">01</span> Chandrayaan-1</h1>
+                
+            <img src="/assests/mission/image-moon.png" alt="the moon">
+        </section>
+
+        <section class="mission-section-2">
+            <div class="tab-list underline-indicators flex" >
+                <!-- tabs -->
+                <button aria-selected="true" class="uppercase ff-sans-cond text-accent  ">Moon</button>
+                <button aria-selected="false" class="uppercase ff-sans-cond text-accent  ">Mars</button>
+                <button aria-selected="false" class="uppercase ff-sans-cond text-accent  ">Sun</button>
+                <button aria-selected="false" class="uppercase ff-sans-cond text-accent  ">Star</button>
+                <button aria-selected="false" class="uppercase ff-sans-cond text-accent  ">Venus</button>
+            </div>
+
+            <article class="moon-article">
+                <h2 class="mission-h2 uppercase ff-serif">Moon</h2>
+                <p class="mission-p">
+                    Chandrayaan-1 was India's first lunar space probe and it found water on the Moon. 
+                    It mapped the Moon in infrared, visible, and X-ray light from lunar orbit and used reflected radiation to prospect for several elements, minerals, and ice. 
+                    It operated from 2008 to 2009.
+                </p>
+                <div class="mission-meta">
+                    <div>
+                        <h3 class="text-accent uppercase">Mission type</h3>
+                        <p class="uppercase  ff-serif">Lunar Orbiter</p>
+                    </div>    
+                    <div>
+                        <h3 class="text-accent uppercase">Launch date</h3>
+                        <p class="uppercase ff-serif">22 oct 2008</p>
+                    </div>
+                </div>
+            </article>
+        </section>
     </main>
+    <section class="moon-info-extra">
+        <button id="extra-btn" class="moon-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
+        <p id="moon-extra"  class="moon-info-extra-p ff-sans no-display" data-visible="false">
+            A Polar Satellite Launch Vehicle (PSLV)  launched the 590-kg (1,300-pound) Chandrayaan-1 on October 22, 2008, from the Satish Dhawan Space Centre on Sriharikota Island, Andhra Pradesh state. The probe then was boosted into an elliptical polar orbit around the Moon, 504 km (312 miles) high at its closest to the lunar surface and 7,502 km (4,651 miles) at its farthest. After checkout, it descended to a 100-km (60-mile) orbit. On November 14, 2008, Chandrayaan-1 launched a small craft, the Moon Impact Probe (MIP), that was designed to test systems for future landings and study the thin lunar atmosphere before crashing on the Moon’s surface. MIP impacted near the south pole, but, before it crashed, it discovered small amounts of water in the Moon’s atmosphere. <br> <br>
+            The estimated cost for the project was ₹386 crore (US$51 million). It was intended to survey the lunar surface over a two-year period, to produce a complete map of the chemical composition at the surface and three-dimensional topography. The polar regions are of special interest as they might contain water ice.Among its many achievements was the discovery of widespread presence of water molecules in lunar soil. <br> <br>
+            After almost a year, the orbiter started suffering from several technical issues including failure of the star tracker and poor thermal shielding; Chandrayaan-1 stopped communicating at about 20:00 UTC on 28 August 2009, shortly after which the ISRO officially declared that the mission was over. Chandrayaan-1 operated for 312 days as opposed to the intended two years, but the mission achieved most of its scientific objectives
+        </p>
+    </section>
+
 </body>
 </html>
