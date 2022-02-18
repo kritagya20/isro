@@ -209,6 +209,25 @@ select {
     border-color: hsl( var(--clr-white) / 1); 
 }
 
+.dot-indicators > * {
+    margin: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    border: 0;
+    border-radius: 90%;
+    padding: 0;
+    background-color: hsl( var(--clr-white) / .25);
+    aspect-ratio: 1;
+}
+ 
+.dot-indicators > *:hover,
+.dot-indicators > *:focus { 
+    background-color: hsl( var(--clr-white) / .5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1); 
+}
 
 /* =====================FOR LARGE SCREEN SIZES========================  */
 .body-home {
@@ -324,184 +343,6 @@ nav {
     transform: scale(1.5);
 }
 
-
-/* ========================================================================= */
-/* ========================================================================= */
-/* -------------------------------MISSION-------------------------------------- */
-.mission-body {
-    background-image: url(/assests/mission/background-mission-desktop.jpg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding-bottom: 3.5rem;
-}
-
-.mission-main {
-    margin: 0 ;
-    padding: 4rem 8rem ;
-    text-align: justify;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.mission-section-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.mission-h1 {
-    font-size: 2rem;
-    line-height: 3rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-}
-.mission-h1 > span {
-    color: hsl( var(--clr-light) / .7 );
-    font-weight: 700;
-    margin-right: 1rem;
-}
-
-.mission-section-1 img {
-    width: 75%;
-    margin: 5rem 0 0 3rem;
-}
-
-.mission-section-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tab-list {
-    margin: 1rem 0 1.8rem 0;
-}
-
-.tab-list > button {
-    background: transparent;
-    margin: 0.5rem;
-    letter-spacing: 3px;
-    font-size: 1rem;
-}
-
-.mission-h2 {
-    font-size: 6rem;
-    line-height: 6rem;
-}
-
-.mission-p {
-    max-width: 50ch;
-    font-size: 1.1rem;
-}
-.mission-p::after {
-    content: '';
-    display: block;
-    position: relative;
-    height: 1.5px;
-    width: 100%;
-    margin: 2.35rem 0;
-    background: hsl( var(--clr-white) / .25);
-    order: 1;
-}
-
-.mission-meta {
-    display: flex;
-    justify-content: space-between;
-}
-
-.mission-meta h3 {
-    font-size : .9rem ;
-    letter-spacing: 1px;
-}
-
-.mission-meta p {
-    font-size : 1.4rem;
-    letter-spacing: 1px;
-}
-
-.moon-info-extra::before{
-    content: '';
-    display: block;
-    position: relative;
-    height: 3px;
-    width: 100%;
-    margin: 2.35rem 0 .5rem 0;
-    background: hsl( var(--clr-white) / .25);
-    box-shadow: inset 0 0 0.5em hsl( var(--clr-white) /.5 ), 0 0 0.5em hsl( var(--clr-white) );
-
-}
-
-.moon-info-extra {
-    display: flexbox;
-    flex-direction: column;
-    margin: 2rem auto;
-    width: 80%;
-    justify-items: center;
-    text-align: center;
-}
-
-.moon-info-extra-p {
-    text-align: justify;
-    padding: 0 6rem;
-}
-.moon-info-extra-btn {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    color: hsl( var(--clr-white) / .7 );
-    border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
-    border-radius: .5rem;
-    padding: 0.3rem 1.5rem;
-    margin: 1rem auto 1.5rem auto;
-    box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
-    position: relative;
-    transition: background-color 100ms linear;
-    background-color: transparent;
-}
-.moon-info-extra-btn::before {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    background-color: hsl( var(--clr-white) / .3 );
-    top: 120%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform:  perspective(1em) rotateX("40deg") scale(1, 0.35);
-    filter: blur(1.6rem);
-    opacity: 0.7;
-}
-.moon-info-extra-btn::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 1.5em 0.5em hsl( var(--clr-white) / .3 );
-    opacity: 0;
-    transition: opacity 100ms linear;
-}
-.moon-info-extra-btn:hover::after,
-.moon-info-extra-btn:focus::after{
-    opacity: 1;
-}
-.moon-info-extra-btn:hover,
-.moon-info-extra-btn:focus{
-    filter: blur(0);
-    background-color: transparent;
-    color: hsl( var(--clr-white) );
-    text-shadow: none;
-}
-.moon-info-extra-btn:hover::before,
-.moon-info-extra-btn:focus:before {
-    opacity: 1;
-}
-
-.no-display {
-    display: none;
-}
 
 /* ========================================================================= */
 /* ========================================================================= */
@@ -621,54 +462,6 @@ nav {
         opacity: 1;
         transform: scale(1.5);
     }
-
-
-        /* -------------------------------MISSION-------------------------------------- */
-    .mission-body {
-        background-image: url(/assests/mission/background-mission-desktop.jpg) ;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        padding-bottom: 2rem;
-    }
-
-    .mission-main {
-        margin: 0 ;
-        padding: 4rem 8rem ;
-        text-align: justify;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        
-    }
-
-    .mission-section-1 img {
-        width: 80%;
-        margin: 0;
-    }
-
-
-    .mission-p::after {
-        content: '';
-        display: block;
-        position: relative;
-        height: 1.5px;
-        width: 100%;
-        margin: 2rem 0;
-        background: hsl( var(--clr-white) / .25);
-        order: 1;
-    }
-
-    .mission-meta h3 {
-        font-size : .9rem ;
-        letter-spacing: 1px;
-    }
-
-    .mission-meta p {
-        font-size : 1.3rem;
-        letter-spacing: 1px;
-    }
-
 
 }
 /* ========================================================================= */
@@ -790,116 +583,6 @@ nav {
         opacity: 1;
         transform: scale(1.3);
     }
-
-    /* -------------------------------MISSION-------------------------------------- */
-.mission-body {
-    background-image: url(/assests/mission/background-mission-desktop.jpg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    padding-bottom: 3rem;
-}
-
-.mission-main {
-    margin: 0 ;
-    padding: 4rem 2.5rem 2rem 2.5rem ;
-    text-align: justify;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    
-}
-.mission-section-1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: flex-start;
-}
-
-.mission-h1 {
-    font-size: 1.8rem;
-    line-height: 3rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-}
-.mission-h1 > span {
-    color: hsl( var(--clr-light) / .7 );
-    font-weight: 700;
-    margin-right: .5rem;
-}
-
-.mission-section-1 img {
-    width: 75%;
-    margin: 0;
-}
-
-.mission-section-2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.tab-list {
-    margin: 1rem 0 ;
-}
-
-.tab-list > button {
-    background: transparent;
-    margin: 0.4rem;
-    letter-spacing: 3px;
-    font-size: 1rem;
-    line-height: 1px;
-}
-
-.mission-h2 {
-    font-size: 4.5rem;
-    line-height: 4rem;
-}
-
-.mission-p {
-    max-width: 50ch;
-    font-size: 1.1rem;
-}
-.mission-p::after {
-    content: '';
-    display: block;
-    position: relative;
-    height: 1.5px;
-    width: 100%;
-    margin: 2.35rem 0;
-    background: hsl( var(--clr-white) / .25);
-    order: 1;
-}
-
-.mission-meta {
-    display: flex;
-    justify-content: space-between;
-}
-
-.mission-meta h3 {
-    font-size : .8rem ;
-    letter-spacing: 1px;
-}
-
-.mission-meta p {
-    font-size : 1.3rem;
-    letter-spacing: 1px;
-}
-
-.moon-info-extra {
-    display: flexbox;
-    flex-direction: column;
-    margin: 1rem auto;
-    width: 90%;
-    justify-items: center;
-    text-align: center;
-}
-
-.moon-info-extra-p {
-    text-align: justify;
-    padding: 0 3rem;
-    font-size: 1.1rem;
-}
 
 }
 /* ========================================================================= */
@@ -1051,139 +734,6 @@ nav {
         transform: scale(1.3);
     }
 
-
-    /* -------------------------------MISSION-------------------------------------- */
-    .mission-body {
-        background-image: url(/assests/mission/background-mission-tablet.jpg) ;
-        background-size: cover;
-        background-position: center center;
-        padding-bottom: 1rem;
-    }
-
-    .mission-main {
-        margin: 0 ;
-        padding: 1rem 1.8rem 0 1.8rem ;
-        text-align: justify;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        
-    }
-    .mission-section-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: flex-start;
-    }
-
-    .mission-h1 {
-        font-size: 1.8rem;
-        line-height: 3rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        margin: 0;
-    }
-    .mission-h1 > span {
-        color: hsl( var(--clr-light) / .7 );
-        font-weight: 700;
-        margin-right: .5rem;
-    }
-
-    .mission-section-1 img {
-        width: 45%;
-        margin: 2rem auto;
-    }
-
-    .mission-section-2 {
-        padding: 0 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .tab-list {
-        margin: 1rem auto ;
-    }
-
-    .mission-h2 {
-        margin: 0 auto;
-        font-size: 4rem;
-        line-height: 4rem;
-    }
-
-    .mission-p {
-        text-align: justify;
-        margin: 0 auto;
-        max-width: 70ch;
-        font-size: 1.1rem;
-    }
-    .mission-p::after {
-        content: '';
-        display: block;
-        position: relative;
-        height: 1.5px;
-        width: 100%;
-        margin: 2rem 0 1rem 0;
-        background: hsl( var(--clr-white) / .25);
-        order: 1;
-    }
-
-    .mission-meta {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .mission-meta h3 {
-        font-size : .8rem ;
-        letter-spacing: .8px;
-    }
-
-    .mission-meta p {
-        font-size : 1.3rem;
-        letter-spacing: 1px;
-    }
-
-    .moon-info-extra {
-        display: flexbox;
-        flex-direction: column;
-        margin: 1rem auto;
-        width: 80%;
-        justify-items: center;
-        text-align: center;
-    }
-
-    .moon-info-extra-p {
-        text-align: justify;
-        padding: 0 1rem;
-        font-size: 1.1rem;
-    }
-    .moon-info-extra-btn {
-        font-size: 1.2rem;
-        letter-spacing: 1.5px;
-        cursor: pointer;
-        color: hsl( var(--clr-white) / .7 );
-        border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
-        border-radius: .5rem;
-        padding: 0.3rem 1.1rem;
-        margin: 1rem auto 1.5rem auto;
-        box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .5 ), 0 0 0.5em hsl( var(--clr-white) / .5 );
-        position: relative;
-        transition: background-color 100ms linear;
-        background-color: transparent;
-    }
-
-    .moon-info-extra::before{
-        content: '';
-        display: block;
-        position: relative;
-        height: 3px;
-        width: 100%;
-        margin: 1.8rem 0 .5rem 0;
-        background: hsl( var(--clr-white) / .25);
-        box-shadow: inset 0 0 0.5rem hsl( var(--clr-white) /.5 ), 0 0 0.5rem hsl( var(--clr-white) /.5 );
-    
-    }
 }
 /* ========================================================================= */
 
@@ -1332,148 +882,6 @@ nav {
         transform: scale(1.2);
     }
 
-
-    /* -------------------------------MISSION-------------------------------------- */
-    .mission-body {
-        background-image: url(/assests/mission/background-mission-mobile.jpg) ;
-        background-size: cover;
-        background-repeat: repeat;
-        padding-bottom: 1rem;
-    }
-
-    .mission-main {
-        margin: 0 ;
-        padding: 1rem 1.8rem 0 1.8rem ;
-        text-align: justify;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        
-    }
-    .mission-section-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: flex-start;
-    }
-
-    .mission-h1 {
-        font-size: 1.5rem;
-        line-height: 3rem;
-        font-weight: 700;
-        letter-spacing: 3px;
-        margin: 0;
-    }
-    .mission-h1 > span {
-        color: hsl( var(--clr-light) / .7 );
-        font-weight: 700;
-        margin-right: .3rem;
-    }
-
-    .mission-section-1 img {
-        width: 55%;
-        margin: 1.8rem auto;
-    }
-
-    .mission-section-2 {
-        padding: 0 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .tab-list {
-        margin: 1rem auto ;
-    }
-
-    .tab-list > button {
-        background: transparent;
-        margin: 0.1rem;
-        font-size: 1rem;
-        letter-spacing: 2px;
-        line-height: 1px;
-    }
-
-    .mission-h2 {
-        margin: 0 auto;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-    }
-
-    .mission-p {
-        text-align: justify;
-        margin: 0 auto;
-        max-width: 70ch;
-        font-size: .9rem;
-    }
-    .mission-p::after {
-        content: '';
-        display: block;
-        position: relative;
-        height: 1.5px;
-        width: 100%;
-        margin: 2rem 0 1rem 0;
-        background: hsl( var(--clr-white) / .25);
-        order: 1;
-    }
-
-    .mission-meta {
-        display: flex;
-        justify-content: space-evenly;
-    }
-
-    .mission-meta h3 {
-        font-size : .5rem ;
-        letter-spacing: .7px;
-    }
-
-    .mission-meta p {
-        font-size : .85rem;        
-        letter-spacing: .8px;
-    }
-
-    .moon-info-extra {
-        display: flexbox;
-        flex-direction: column;
-        margin: 1rem auto;
-        width: 80%;
-        justify-items: center;
-        text-align: center;
-    }
-
-    .moon-info-extra-p {
-        text-align: justify;
-        padding: 0 1rem;
-        font-size: .9rem;
-    }
-
-    .moon-info-extra-btn {
-        font-size: 1rem;
-        letter-spacing: 1px;
-        cursor: pointer;
-        color: hsl( var(--clr-white) / .7 );
-        border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
-        border-radius: .5rem;
-        padding: 0.3rem 1rem;
-        margin: 1rem auto 1.5rem auto;
-        box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
-        position: relative;
-        transition: background-color 100ms linear;
-        background-color: transparent;
-    }
-
-    .moon-info-extra::before{
-        content: '';
-        display: block;
-        position: relative;
-        height: 3px;
-        width: 100%;
-        margin: 1rem 0 .5rem 0;
-        background: hsl( var(--clr-white) / .25);
-        box-shadow: inset 0 0 0.5rem hsl( var(--clr-white) /.5 ), 0 0 0.5rem hsl( var(--clr-white) /.5 );
-    
-    }
 }
 /* ========================================================================= */
 
@@ -1617,130 +1025,7 @@ nav {
         transform: scale(1.2);
     }
 
-    /* -------------------------------MISSION-------------------------------------- */
-    .mission-body {
-        background-image: url(/assests/mission/background-mission-mobile.jpg) ;
-        background-size: cover;
-        background-repeat: repeat;
-        padding-bottom: 1rem;
-    }
 
-    .mission-main {
-        margin: 0 ;
-        padding: 1rem 1.8rem 0 1.8rem ;
-        text-align: justify;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        
-    }
-    .mission-section-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-content: flex-start;
-    }
-
-    .mission-h1 {
-        font-size: 1.2rem;
-        line-height: 3rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        margin: 0;
-    }
-    .mission-h1 > span {
-        color: hsl( var(--clr-light) / .7 );
-        font-weight: 700;
-        margin-right: .2rem;
-    }
-
-    .mission-section-1 img {
-        width: 65%;
-        margin: 1rem auto;
-    }
-
-    .mission-section-2 {
-        padding: 0 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .tab-list {
-        margin: 1rem auto ;
-    }
-
-    .tab-list > button {
-        background: transparent;
-        margin: 0.2rem;
-        font-size: .75rem;
-        letter-spacing: 1px;
-        line-height: 1px;
-    }
-
-    .mission-h2 {
-        margin: 0 auto;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-    }
-
-    .mission-p {
-        text-align: justify;
-        margin: 0 auto;
-        max-width: 70ch;
-        font-size: .9rem;
-    }
-    .mission-p::after {
-        content: '';
-        display: block;
-        position: relative;
-        height: 1.5px;
-        width: 100%;
-        margin: 2rem 0 1rem 0;
-        background: hsl( var(--clr-white) / .25);
-        order: 1;
-    }
-
-    .mission-meta h3 {
-        font-size : .5rem ;
-        letter-spacing: .7px;
-    }
-
-    .mission-meta p {
-        font-size : .85rem;        
-        letter-spacing: .7px;
-    }
-
-    .moon-info-extra {
-        display: flexbox;
-        flex-direction: column;
-        margin: 1rem auto;
-        width: 80%;
-        justify-items: center;
-        text-align: center;
-    }
-
-    .moon-info-extra-p {
-        text-align: justify;
-        padding: 0 1rem;
-        font-size: .9rem;
-    }
-
-    .moon-info-extra-btn {
-        font-size: .9rem;
-        letter-spacing: .8px;
-        cursor: pointer;
-        color: hsl( var(--clr-white) / .7 );
-        border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
-        border-radius: .3rem;
-        padding: 0.3rem .8rem;
-        margin: 1rem auto 1.5rem auto;
-        box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
-        position: relative;
-        transition: background-color 100ms linear;
-        background-color: transparent;
-    }
     
 }
 
@@ -1750,3 +1035,600 @@ nav {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================MISSION-PAGE-STYLE-LAYOUT============================== */
+.mission-body {
+    background-image: url(/assests/mission/background-mission-desktop.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.mission-main {
+    padding: 3.5rem 0;
+    column-gap: 2rem;
+    row-gap: 0rem;
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-rows: minmax(5rem, auto);
+    grid-template-areas: 
+    '. title title .'
+    '. image tabs .'
+    '. image content .'
+    '. extra extra .';
+}
+.tab-list {
+    grid-area: tabs;
+    margin: -2rem 0 2rem 0;
+}
+.mission-h1 {
+    grid-area: title;
+}
+.mission-img {
+    grid-area: image;
+    padding-top: 3rem;
+    width: 85%;
+}
+
+#mission-img-sun {
+    padding-top: 1.5rem;
+    width: 90%;
+}
+
+.mission-article {
+    grid-area: content;
+    justify-content: justify;
+    text-align: justify;
+}
+.mission-info-extra {
+    grid-area: extra;
+}
+.no-display {
+    display: none;
+}
+
+.tab {
+    background-color: transparent;
+    letter-spacing: 2px;
+    margin: 1rem 0.5rem 0 0;
+}
+
+.mission-h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.mission-h1 > span {
+    margin-right: 1rem;
+    color: hsl( var(--clr-white) / .6);
+}
+
+.mission-h2 {
+    font-size: 5rem;
+    line-height: 7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.mission-meta {
+    flex-direction: row;
+    justify-content: space-between;;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.mission-p::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1.5px;
+    width: 100%;
+    margin: 2.35rem 0;
+    background: hsl( var(--clr-white) / .25);
+    order: 1;
+}
+
+.mission-meta h3 {
+    font-size : .9rem ;
+    letter-spacing: 1px;
+}
+
+.mission-meta p {
+    font-size : 1.4rem;
+    letter-spacing: 1px;
+}
+
+.mission-info-extra {
+    text-align: center;
+}
+
+.mission-info-extra p {
+    text-align: justify;
+}
+
+.mission-info-extra-btn{
+    margin: 1rem auto 1.5rem auto;
+    width: 11rem;
+    aspect-ratio: 3.5;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: hsl( var(--clr-white) / .7 );
+    border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
+    border-radius: .5rem;
+    box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
+    position: relative;
+    background-color: transparent;
+}
+.mission-info-extra-btn::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: hsl( var(--clr-white) / .15 );
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform:  perspective(1em) rotateX("40deg") scale(1, 0.35);
+    filter: blur(1.1rem);
+    opacity: 0.7;
+}
+.mission-info-extra-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 0.01rem 0.01rem hsl( var(--clr-white) / .3 );/* offset-x | offset-y | blur-radius | spread-radius | color */
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.mission-info-extra-btn:hover::after,
+.mission-info-extra-btn:focus::after{
+    opacity: 1;
+}
+.mission-info-extra-btn:hover,
+.mission-info-extra-btn:focus{
+    background-color: transparent;
+    color: hsl( var(--clr-white) );
+    text-shadow: none;
+}
+.mission-info-extra-btn:hover::before,
+.mission-info-extra-btn:focus:before {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================SATELLITE-PAGE-STYLE-LAYOUT============================== */
+.satellite-body {
+    background-image: url(/assests/satellite/background-satellite-desktop.jpg) ;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: bottom bottom;
+}
+
+.sr-only-satellite {
+    position: absolute; 
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px; 
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+}
+
+
+
+.satellite-main {
+    padding: 3.5rem 0;
+    column-gap: 2rem;
+    row-gap: 0rem;
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-rows: minmax(5rem, auto);
+    grid-template-areas: 
+    '. title title .'
+    '. image content .'
+    '. tabs content .';
+}
+.tab-list {
+    grid-area: tabs;
+    margin: 0 auto;    
+    align-items: center;
+    max-height: 5rem;
+}
+.satellite-h1 {
+    grid-area: title;
+}
+.satellite-img {
+    grid-area: image;
+    padding-top: 5rem;
+    width: 25rem;
+}
+.satellite-img img {
+    border-radius: .5rem;
+}
+
+.satellite-article {
+    grid-area: content;
+    justify-content: justify;
+    text-align: justify;
+}
+.satellite-info-extra {
+    grid-area: extra;
+}
+.no-display {
+    display: none;
+}
+
+.tab {
+    background-color: transparent;
+    letter-spacing: 2px;
+    margin: 1rem 0.5rem 0 0;
+}
+
+.satellite-h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+.satellite-h1 > span {
+    margin-right: .8rem;
+    color: hsl( var(--clr-white) / .6);
+}
+
+.satellite-h2 {
+    font-size: 4rem;
+    line-height: 6rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.satellite-p::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1.5px;
+    width: 100%;
+    margin: 2.35rem 0;
+    background: hsl( var(--clr-white) / .25);
+    order: 1;
+}
+
+.satellite-meta {
+    flex-direction: row;
+    justify-content: space-between;;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.satellite-meta-2 {
+    text-align: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.satellite-meta h3,
+.satellite-meta-2 h3 {
+    font-size : .9rem ;
+    letter-spacing: 1px;
+}
+
+.satellite-meta p,
+.satellite-meta-2 p {
+    font-size : 1.4rem;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================TECHNOLOGY-PAGE-STYLE-LAYOUT============================== */
+.technology-body {
+    background-image: url(/assests/technology/background-technology-desktop.jpg) ;
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: bottom bottom;
+}
+
+.technology-main {
+    padding: 3.5rem 0;
+    column-gap: 2rem;
+    row-gap: 0rem;
+    grid-template-columns: repeat(2, minmax(1rem, 1fr)) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-rows: minmax(5rem, auto);
+    grid-template-areas: 
+    '. tabs title image image'
+    '. tabs content image image'
+    '. extra extra extra .';
+}
+.tab-list-technology {
+    display: flex;
+    flex-direction: column;
+    grid-area: tabs;
+    margin: -2rem 0 1rem 0;
+}
+
+.tab-list-technology button {
+    padding: 0.01rem;
+    border-radius: 80%;
+    border-color: aliceblue;
+    border-width: 0.15rem;
+    border-style: solid;
+    color: black;
+    background-color: hsl( var(--clr-white) /.7 );
+    font-weight: 900;
+    font-size: 1rem;
+    margin: 0.01rem 0;
+    line-height: 2px;
+    width: 4.5rem;
+    aspect-ratio: 1;
+}
+.tab-list-technology button:hover,
+.tab-list-technology button:focus {
+    transform: scale(0.9);
+    transition-property: color, border-color, transform;
+    transition-duration: 2s;
+    transition-delay: 0.15s;
+    transition-timing-function: ease-in-out;
+    color: hsl( var(--clr-dark) /.8 );
+    background-color: hsl( var(--clr-white)  );
+    color: darkslateblue;
+    border-color: darkslateblue;
+}
+
+
+.technology-h1 {
+    grid-area: title;
+}
+.technology-img {
+    padding-top: 2rem;
+    margin-left: 10rem;
+    grid-area: image;
+}
+.technology-img img {
+    border-radius: .5rem;
+    max-height: 35rem;
+}
+
+.technology-article {
+    grid-area: content;
+    justify-content: justify;
+    text-align: justify;
+}
+.technology-info-extra {
+    grid-area: extra;
+}
+.no-display {
+    display: none;
+}
+
+.tab {
+    background-color: transparent;
+    letter-spacing: 2px;
+    margin: 1rem 0.5rem 0 0;
+}
+
+.technology-h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.technology-h2 {
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
+.technology-p::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1.5px;
+    width: 100%;
+    margin: 2.35rem 0;
+    background: hsl( var(--clr-white) / .25);
+    order: 1;
+}
+
+.technology-meta {
+    flex-direction: row;
+    justify-content: space-between;;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.technology-meta h3 {
+    font-size : .9rem ;
+    letter-spacing: 1px;
+}
+
+.technology-meta p {
+    font-size : 1.4rem;
+    letter-spacing: 1px;
+}
+
+.technology-info-extra {
+    text-align: center;
+}
+
+.technology-info-extra p {
+    text-align: justify;
+}
+
+.technology-info-extra-btn{
+    margin: 1rem auto 1.5rem auto;
+    width: 11rem;
+    aspect-ratio: 3.5;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: hsl( var(--clr-white) / .7 );
+    border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
+    border-radius: .5rem;
+    box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
+    position: relative;
+    background-color: transparent;
+}
+.technology-info-extra-btn::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: hsl( var(--clr-white) / .15 );
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform:  perspective(1em) rotateX("40deg") scale(1, 0.35);
+    filter: blur(1.1rem);
+    opacity: 0.7;
+}
+.technology-info-extra-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 0.01rem 0.01rem hsl( var(--clr-white) / .3 );/* offset-x | offset-y | blur-radius | spread-radius | color */
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.technology-info-extra-btn:hover::after,
+.technology-info-extra-btn:focus::after{
+    opacity: 1;
+}
+.technology-info-extra-btn:hover{
+    transform: scale(1.05);
+}
+.technology-info-extra-btn:hover,
+.technology-info-extra-btn:focus{
+    
+    background-color: transparent;
+    color: hsl( var(--clr-white) );
+    text-shadow: none;
+}
+.technology-info-extra-btn:hover::before,
+.technology-info-extra-btn:focus:before {
+    opacity: 1;
+}
+
+.no-display {
+    display: none;
+}
