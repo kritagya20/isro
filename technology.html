@@ -34,12 +34,12 @@
     <main class="technology-main grid">
         <div class="tab-list-technology underline-indicators flex" role="tablist" >
             <!-- tabs -->
-            <button  role="tab" aria-controls="first-tab" tabindex="0" class="ff-sans-cond "aria-selected="true">1</button>
-            <button  role="tab" aria-controls="second-tab" tabindex="-1" class=" ff-sans-cond "aria-selected="false">2</button>
-            <button  role="tab" aria-controls="third-tab" tabindex="-1" class="ff-sans-cond "aria-selected="false">3</button>
-            <button  role="tab" aria-controls="fourth-tab" tabindex="-1" class=" ff-sans-cond "aria-selected="false">4</button>
-            <button  role="tab" aria-controls="fifth-tab" tabindex="-1" class=" ff-sans-cond "aria-selected="false">5</button>
-            <button  role="tab" aria-controls="sixth-tab" tabindex="-1" class=" ff-sans-cond "aria-selected="false">6</button>
+            <button  role="tab" aria-controls="first-tab" tabindex="0" class="tab-technology ff-sans-cond "aria-selected="true">1</button>
+            <button  role="tab" aria-controls="second-tab" tabindex="-1" class="tab-technology ff-sans-cond "aria-selected="false">2</button>
+            <button  role="tab" aria-controls="third-tab" tabindex="-1" class=" tab-technology ff-sans-cond "aria-selected="false">3</button>
+            <button  role="tab" aria-controls="fourth-tab" tabindex="-1" class="tab-technology ff-sans-cond "aria-selected="false">4</button>
+            <button  role="tab" aria-controls="fifth-tab" tabindex="-1" class="tab-technology ff-sans-cond "aria-selected="false">5</button>
+            <button  role="tab" aria-controls="sixth-tab" tabindex="-1" class="tab-technology ff-sans-cond "aria-selected="false">6</button>
 
         </div>
         <!-- =====================================SLV====================================== -->
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </article>
-        <section class="first-tab technology-info-extra" role="tabpanel">
+        <section id="first-tab" class="first-tab technology-info-extra" role="tabpanel">
             <button id="slv-btn" class="technology-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
             <p id="slv-extra"  class="technology-info-extra-p ff-sans no-display" data-visible="false">
                 The first launch of the SLV took place in Sriharikota on 10 August 1979. The fourth and final launch of the SLV took place on 17 April 1983. It has taken approximately seven years to realise the vehicle from start. The solid motor case for first and second stage are fabricated from 15 CDV6 steel sheets and third and fourth stages from fibre reinforced plastic. 
@@ -86,7 +86,7 @@
 
         <article hidden  class="second-tab mission-article" role="tabpanel" aria-details="mars" role="tabpanel">
             <h2 class="technology-h2 uppercase ff-serif">Augmented Satellite Launch Vehicle</h2>
-            <p class="mission-p">
+            <p class="technology-p">
                 The Augmented Satellite Launch Vehicle or Advanced Satellite Launch Vehicle, also known as ASLV, was a Small-lift launch vehicle five-stage solid-fuel rocket developed by the Indian Space Research Organisation (ISRO) to place 150 kg satellites into LEO. This project was started by India during the early 1980s to develop technologies needed for a payload to be placed into a geostationary orbit. Its design was based on Satellite Launch Vehicle. ISRO did not have sufficient funds for both the Polar Satellite Launch Vehicle programme and the ASLV programme at the same time and the ASLV programme was terminated after the initial developmental flights. The payloads of ASLV were Stretched Rohini Satellites.
             </p>
             <div class="technology-meta flex">
@@ -101,7 +101,7 @@
             </div>
         </article>
 
-        <section class="second-tab technology-info-extra" role="tabpanel">
+        <section id="second-tab" class="second-tab technology-info-extra" role="tabpanel">
             <button id="aslv-btn" class="technology-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
             <p id="aslv-extra"  class="technology-info-extra-p ff-sans no-display" data-visible="false">
                 The ASLV was a five-stage vehicle. Two strap-on boosters acted as a first stage, with the core stage igniting after booster burn out. The payload capacity of the ASLV was approximately 150 kg (330 lb) to an orbit of 400 km (250 mi) with a 47-degree inclination. <br> <br>
@@ -120,7 +120,7 @@
 
         <article hidden class="third-tab mission-article" role="tabpanel">
             <h2 class="technology-h2 uppercase ff-serif">Polar Satellite Launch Vehicle</h2>
-            <p class="mission-p">
+            <p class="technology-p">
                 PSLV is an expendable medium-lift launch vehicle designed and operated by the Indian Space Research Organisation (ISRO). It was developed to allow India to launch its Indian Remote Sensing (IRS) satellites into sun-synchronous orbits, a service that was, until the advent of the PSLV in 1993, commercially available only from Russia. PSLV can also launch small size satellites into Geostationary Transfer Orbit (GTO).
             </p>
             <div class="technology-meta flex">
@@ -135,7 +135,7 @@
             </div>
         </article>
 
-        <section class="third-tab technology-info-extra" role="tabpanel">
+        <section id="third-tab" class="third-tab technology-info-extra" role="tabpanel">
             <button id="pslv-btn" class="technology-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
             <p id="pslv-extra"  class="technology-info-extra-p ff-sans no-display" data-visible="false">
                 Some notable payloads launched by PSLV include India's first lunar probe Chandrayaan-1, India's first interplanetary mission, Mars Orbiter Mission (Mangalyaan) and India's first space observatory, Astrosat. <br> <br>
@@ -154,22 +154,22 @@
 
         <article hidden  class="fourth-tab mission-article" role="tabpanel">
             <h2 class="technology-h2 uppercase ff-serif">Geosynchronous Satellite Launch Vehicle Mark 2</h2>
-            <p class="mission-p">
+            <p class="technology-p">
                 GSLV Mk II is the largest launch vehicle developed by India, which is currently in operation. This fourth generation launch vehicle is a three stage vehicle with four liquid strap-ons. The indigenously developed cryogenic Upper Stage (CUS), which is flight proven, forms the third stage of GSLV Mk II. From January 2014, the vehicle has achieved four consecutive successes            
             </p>    
                 <div class="technology-meta flex">
                 <div>
-                    <h3 class="text-accent uppercase">Total Launches</h3>
+                    <h3 class="technology-meta-h3 text-accent uppercase">Total Launches</h3>
                     <p class="uppercase  ff-serif">14</p>
                 </div>    
                 <div>
-                    <h3 class="text-accent uppercase">Successful Launches</h3>
+                    <h3 class="technology-meta-h3 text-accent uppercase">Successful Launches</h3>
                     <p class="uppercase ff-serif">10</p>
                 </div>
             </div>
         </article>
 
-        <section class="fourth-tab technology-info-extra" role="tabpanel">
+        <section id="fourth-tab" class="fourth-tab technology-info-extra" role="tabpanel">
             <button id="gslv-2-btn" class="technology-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
             <p id="gslv-2-extra"  class="technology-info-extra-p ff-sans no-display" data-visible="false">
                 GSLV rockets using the Russian Cryogenic Stage (CS) are designated as the GSLV Mark I while versions using the indigenous Cryogenic Upper Stage (CUS) are designated the GSLV Mark-II. GSLV MARK-II variant uses an Indian cryogenic engine, the CE-7.5, and is capable of launching 2500 kg into geostationary transfer orbit. Previous GSLV vehicles (GSLV Mark I) have used Russian cryogenic engines.
@@ -205,7 +205,7 @@
             </div>
         </article>
 
-        <section class="fifth-tab technology-info-extra" role="tabpanel">
+        <section id="fifth-tab" class="fifth-tab technology-info-extra" role="tabpanel">
             <button id="gslv-3-btn" class="technology-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
             <p id="gslv-3-extra"  class="technology-info-extra-p ff-sans no-display" data-visible="false">
                 After several delays and a sub-orbital test flight on 18 December 2014, ISRO successfully conducted the first orbital test launch of GSLV Mk III on 5 June 2017 from the Satish Dhawan Space Centre, Andhra Pradesh. In June 2018, the Union Cabinet approved ₹43.38 billion (US$580 million) to build 10 GSLV Mk III rockets over a five-year period. <br> <br>
@@ -242,7 +242,7 @@
             </div>
         </article>
 
-        <section class="sixth-tab technology-info-extra" role="tabpanel">
+        <section id="sixth-tab" class="sixth-tab technology-info-extra" role="tabpanel">
             <button id="rlvtd-btn" class="technology-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
             <p id="rlvtd-extra"  class="technology-info-extra-p ff-sans no-display" data-visible="false">
                 It was designed to evaluate various technologies, and development of the final version is expected to take 10 to 15 years. The fully developed RLV is expected to take off vertically like a rocket, deploy a satellite in orbit, return to Earth, and land on a runway.             </p>

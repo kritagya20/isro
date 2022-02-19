@@ -14,9 +14,17 @@ navToggle.addEventListener("click",() =>{
 })
 
 
-
+// Changing the Page from index to mission Page through button on click
 try{
-    // ======================================TABS=====================================
+    const button = document.querySelector('.large-button');
+    button.addEventListener("click", () => { window.location.href="mission.html"});
+} catch {
+    console.log("Button not found");
+}
+
+
+// ======================================TABS=====================================
+try{
     const tabList = document.querySelector('[role="tablist"]'); //Selecting div containing the tabs
     const tabs = tabList.querySelectorAll('[role="tab"]'); //Selecting all the tabs in form of array
 
@@ -100,8 +108,9 @@ try{
 }catch{
     console.log("page doesn't have tabs");
 }
+//=======================================================================================
 
-//=============Additional Information of Mission Page===============
+//==========================Additional Information of Mission Page=======================
 try{
 
     //extra details of the mission moon  visibility through button
@@ -247,11 +256,35 @@ try{
 }
 //=====================================================================
 //=============Additional Information of Technology Page===============
+var buttonVisible = document.querySelector("[tabindex='0']").getAttribute("aria-controls");
+var sectionDisplayed = document.querySelector(`section[id="${buttonVisible}"]`);
+console.log(sectionDisplayed);
+try {
 
-try{
-    //extra details of the tecgnology slv visibility through button
     const ExtraInfoSlv = document.querySelector("#slv-extra"); //additional information paragraph of slv
     const slvBtn = document.querySelector("#slv-btn");//additional information button of slv
+    
+
+    const ExtraInfoAslv = document.querySelector("#aslv-extra"); //additional information paragraph of aslv
+    const aslvBtn = document.querySelector("#aslv-btn");//additional information button of aslv
+    
+
+    const ExtraInfoPslv = document.querySelector("#pslv-extra"); //additional information paragraph of pslv
+    const pslvBtn = document.querySelector("#pslv-btn");//additional information button of pslv
+    
+   
+    const ExtraInfoGslv2 = document.querySelector("#gslv-2-extra"); //additional information paragraph of gslv-2
+    const gslv2Btn = document.querySelector("#gslv-2-btn");//additional information button of gslv-3
+    
+
+    const ExtraInfoGslv3 = document.querySelector("#gslv-3-extra"); //additional information paragraph of gslv-3
+    const gslv3Btn = document.querySelector("#gslv-3-btn");//additional information button of gslv-3
+    
+
+    const ExtraInfoRlvtd = document.querySelector("#rlvtd-extra"); //additional information paragraph of rlvtd
+    const rlvtdBtn = document.querySelector("#rlvtd-btn");//additional information button of rlvtd
+    
+    
 
     slvBtn.addEventListener("click", slvAdditionalInfo);
     function slvAdditionalInfo () {
@@ -272,11 +305,9 @@ try{
             document.getElementById("slv-btn").innerText = "Show Details";
         }
     }
-    
 
-    //extra details of the tecgnology aslv visibility through button
-    const ExtraInfoAslv = document.querySelector("#aslv-extra"); //additional information paragraph of aslv
-    const aslvBtn = document.querySelector("#aslv-btn");//additional information button of aslv
+
+
 
     aslvBtn.addEventListener("click", aslvAdditionalInfo);
     function aslvAdditionalInfo () {
@@ -298,9 +329,6 @@ try{
         }
     }
 
-    //extra details of the tecgnology pslv visibility through button
-    const ExtraInfoPslv = document.querySelector("#pslv-extra"); //additional information paragraph of pslv
-    const pslvBtn = document.querySelector("#pslv-btn");//additional information button of pslv
 
     pslvBtn.addEventListener("click", pslvAdditionalInfo);
     function pslvAdditionalInfo () {
@@ -322,9 +350,7 @@ try{
         }
     }
 
-    //extra details of the tecgnology gslv-2 visibility through button
-    const ExtraInfoGslv2 = document.querySelector("#gslv-2-extra"); //additional information paragraph of gslv-2
-    const gslv2Btn = document.querySelector("#gslv-2-btn");//additional information button of gslv-3
+
 
     gslv2Btn.addEventListener("click", gslv2AdditionalInfo);
     function gslv2AdditionalInfo () {
@@ -346,9 +372,7 @@ try{
         }
     }
 
-    //extra details of the tecgnology gslv-3 visibility through button
-    const ExtraInfoGslv3 = document.querySelector("#gslv-3-extra"); //additional information paragraph of gslv-3
-    const gslv3Btn = document.querySelector("#gslv-3-btn");//additional information button of gslv-3
+
 
     gslv3Btn.addEventListener("click", gslv3AdditionalInfo);
     function gslv3AdditionalInfo () {
@@ -370,9 +394,7 @@ try{
         }
     }
 
-        //extra details of the tecgnology rlvtd visibility through button
-        const ExtraInfoRlvtd = document.querySelector("#rlvtd-extra"); //additional information paragraph of rlvtd
-        const rlvtdBtn = document.querySelector("#rlvtd-btn");//additional information button of rlvtd
+
     
         rlvtdBtn.addEventListener("click", rlvtdAdditionalInfo);
         function rlvtdAdditionalInfo () {

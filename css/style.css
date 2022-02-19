@@ -210,7 +210,7 @@ select {
 }
 
 .dot-indicators > * {
-    margin: 1rem;
+    margin: 0;
     width: 1rem;
     cursor: pointer;
     border: 0;
@@ -225,143 +225,31 @@ select {
     background-color: hsl( var(--clr-white) / .5);
 }
 
-.dot-indicators > [aria-selected="true"] {
+.dot-indicators > .active,
+.dot-indicators >[aria-selected="true"] {
     background-color: hsl( var(--clr-white) / 1); 
+    color: hsl( var(--clr-dark) / 1);
 }
 
 /* =====================FOR LARGE SCREEN SIZES========================  */
-.body-home {
-    display: block;
-    background-image: url(/assests/home/background-home-desktop.jpg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.mobile-nav-toggle {
-    display: none;
-}
-
-.primary-header {
-    display: flex;
-    justify-content: space-between;
-    margin: 0.5rem 0 0 0 ;
-    padding: 1rem 0 0 2rem ;
-}
-
-.primary-header::after {
-    content: '';
-    display: block;
-    position: relative;
-    height: 1.5px;
-    width: 100%;
-    margin-right: -1.5rem;
-    margin-top: 2.35rem;
-    background: hsl( var(--clr-white) / .25);
-    order: 1;
-}
-
-.primary-navigation {
-    --gap: clamp(1.5rem, 5vw, 3.5rem);
-    --underline-gap: 1.3rem;
-    list-style: none;
-    padding: 0 4rem;
-    margin: 0;
-    background: hsl( var(--clr-white) / 0.2);
-    backdrop-filter: blur(1.5rem);
-    font-weight: 700;
-}
-
-nav {
-    align-items:flex-end;
-    order: 2;
-}
-
-.primary-link {
-    font-size: 1.25rem;
-}
-
-.logo-isro {
-    max-width: 6.5rem;
-}
-
-.home-main {
-    margin: 0 1rem;
-    padding: 8rem 10rem 0 5rem ;
-    text-align: justify;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.home-h1 {
-    font-size: 1.5rem;
-    line-height: 3rem;
-}
-
-.home-h1  > span {
-    font-size: 10rem;
-    line-height: 8.5rem;
-    letter-spacing: 6px;
-    display: block;
-}
-
-.home-main p {
-    max-width: 50ch;
-    font-size: 1.1rem;
-}
-
-.large-button {
-    font-size: 2rem;
-    position: relative;
-    z-index: 1;
-    display: inline-grid;
-    place-items: center;
-    width: 15rem;
-    margin: 6.5rem 0 0 0;
-    padding: 0 1em;
-    border-radius: 50%;
-    aspect-ratio: 1;
-    text-decoration: none;
-}
-
-.large-button::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: hsl( var(--clr-white) / .1);
-    border-radius: 50%;
-    opacity: 0;
-    transition: opacity 500ms linear, transform 750ms ease-in-out;
-}
-    
-.large-button:hover::after,
-.large-button:focus::after {
-    opacity: 1;
-    transform: scale(1.5);
-}
-
-
-/* ========================================================================= */
-/* ========================================================================= */
-
-/* =====================FOR DESKTOP SCREEN SIZES========================  */
-@media (min-width: 1024px) and (max-width: 1200px) {
+/* -----------HOME-PAGE-LAYOUT------------ */
     .body-home {
         display: block;
-        background-image: url(/assests/home/background-home-desktop.jpg);
+        background-image: url(/assests/home/background-home-desktop.jpg) ;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
 
+    .mobile-nav-toggle {
+        display: none;
+    }
+
     .primary-header {
         display: flex;
         justify-content: space-between;
-        margin: 0 ;
-        padding: 2rem 0 0 2rem ;
+        margin: 0.5rem 0 0 0 ;
+        padding: 1rem 0 0 2rem ;
     }
 
     .primary-header::after {
@@ -370,40 +258,34 @@ nav {
         position: relative;
         height: 1.5px;
         width: 100%;
-        margin-right: -1rem;
+        margin-right: -1.5rem;
         margin-top: 2.35rem;
         background: hsl( var(--clr-white) / .25);
         order: 1;
     }
-    
-    nav {
-       order: 2;
-    }
-   
+
     .primary-navigation {
         --gap: clamp(1.5rem, 5vw, 3.5rem);
         --underline-gap: 1.3rem;
         list-style: none;
-        padding: 0 3rem;
+        padding: 0 4rem;
         margin: 0;
         background: hsl( var(--clr-white) / 0.2);
         backdrop-filter: blur(1.5rem);
         font-weight: 700;
     }
 
-    .primary-link {
-        font-size: 1rem;
+    nav {
+        align-items:flex-end;
+        order: 2;
     }
-    
-    .mobile-nav-toggle {
-        display: none;
-    }
+
     .primary-link {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
     .logo-isro {
-        max-width: 5.3rem;
+        max-width: 6.5rem;
     }
 
     .home-main {
@@ -411,161 +293,42 @@ nav {
         padding: 8rem 10rem 0 5rem ;
         text-align: justify;
         display: flex;
-        flex-direction: row !important;
-        justify-content: space-around;
-    }
-
-    .home-h1 {
-        font-size: 1.4rem;
-        line-height: 2rem;
-    }
-
-    .home-h1  > span {
-        font-size: 7.5rem;
-        line-height: 8rem;
-        letter-spacing: 6px;
-    }
-
-    .home-main p {
-        max-width: 50ch;
-        font-size: 1.04rem;
-    }
-
-    .large-button {
-        font-size: 1.5rem;
-        position: relative;
-        z-index: 1;
-        display: inline-grid;
-        place-items: center;
-        width: 13rem;
-        margin: 9rem 0 0 10rem;
-        padding: 0 1em;
-        border-radius: 50%;
-        aspect-ratio: 1;
-        text-decoration: none;
-    }
-    
-    .large-button::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: hsl( var(--clr-white) / .1);
-        border-radius: 50%;
-        opacity: 0;
-        transition: opacity 500ms linear, transform 750ms ease-in-out;
-    }
-     
-    .large-button:hover::after,
-    .large-button:focus::after {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-
-}
-/* ========================================================================= */
-
-
-
-
-/* =====================FOR SMALL DESKTOPS SCREEN SIZES========================  */
-@media (min-width: 768px) and (max-width: 1023.9999px) {
-    
-    .body-home {
-        display: block;
-        background-image: url(/assests/home/background-home-desktop.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-
-    .primary-header {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 ;
-        padding: 1.5rem 0 0 2rem ;
-    }
-
-    .primary-header::after {
-        content: '';
-        display: block;
-        position: relative;
-        height: 1px;
-        width: 100%;
-        margin-top: 1.8rem;
-        margin-right: .1rem;
-        background: hsl( var(--clr-white) / .25);
-        order: 1;
-    }
-    
-    nav {
-       order: 2;
-    }
-
-    .primary-navigation {
-        --underline-gap: 1rem;
-        list-style: none;
-        padding: 0 2rem;
-        margin: 0;
-        background: hsl( var(--clr-white) / 0.2);
-        backdrop-filter: blur(1.5rem);
-        font-weight: 700;
-        line-height: 1.4rem;
-    }
-
-    .primary-link {
-        font-size: 1rem;
-    }
-
-    .mobile-nav-toggle {
-        display: none;
-    }
-
-    .logo-isro {
-        max-width: 5rem;
-    }
-
-    .home-main {
-        margin: 1.5rem;
-        padding: 6rem 0 0 0 ;
-        text-align: justify;
-        display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
 
     .home-h1 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         line-height: 3rem;
     }
-    
+
     .home-h1  > span {
-        font-size: 8rem;
+        font-size: 10rem;
         line-height: 8.5rem;
         letter-spacing: 6px;
         display: block;
     }
-    
+
     .home-main p {
-        max-width: 45ch;
-        font-size: 1rem;
+        max-width: 50ch;
+        font-size: 1.1rem;
     }
-    
+
     .large-button {
-        font-size: 1.5rem;
+        font-size: 2rem;
         position: relative;
         z-index: 1;
         display: inline-grid;
         place-items: center;
-        width: 12rem;
-        margin: 9rem 0 0 0;
-        padding: 0 1rem;
+        width: 15rem;
+        margin: 6.5rem 0 0 0;
+        padding: 0 1em;
         border-radius: 50%;
         aspect-ratio: 1;
         text-decoration: none;
+        color: hsl( var(--clr-dark) );
     }
-    
+
     .large-button::after {
         content: '';
         position: absolute;
@@ -577,866 +340,306 @@ nav {
         opacity: 0;
         transition: opacity 500ms linear, transform 750ms ease-in-out;
     }
-     
+        
     .large-button:hover::after,
     .large-button:focus::after {
         opacity: 1;
-        transform: scale(1.3);
+        transform: scale(1.5);
     }
+/* ----------------------------------------------- */
 
-}
-/* ========================================================================= */
-
-
-
-/* =====================FOR MOBILE SCREEN SIZES========================  */
-@media (min-width: 480px) and (max-width: 767.9999px) {
-    .body-home {
-        display: block;
-        background-image: url(/assests/home/background-home-tablet.jpg);
+/* -------------MISSION-PAGE-LAYOUT-------------- */
+    .mission-body {
+        background-image: url(/assests/mission/background-mission-desktop.jpg) ;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
     }
+    
+    .mission-main {
+        padding: 3.5rem 0;
+        column-gap: 2rem;
+        row-gap: 0rem;
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        grid-template-rows: minmax(5rem, auto);
+        grid-template-areas: 
+        '. title title .'
+        '. image tabs .'
+        '. image content .'
+        '. extra extra .';
+    }
+    .tab-list-mission {
+        grid-area: tabs;
+        margin: -2rem 0 2rem 0;
+    }
+    .mission-h1 {
+        grid-area: title;
+    }
+    .mission-img {
+        grid-area: image;
+        padding-top: 3rem;
+        width: 85%;
+    }
+    
+    #mission-img-sun {
+        padding-top: 1.5rem;
+        width: 90%;
+    }
+    
+    .mission-article {
+        grid-area: content;
+        justify-content: justify;
+        text-align: justify;
+    }
+    .mission-info-extra {
+        grid-area: extra;
+    }
+    .no-display {
+        display: none;
+    }
 
-    .home-main {
-        margin: 1.5rem;
-        padding: 2rem 0 4rem 0 ;
+
+    .tab-mission {
+        background-color: transparent;
+        letter-spacing: 2px;
+        margin: 1rem 0.5rem 0 0;
+    }
+    
+    .mission-h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 400;
+        letter-spacing: 4px;
+    }
+    
+    .mission-h1 > span {
+        margin-right: 1rem;
+        color: hsl( var(--clr-white) / .6);
+    }
+    
+    .mission-h2 {
+        font-size: 5rem;
+        line-height: 7rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+    }
+    
+    .mission-meta {
+        flex-direction: row;
+        justify-content: space-between;;
         text-align: center;
+        margin: 1rem 0;
     }
-    .primary-link {
-        font-size: 0.9rem;
-    }
-
-    .primary-header {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 ;
-        padding: 1rem 0 0 1.5rem ;
-    }
-
-    .primary-header::after {
+    
+    .mission-p::after {
         content: '';
         display: block;
         position: relative;
-        height: 1px;
+        height: 1.5px;
         width: 100%;
-        margin: 3rem .5rem 0 .5rem;
-
+        margin: 2.35rem 0;
         background: hsl( var(--clr-white) / .25);
         order: 1;
     }
     
-    nav {
-       order: 2;
-    }
-
-    .primary-navigation {
-        flex-direction: column;
-        --underline-gap: .5rem;
-        inset: 0 0 0 30%;
-        position: fixed;
-        z-index: 1000;
-        background-color: hsl( var(--clr-dark) / .9);
-        margin: 0;
-        padding: 6rem 1rem;
-        transform: translateX(100%);
-    }
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0);
+    .mission-meta h3 {
+        font-size : .9rem ;
+        letter-spacing: 1px;
     }
     
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        z-index: 2000;
-        top: 1.5rem;
-        right: 1rem;
-        background:transparent;
-        background-image: url(/assests/icons/icon-hamburger.svg);
-        background-repeat: no-repeat;
-        width: 1.8rem;
-        aspect-ratio: 1;
-        border: 0;
+    .mission-meta p {
+        font-size : 1.4rem;
+        letter-spacing: 1px;
     }
     
-    .mobile-nav-toggle[aria-expanded="true"]{
-        background-image: url(/assests/icons/icon-close.svg);
-    }
-
-    .logo-isro {
-        max-width: 4rem;
-    }
-
-    .home-main {
-        margin: 1.5rem;
-        padding: 4rem 0 4rem 0 ;
-        text-align: center;
-        display: flex;
-        place-content: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .home-div {
-        display: flex;
-        place-content: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .home-h1 {
-        font-size: 1.3rem;
-        line-height: 3rem;
-    }
-    
-    .home-h1  > span {
-        font-size: 7rem;
-        line-height: 6.5rem;
-        letter-spacing: 6px;
-        display: block;
-    }
-    
-    .home-main p {
-        max-width: none;
-        font-size: 1rem;
-    }
-    
-    .large-button {
-        font-size: 1.5rem;
-        position: relative;
-        z-index: 1;
-        display: inline-grid;
-        place-items: center;
-        width: 12rem;
-        margin: 4rem 0 0 0;
-        padding: 0 1rem;
-        border-radius: 50%;
-        aspect-ratio: 1;
-        text-decoration: none;
-    }
-    
-    .large-button::after {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        background: hsl( var(--clr-white) / .1);
-        border-radius: 50%;
-        opacity: 0;
-        transition: opacity 500ms linear, transform 750ms ease-in-out;
-    }
-     
-    .large-button:hover::after,
-    .large-button:focus::after {
-        opacity: 1;
-        transform: scale(1.3);
-    }
-
-}
-/* ========================================================================= */
-
-
-
-/* =====================FOR MOBILE SCREEN SIZES========================  */
-@media (min-width: 320px) and (max-width: 479.9999px)  {
-    .body-home {
-        display: block;
-        background-image: url(/assests/home/background-home-mobile.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-
-    .home-main {
-        margin: 1.5rem;
-        padding: 2rem 0 4rem 0 ;
+    .mission-info-extra {
         text-align: center;
     }
-    .primary-link {
-        font-size: 0.9rem;
-    }
-
-    .primary-header {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 ;
-        padding: 1rem 0 0 1.5rem ;
-    }
-
-    .primary-header::after {
-        content: '';
-        height: 0;
-        width: 00;
-        margin: 0;
-        background: transparent;
-        order: 1;
+    
+    .mission-info-extra p {
+        text-align: justify;
     }
     
-    nav {
-       order: 2;
-    }
-
-    .primary-navigation {
-        flex-direction: column;
-        --underline-gap: .5rem;
-        inset: 0 0 0 30%;
-        position: fixed;
-        z-index: 1000;
-        background-color: hsl( var(--clr-dark) / .9);
-        margin: 0;
-        padding: 6rem 1rem;
-        transform: translateX(100%);
-    }
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0);
-    }
-    
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        z-index: 2000;
-        top: 1.5rem;
-        right: 1rem;
-        background:transparent;
-        background-image: url(/assests/icons/icon-hamburger.svg);
-        background-repeat: no-repeat;
-        width: 1.8rem;
-        aspect-ratio: 1;
-        border: 0;
-    }
-    
-    .mobile-nav-toggle[aria-expanded="true"]{
-        background-image: url(/assests/icons/icon-close.svg);
-    }
-
-    .logo-isro {
-        max-width: 4rem;
-    }
-
-    .home-main {
-        margin: 1.5rem;
-        padding: 4rem 0 3rem 0 ;
-        text-align: center;
-        display: flex;
-        place-content: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .home-div {
-        display: flex;
-        place-content: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .home-h1 {
-        font-size: 0.95rem;
-        letter-spacing: 1.2px;
-        line-height: 3rem;
-    }
-    
-    .home-h1  > span {
-        font-size: 6rem;
-        line-height: 5.5rem;
-        letter-spacing: 6px;
-        display: block;
-    }
-    
-    .home-main p {
-        max-width: none;
-        font-size: .9rem;
-    }
-    
-    .large-button {
-        font-size: 1.4rem;
-        position: relative;
-        z-index: 1;
-        display: inline-grid;
-        place-items: center;
+    .mission-info-extra-btn{
+        margin: 1rem auto 1.5rem auto;
         width: 11rem;
-        margin: 3.5rem 0 0 0;
-        padding: 0 .8rem;
-        border-radius: 50%;
-        aspect-ratio: 1;
-        text-decoration: none;
+        aspect-ratio: 3.5;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        cursor: pointer;
+        color: hsl( var(--clr-white) / .7 );
+        border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
+        border-radius: .5rem;
+        box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
+        position: relative;
+        background-color: transparent;
     }
-    
-    .large-button::after {
-        content: '';
+    .mission-info-extra-btn::before{
+        pointer-events: none;
+        content: "";
         position: absolute;
-        z-index: -1;
+        background-color: hsl( var(--clr-white) / .15 );
+        top: 110%;
+        left: 0;
         width: 100%;
         height: 100%;
-        background: hsl( var(--clr-white) / .1);
-        border-radius: 50%;
-        opacity: 0;
-        transition: opacity 500ms linear, transform 750ms ease-in-out;
+        transform:  perspective(1em) rotateX("40deg") scale(1, 0.35);
+        filter: blur(1.1rem);
+        opacity: 0.7;
     }
-     
-    .large-button:hover::after,
-    .large-button:focus::after {
-        opacity: 1;
-        transform: scale(1.2);
-    }
-
-}
-/* ========================================================================= */
-
-
-
-
-@media (min-width: 0px) and (max-width: 319.999px) {
-    .body-home {
-        display: block;
-        background-image: url(/assests/home/background-home-mobile.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-
-    .primary-link {
-        font-size: 0.9rem;
-    }
-
-    .primary-header {
-        display: flex;
-        justify-content: space-between;
-        margin: 0 ;
-        padding: 1rem 0 0 1.5rem ;
-    }
-
-    .primary-header::after {
-        content: '';
-        height: 0;
-        width: 00;
-        margin: 0;
-        background: transparent;
-        order: 1;
-    }
-    
-    nav {
-       order: 2;
-    }
-
-    .primary-navigation {
-        flex-direction: column;
-        --underline-gap: .5rem;
-        inset: 0 0 0 30%;
-        position: fixed;
-        z-index: 1000;
-        background-color: hsl( var(--clr-dark) / .9);
-        margin: 0;
-        padding: 6rem 1rem;
-        transform: translateX(100%);
-    }
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0);
-    }
-    
-    .mobile-nav-toggle {
-        display: block;
+    .mission-info-extra-btn::after{
+        content: "";
         position: absolute;
-        z-index: 2000;
-        top: 1.5rem;
-        right: 1rem;
-        background:transparent;
-        background-image: url(/assests/icons/icon-hamburger.svg);
-        background-repeat: no-repeat;
-        width: 1.8rem;
-        aspect-ratio: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 0.01rem 0.01rem hsl( var(--clr-white) / .3 );/* offset-x | offset-y | blur-radius | spread-radius | color */
+        opacity: 0;
+        transition: opacity 100ms linear;
+    }
+    .mission-info-extra-btn:hover::after,
+    .mission-info-extra-btn:focus::after{
+        opacity: 1;
+    }
+    .mission-info-extra-btn:hover,
+    .mission-info-extra-btn:focus{
+        background-color: transparent;
+        color: hsl( var(--clr-white) );
+        text-shadow: none;
+    }
+    .mission-info-extra-btn:hover::before,
+    .mission-info-extra-btn:focus:before {
+        opacity: 1;
+    }
+/* ----------------------------------------------- */
+
+/* ------------SATELLITE-PAGE-LAYOUT-------------- */
+    .satellite-body {
+        background-image: url(/assests/satellite/background-satellite-desktop.jpg) ;
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: bottom bottom;
+    }
+
+    .sr-only-satellite {
+        position: absolute; 
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px; 
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap; /* added line */
         border: 0;
     }
-    
-    .mobile-nav-toggle[aria-expanded="true"]{
-        background-image: url(/assests/icons/icon-close.svg);
+
+    .satellite-main {
+        padding: 3.5rem 0;
+        column-gap: 2rem;
+        row-gap: 0rem;
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        grid-template-rows: minmax(5rem, auto);
+        grid-template-areas: 
+        '. title title .'
+        '. image content .'
+        '. tabs content .';
+    }
+    .tab-list {
+        grid-area: tabs;
+        margin: 0 auto;    
+        align-items: center;
+        max-height: 5rem;
+    }
+    .satellite-h1 {
+        grid-area: title;
+    }
+    .satellite-img {
+        grid-area: image;
+        padding-top: 5rem;
+        width: 25rem;
+    }
+    .satellite-img img {
+        border-radius: .5rem;
     }
 
-    .logo-isro {
-        max-width: 3.3rem;
+    .satellite-article {
+        grid-area: content;
+        justify-content: justify;
+        text-align: justify;
+    }
+    .satellite-info-extra {
+        grid-area: extra;
+    }
+    .no-display {
+        display: none;
     }
 
-    .home-main {
-        margin: 1.5rem;
-        padding: 4rem 0 3rem 0 ;
-        text-align: center;
-        display: flex;
-        place-content: center;
-        justify-content: center;
-        flex-direction: column;
+    .tab {
+        background-color: transparent;
+        letter-spacing: 2px;
+        margin: 1rem 0.5rem 0 0;
     }
 
-    .home-div {
-        display: flex;
-        place-content: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .home-h1 {
-        font-size: 0.95rem;
-        letter-spacing: 1.2px;
+    .satellite-h1 {
+        font-size: 2.5rem;
         line-height: 3rem;
+        font-weight: 400;
+        letter-spacing: 4px;
     }
-    
-    .home-h1  > span {
-        font-size: 5rem;
-        line-height: 4.5rem;
-        letter-spacing: 6px;
-        display: block;
+
+    .satellite-h1 > span {
+        margin-right: .8rem;
+        color: hsl( var(--clr-white) / .6);
     }
-    
-    .home-main p {
-        max-width: none;
-        font-size: .9rem;
+
+    .satellite-h2 {
+        font-size: 4rem;
+        line-height: 6rem;
+        font-weight: 700;
+        letter-spacing: 4px;
     }
-    
-    .large-button {
-        font-size: 1.2rem;
-        position: relative;
-        z-index: 1;
-        display: inline-grid;
-        place-items: center;
-        width: 10rem;
-        margin: 3.5rem 0 0 0;
-        padding: 0 .8rem;
-        border-radius: 50%;
-        aspect-ratio: 1;
-        text-decoration: none;
-    }
-    
-    .large-button::after {
+
+    .satellite-p::after {
         content: '';
-        position: absolute;
-        z-index: -1;
+        display: block;
+        position: relative;
+        height: 1.5px;
         width: 100%;
-        height: 100%;
-        background: hsl( var(--clr-white) / .1);
-        border-radius: 50%;
-        opacity: 0;
-        transition: opacity 500ms linear, transform 750ms ease-in-out;
-    }
-     
-    .large-button:hover::after,
-    .large-button:focus::after {
-        opacity: 1;
-        transform: scale(1.2);
+        margin: 2.35rem 0;
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
     }
 
+    .satellite-meta {
+        flex-direction: row;
+        justify-content: space-between;;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    .satellite-meta-2 {
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .satellite-meta h3,
+    .satellite-meta-2 h3 {
+        font-size : .9rem ;
+        letter-spacing: 1px;
+    }
+
+    .satellite-meta p,
+    .satellite-meta-2 p {
+        font-size : 1.4rem;
+        letter-spacing: 1px;
+    }
+/* ----------------------------------------------- */
+
+/* -------------TECHNOLOGY-PAGE-LAYOUT-------------- */
 
-    
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===============================MISSION-PAGE-STYLE-LAYOUT============================== */
-.mission-body {
-    background-image: url(/assests/mission/background-mission-desktop.jpg) ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.mission-main {
-    padding: 3.5rem 0;
-    column-gap: 2rem;
-    row-gap: 0rem;
-    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
-    grid-template-rows: minmax(5rem, auto);
-    grid-template-areas: 
-    '. title title .'
-    '. image tabs .'
-    '. image content .'
-    '. extra extra .';
-}
-.tab-list {
-    grid-area: tabs;
-    margin: -2rem 0 2rem 0;
-}
-.mission-h1 {
-    grid-area: title;
-}
-.mission-img {
-    grid-area: image;
-    padding-top: 3rem;
-    width: 85%;
-}
-
-#mission-img-sun {
-    padding-top: 1.5rem;
-    width: 90%;
-}
-
-.mission-article {
-    grid-area: content;
-    justify-content: justify;
-    text-align: justify;
-}
-.mission-info-extra {
-    grid-area: extra;
-}
-.no-display {
-    display: none;
-}
-
-.tab {
-    background-color: transparent;
-    letter-spacing: 2px;
-    margin: 1rem 0.5rem 0 0;
-}
-
-.mission-h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-}
-
-.mission-h1 > span {
-    margin-right: 1rem;
-    color: hsl( var(--clr-white) / .6);
-}
-
-.mission-h2 {
-    font-size: 5rem;
-    line-height: 7rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-}
-
-.mission-meta {
-    flex-direction: row;
-    justify-content: space-between;;
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.mission-p::after {
-    content: '';
-    display: block;
-    position: relative;
-    height: 1.5px;
-    width: 100%;
-    margin: 2.35rem 0;
-    background: hsl( var(--clr-white) / .25);
-    order: 1;
-}
-
-.mission-meta h3 {
-    font-size : .9rem ;
-    letter-spacing: 1px;
-}
-
-.mission-meta p {
-    font-size : 1.4rem;
-    letter-spacing: 1px;
-}
-
-.mission-info-extra {
-    text-align: center;
-}
-
-.mission-info-extra p {
-    text-align: justify;
-}
-
-.mission-info-extra-btn{
-    margin: 1rem auto 1.5rem auto;
-    width: 11rem;
-    aspect-ratio: 3.5;
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    color: hsl( var(--clr-white) / .7 );
-    border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
-    border-radius: .5rem;
-    box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
-    position: relative;
-    background-color: transparent;
-}
-.mission-info-extra-btn::before{
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    background-color: hsl( var(--clr-white) / .15 );
-    top: 110%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform:  perspective(1em) rotateX("40deg") scale(1, 0.35);
-    filter: blur(1.1rem);
-    opacity: 0.7;
-}
-.mission-info-extra-btn::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 0 0.01rem 0.01rem hsl( var(--clr-white) / .3 );/* offset-x | offset-y | blur-radius | spread-radius | color */
-    opacity: 0;
-    transition: opacity 100ms linear;
-}
-.mission-info-extra-btn:hover::after,
-.mission-info-extra-btn:focus::after{
-    opacity: 1;
-}
-.mission-info-extra-btn:hover,
-.mission-info-extra-btn:focus{
-    background-color: transparent;
-    color: hsl( var(--clr-white) );
-    text-shadow: none;
-}
-.mission-info-extra-btn:hover::before,
-.mission-info-extra-btn:focus:before {
-    opacity: 1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===============================SATELLITE-PAGE-STYLE-LAYOUT============================== */
-.satellite-body {
-    background-image: url(/assests/satellite/background-satellite-desktop.jpg) ;
-    background-size: cover;
-    background-repeat: repeat;
-    background-position: bottom bottom;
-}
-
-.sr-only-satellite {
-    position: absolute; 
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px; 
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line */
-    border: 0;
-}
-
-
-
-.satellite-main {
-    padding: 3.5rem 0;
-    column-gap: 2rem;
-    row-gap: 0rem;
-    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
-    grid-template-rows: minmax(5rem, auto);
-    grid-template-areas: 
-    '. title title .'
-    '. image content .'
-    '. tabs content .';
-}
-.tab-list {
-    grid-area: tabs;
-    margin: 0 auto;    
-    align-items: center;
-    max-height: 5rem;
-}
-.satellite-h1 {
-    grid-area: title;
-}
-.satellite-img {
-    grid-area: image;
-    padding-top: 5rem;
-    width: 25rem;
-}
-.satellite-img img {
-    border-radius: .5rem;
-}
-
-.satellite-article {
-    grid-area: content;
-    justify-content: justify;
-    text-align: justify;
-}
-.satellite-info-extra {
-    grid-area: extra;
-}
-.no-display {
-    display: none;
-}
-
-.tab {
-    background-color: transparent;
-    letter-spacing: 2px;
-    margin: 1rem 0.5rem 0 0;
-}
-
-.satellite-h1 {
-    font-size: 2.5rem;
-    line-height: 3rem;
-    font-weight: 400;
-    letter-spacing: 4px;
-}
-
-.satellite-h1 > span {
-    margin-right: .8rem;
-    color: hsl( var(--clr-white) / .6);
-}
-
-.satellite-h2 {
-    font-size: 4rem;
-    line-height: 6rem;
-    font-weight: 700;
-    letter-spacing: 4px;
-}
-
-.satellite-p::after {
-    content: '';
-    display: block;
-    position: relative;
-    height: 1.5px;
-    width: 100%;
-    margin: 2.35rem 0;
-    background: hsl( var(--clr-white) / .25);
-    order: 1;
-}
-
-.satellite-meta {
-    flex-direction: row;
-    justify-content: space-between;;
-    text-align: center;
-    margin: 1rem 0;
-}
-
-.satellite-meta-2 {
-    text-align: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.satellite-meta h3,
-.satellite-meta-2 h3 {
-    font-size : .9rem ;
-    letter-spacing: 1px;
-}
-
-.satellite-meta p,
-.satellite-meta-2 p {
-    font-size : 1.4rem;
-    letter-spacing: 1px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===============================TECHNOLOGY-PAGE-STYLE-LAYOUT============================== */
 .technology-body {
     background-image: url(/assests/technology/background-technology-desktop.jpg) ;
     background-size: cover;
@@ -1448,21 +651,21 @@ nav {
     padding: 3.5rem 0;
     column-gap: 2rem;
     row-gap: 0rem;
-    grid-template-columns: repeat(2, minmax(1rem, 1fr)) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-columns: repeat(2, minmax(1rem, 1fr))  minmax(0, 30rem) repeat(2,minmax(1rem, 1fr));
     grid-template-rows: minmax(5rem, auto);
     grid-template-areas: 
-    '. tabs title image image'
-    '. tabs content image image'
+    'tabs title title image image'
+    'tabs content content image image'
     '. extra extra extra .';
 }
 .tab-list-technology {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     grid-area: tabs;
-    margin: -2rem 0 1rem 0;
 }
 
-.tab-list-technology button {
+.tab-technology {
     padding: 0.01rem;
     border-radius: 80%;
     border-color: aliceblue;
@@ -1477,8 +680,8 @@ nav {
     width: 4.5rem;
     aspect-ratio: 1;
 }
-.tab-list-technology button:hover,
-.tab-list-technology button:focus {
+.tab-technology:hover,
+.tab-technology:focus {
     transform: scale(0.9);
     transition-property: color, border-color, transform;
     transition-duration: 2s;
@@ -1496,7 +699,7 @@ nav {
 }
 .technology-img {
     padding-top: 2rem;
-    margin-left: 10rem;
+    margin: 0 auto;
     grid-area: image;
 }
 .technology-img img {
@@ -1632,3 +835,2027 @@ nav {
 .no-display {
     display: none;
 }
+
+/* ----------------------------------------------- */
+
+/* -------------ABOUT-PAGE-LAYOUT-------------- */
+
+/* ----------------------------------------------- */
+
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+
+
+
+
+
+/* =====================FOR DESKTOP SCREEN SIZES========================  */
+@media (min-width: 1024px) and (max-width: 1200px) {
+    /* -----------HOME-PAGE-LAYOUT------------ */
+        .body-home {
+            display: block;
+            background-image: url(/assests/home/background-home-desktop.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .primary-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 ;
+            padding: 2rem 0 0 2rem ;
+        }
+
+        .primary-header::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin-right: -1rem;
+            margin-top: 2.35rem;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+        
+        nav {
+        order: 2;
+        }
+    
+        .primary-navigation {
+            --gap: clamp(1.5rem, 5vw, 3.5rem);
+            --underline-gap: 1.3rem;
+            list-style: none;
+            padding: 0 3rem;
+            margin: 0;
+            background: hsl( var(--clr-white) / 0.2);
+            backdrop-filter: blur(1.5rem);
+            font-weight: 700;
+        }
+
+        .primary-link {
+            font-size: 1rem;
+        }
+        
+        .mobile-nav-toggle {
+            display: none;
+        }
+        .primary-link {
+            font-size: 1rem;
+        }
+
+        .logo-isro {
+            max-width: 5.3rem;
+        }
+
+        .home-main {
+            margin: 0 1rem;
+            padding: 8rem 10rem 0 5rem ;
+            text-align: justify;
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-around;
+        }
+
+        .home-h1 {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+
+        .home-h1  > span {
+            font-size: 7.5rem;
+            line-height: 8rem;
+            letter-spacing: 6px;
+        }
+
+        .home-main p {
+            max-width: 50ch;
+            font-size: 1.04rem;
+        }
+
+        .large-button {
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+            display: inline-grid;
+            place-items: center;
+            width: 13rem;
+            margin: 9rem 0 0 10rem;
+            padding: 0 1em;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            text-decoration: none;
+        }
+        
+        .large-button::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: hsl( var(--clr-white) / .1);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 500ms linear, transform 750ms ease-in-out;
+        }
+        
+        .large-button:hover::after,
+        .large-button:focus::after {
+            opacity: 1;
+            transform: scale(1.5);
+        }
+    /* --------------------------------------------- */
+
+    /* -------------MISSION-PAGE-LAYOUT-------------- */
+        /* NOTHING HERE */
+    /* ----------------------------------------------- */
+
+    /* ------------SATELLITE-PAGE-LAYOUT-------------- */
+        /* NOTHING-HERE */
+    /* ----------------------------------------------- */
+
+    /* -------------TECHNOLOGY-PAGE-LAYOUT-------------- */
+        /* NOTHING-HERE */
+    /* ----------------------------------------------- */
+    
+    /* -------------ABOUT-PAGE-LAYOUT-------------- */
+
+    /* ----------------------------------------------- */
+
+}
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+
+
+
+
+
+
+/* =====================FOR SMALL DESKTOPS SCREEN SIZES========================  */
+@media (min-width: 768px) and (max-width: 1023.9999px) {
+
+    /* ------------HOME-PAGE-LAYOUT------------ */
+
+        .body-home {
+            display: block;
+            background-image: url(/assests/home/background-home-desktop.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .primary-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 ;
+            padding: 1.5rem 0 0 2rem ;
+        }
+
+        .primary-header::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1px;
+            width: 100%;
+            margin-top: 1.8rem;
+            margin-right: .1rem;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+        
+        nav {
+        order: 2;
+        }
+
+        .primary-navigation {
+            --underline-gap: 1rem;
+            list-style: none;
+            padding: 0 2rem;
+            margin: 0;
+            background: hsl( var(--clr-white) / 0.2);
+            backdrop-filter: blur(1.5rem);
+            font-weight: 700;
+            line-height: 1.4rem;
+        }
+
+        .primary-link {
+            font-size: 1rem;
+        }
+
+        .mobile-nav-toggle {
+            display: none;
+        }
+
+        .logo-isro {
+            max-width: 5rem;
+        }
+
+        .home-main {
+            margin: 1.5rem;
+            padding: 6rem 0 0 0 ;
+            text-align: justify;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .home-h1 {
+            font-size: 1.4rem;
+            line-height: 3rem;
+        }
+        
+        .home-h1  > span {
+            font-size: 8rem;
+            line-height: 8.5rem;
+            letter-spacing: 6px;
+            display: block;
+        }
+        
+        .home-main p {
+            max-width: 45ch;
+            font-size: 1rem;
+        }
+        
+        .large-button {
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+            display: inline-grid;
+            place-items: center;
+            width: 12rem;
+            margin: 9rem 0 0 0;
+            padding: 0 1rem;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            text-decoration: none;
+        }
+        
+        .large-button::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: hsl( var(--clr-white) / .1);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 500ms linear, transform 750ms ease-in-out;
+        }
+        
+        .large-button:hover::after,
+        .large-button:focus::after {
+            opacity: 1;
+            transform: scale(1.3);
+        }
+
+    /* -------------MISSION-PAGE-LAYOUT-------------- */
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: -2rem 0 0.5rem 0;
+        }
+
+        .tab-mission {
+            background-color: transparent;
+            letter-spacing: 2px;
+            margin: 1rem 0.5rem 0 0;
+        }
+
+        .mission-h1 {
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+        
+        .mission-h1 > span {
+            margin-right: .8rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+
+        .mission-h2 {
+            font-size: 3.5rem;
+            line-height: 5rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+        }
+
+        .mission-p::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: 1.5rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .mission-meta {
+            margin: 0.3rem;
+        }
+
+        .mission-meta h3 {
+            font-size : .9rem ;
+            letter-spacing: 1px;
+        }
+        
+        .mission-meta p {
+            font-size : 1.2rem;
+            letter-spacing: 1.1px;
+        }
+    /* ----------------------------------------------- */
+
+
+
+
+
+    /* ------------SATELLITE-PAGE-LAYOUT-------------- */
+        .satellite-main {
+            padding: 1rem 0;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+            grid-template-rows: minmax(5rem, auto);
+            grid-template-areas: 
+            '. title title .'
+            '. image content .'
+            '. tabs content .';
+        }
+
+
+        .satellite-h1 {
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+        }
+    
+        .satellite-h1 > span {
+            margin-right: .6rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+    
+        .satellite-h2 {
+            font-size: 3rem;
+            line-height: 4rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .satellite-img {
+            grid-area: image;
+            padding-top: 5rem;
+            width: 21rem;
+        }
+
+        .satellite-meta h3,
+        .satellite-meta-2 h3 {
+            font-size : .7rem ;
+            letter-spacing: .8px;
+        }
+    
+        .satellite-meta p,
+        .satellite-meta-2 p {
+            font-size : 1.2rem;
+            letter-spacing: .7px;
+        }
+
+    /* ----------------------------------------------- */
+
+
+
+
+    /* -------------TECHNOLOGY-PAGE-LAYOUT-------------- */
+
+    .technology-main {
+        padding: 3.5rem 0;
+        column-gap: 2rem;
+        row-gap: 0rem;
+        grid-template-columns: repeat(2, minmax(1rem, 1fr)) minmax(0, 30rem) repeat(2, minmax(1rem, 1fr)) ;
+        grid-template-rows: minmax(5rem, auto);
+        grid-template-areas: 
+        'tabs . title image image'
+        'tabs . content image image'
+        '. extra extra extra .';
+    }
+    .tab-list-technology {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        grid-area: tabs;
+    }
+
+    .tab-technology {
+        padding: 0.5rem !important;
+        border-radius: 80%;
+        border-width: 0.15rem;
+        border-style: solid;
+        background-color: hsl( var(--clr-white) /.7 );
+        font-weight: 900;
+        font-size: 1rem;
+        margin: 0rem 2rem;
+        line-height: 2px;
+        width: 4rem;
+        aspect-ratio: 1;
+    }
+    .tab-technology:hover,
+    .tab-technology:focus {
+        transform: scale(0.9);
+        transition-property: color, border-color, transform;
+        transition-duration: 2s;
+        transition-delay: 0.15s;
+        transition-timing-function: ease-in-out;
+        color: hsl( var(--clr-dark) /.8 );
+        background-color: hsl( var(--clr-white)  );
+        color: darkslateblue;
+        border-color: darkslateblue;
+    }
+
+
+    .technology-h1 {
+        grid-area: title;
+    }
+    .technology-img {
+        padding-top: 2rem;
+        margin: 0 auto;
+        grid-area: image;
+    }
+    .technology-img img {
+        border-radius: .5rem;
+        max-height: 50rem;
+    }
+
+    .technology-article {
+        grid-area: content;
+        justify-content: justify;
+        text-align: justify;
+    }
+    .technology-info-extra {
+        grid-area: extra;
+    }
+
+    .tab {
+        background-color: transparent;
+        letter-spacing: 2px;
+        margin: 1rem 0.5rem 0 0;
+    }
+
+    .technology-h1 {
+        font-size: 5rem;
+        line-height: 6rem;
+        font-weight: 700;
+        letter-spacing: 4px;
+    }
+
+    .technology-h2 {
+        text-align: left;
+        font-size: .85rem;
+        line-height: 3rem;
+        font-weight: 400;
+        letter-spacing: .8px;
+        word-spacing: 2px;
+    }
+    .technology-p {
+        font-size: 1.2rem;
+    }
+    /* ----------------------------------------------- */
+    
+
+
+
+    /* -------------ABOUT-PAGE-LAYOUT-------------- */
+
+    /* ----------------------------------------------- */
+
+
+}
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+
+
+
+
+
+
+
+/* =====================FOR TABLET SCREEN SIZES========================  */
+@media (min-width: 480px) and (max-width: 767.9999px) {
+    /* --------------HOME-PAGE-LAYOUT------------ */
+        .body-home {
+            display: block;
+            background-image: url(/assests/home/background-home-tablet.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home-main {
+            margin: 1.5rem;
+            padding: 2rem 0 4rem 0 ;
+            text-align: center;
+        }
+        .primary-link {
+            font-size: 0.9rem;
+        }
+
+        .primary-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 ;
+            padding: 1rem 0 0 1.5rem ;
+        }
+
+        .primary-header::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1px;
+            width: 100%;
+            margin: 3rem .5rem 0 .5rem;
+
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+        
+        nav {
+        order: 2;
+        }
+
+        .primary-navigation {
+            flex-direction: column;
+            --underline-gap: .5rem;
+            inset: 0 0 0 30%;
+            position: fixed;
+            z-index: 1000;
+            background-color: hsl( var(--clr-dark) / .9);
+            margin: 0;
+            padding: 6rem 1rem;
+            transform: translateX(100%);
+        }
+        .primary-navigation[data-visible="true"] {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-toggle {
+            display: block;
+            position: absolute;
+            z-index: 2000;
+            top: 1.5rem;
+            right: 1rem;
+            background:transparent;
+            background-image: url(/assests/icons/icon-hamburger.svg);
+            background-repeat: no-repeat;
+            width: 1.8rem;
+            aspect-ratio: 1;
+            border: 0;
+        }
+        
+        .mobile-nav-toggle[aria-expanded="true"]{
+            background-image: url(/assests/icons/icon-close.svg);
+        }
+
+        .logo-isro {
+            max-width: 4rem;
+        }
+
+        .home-main {
+            margin: 1.5rem;
+            padding: 4rem 0 4rem 0 ;
+            text-align: center;
+            display: flex;
+            place-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .home-div {
+            display: flex;
+            place-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .home-h1 {
+            font-size: 1.3rem;
+            line-height: 3rem;
+        }
+        
+        .home-h1  > span {
+            font-size: 7rem;
+            line-height: 6.5rem;
+            letter-spacing: 6px;
+            display: block;
+        }
+        
+        .home-main p {
+            max-width: none;
+            font-size: 1rem;
+        }
+        
+        .large-button {
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+            display: inline-grid;
+            place-items: center;
+            width: 12rem;
+            margin: 4rem 0 0 0;
+            padding: 0 1rem;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            text-decoration: none;
+        }
+        
+        .large-button::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: hsl( var(--clr-white) / .1);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 500ms linear, transform 750ms ease-in-out;
+        }
+        
+        .large-button:hover::after,
+        .large-button:focus::after {
+            opacity: 1;
+            transform: scale(1.3);
+        }
+    /* --------------------------------------------- */
+
+
+
+
+    /* -------------MISSION-PAGE-LAYOUT-------------- */
+        .mission-body {
+            background-image: url(/assests/mission/background-mission-tablet.jpg) ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .mission-main {
+            padding: 1rem 0.5rem;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-rows: minmax(5rem, auto);
+            grid-template-areas: 
+            'title title .'
+            '. image .'
+            '. tabs .'
+            '. content .'
+            '. extra .';
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: -2rem 0 2rem 0;
+        }
+
+        .mission-h1 {
+            grid-area: title;
+        }
+        
+        .mission-article {
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+
+        .mission-img {
+            grid-area: image;
+            padding: 0;
+            margin: 0 auto;
+            width: 55%;
+        }
+        
+        #mission-img-sun {
+            padding-top: 0;
+            width: 60%;
+        }
+
+        .mission-h1 {
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        
+        .mission-h1 > span {
+            margin-right: .8rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: 0 auto 0 auto;
+        }
+
+        .tab-mission {
+            background-color: transparent;
+            letter-spacing: 2px;
+            margin: 1rem 0.5rem 0 0;
+        }
+
+        .mission-h2 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 4rem;
+            line-height: 7rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .mission-p::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: 1.5rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .mission-meta {
+            flex-direction: column;
+            justify-content: space-between;;
+            text-align: center;
+            margin: 0.3rem;
+        }
+
+        .mission-meta h3 {
+            font-size : .9rem ;
+            letter-spacing: 1px;
+        }
+        
+        .mission-meta p {
+            font-size : 1.4rem;
+            letter-spacing: 1.1px;
+        }
+    /* ----------------------------------------------- */
+
+
+
+
+
+    /* ------------SATELLITE-PAGE-LAYOUT-------------- */
+        .satellite-body {
+            background-image: url(/assests/satellite/background-satellite-tablet.jpg) ;
+            background-size: cover;
+        }
+
+        .satellite-main {
+            padding: 1rem ;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-rows: minmax(5rem, auto);
+            grid-template-areas: 
+            'title title .'
+            '. content .'
+            '. tabs .'
+            'image image image';
+        }
+
+        .satellite-h1 {
+            grid-area: title;
+        }
+        
+        .satellite-article {
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+
+        .satellite-img {
+            grid-area: image;
+            padding: 0;
+            margin: 3rem auto;
+            width: 80;
+        }
+
+        .satellite-h1 {
+            font-size: 1.5rem;
+            line-height: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        
+        .satellite-h1 > span {
+            margin-right: .8rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: 0 auto 0 auto;
+        }
+
+        .tab-mission {
+            background-color: transparent;
+            letter-spacing: 2px;
+            margin: 1rem 0.5rem 0 0;
+        }
+
+        .satellite-h2 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 3rem;
+            line-height: 4rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .satellite-p::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: 1rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .satellite-meta {
+            flex-direction: column;
+            justify-content: space-between;;
+            text-align: center;
+            margin: 0 0 .8rem 0;
+        }
+
+        .satellite-meta-2 {
+            margin: 0 0 2rem 0;
+        }
+
+        .satellite-meta h3,
+        .satellite-meta-2 h3 {
+            font-size : .9rem ;
+            letter-spacing: 1px;
+        }
+        
+        .satellite-meta p,
+        .satellite-meta-2 p {
+            font-size : 1.2rem;
+            letter-spacing: 1.1px;
+        }
+
+    /* ----------------------------------------------- */
+
+    /* -------------TECHNOLOGY-PAGE-LAYOUT-------------- */
+    .technology-body {
+        background-image: url(/assests/technology/background-technology-tablet.jpg) ;
+        background-size: cover;
+    }
+
+        .technology-main {
+            margin: 0;
+            padding: 1rem 3rem;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns:  minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-areas: 
+            'title title .'
+            'image image image'
+            'tabs tabs tabs'
+            'content content content'
+            '. extra .' !important;
+        }
+        .tab-list-technology {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            grid-area: tabs;
+        }
+
+        .tab-technology {
+            padding: 0.5rem !important;
+            border-radius: 80%;
+            border-width: 0.15rem;
+            border-style: solid;
+            background-color: hsl( var(--clr-white) /.7 );
+            font-weight: 900;
+            font-size: 1rem;
+            margin: .6rem 0;
+            line-height: 2px;
+            width: 3rem;
+            aspect-ratio: 1;
+        }
+    
+        .technology-h1 {
+            grid-area: title;
+        }
+
+        .technology-img {
+            grid-area: image;
+        }
+
+        .technology-img img {
+            margin: 0 auto 0.5rem auto;
+            width: 10rem; /* width of container */
+            height: 15rem; /* height of container */
+            object-position: 20% 80%;
+            object-fit: cover;
+        }
+    
+        .technology-article {
+            margin-top: 1rem;
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+        .technology-info-extra {
+            grid-area: extra;
+        }
+    
+        .technology-h1 {
+            font-size: 4rem;
+            line-height: 5rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+    
+        .technology-h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            font-weight: 400;
+            letter-spacing: .8px;
+            word-spacing: 1px;
+        }
+        .technology-p {
+            font-size: 1.2rem;
+        }
+        .technology-info-extra-p {
+            font-size: 1.1rem;
+        }
+        .technology-meta {
+            flex-direction: column;
+        }
+    /* ----------------------------------------------- */
+    
+    /* -------------ABOUT-PAGE-LAYOUT-------------- */
+
+    /* ----------------------------------------------- */
+
+}
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+
+
+
+
+
+
+/* =====================FOR MOBILE SCREEN SIZES========================  */
+@media (min-width: 320px) and (max-width: 479.9999px)  {
+    /* ---------HOME-PAGE-LAYOUT--------------- */
+        .body-home {
+            display: block;
+            background-image: url(/assests/home/background-home-mobile.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .home-main {
+            margin: 1.5rem;
+            padding: 2rem 0 4rem 0 ;
+            text-align: center;
+        }
+        .primary-link {
+            font-size: 0.9rem;
+        }
+
+        .primary-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 ;
+            padding: 1rem 0 0 1.5rem ;
+        }
+
+        .primary-header::after {
+            content: '';
+            height: 0;
+            width: 00;
+            margin: 0;
+            background: transparent;
+            order: 1;
+        }
+        
+        nav {
+        order: 2;
+        }
+
+        .primary-navigation {
+            flex-direction: column;
+            --underline-gap: .5rem;
+            inset: 0 0 0 30%;
+            position: fixed;
+            z-index: 1000;
+            background-color: hsl( var(--clr-dark) / .9);
+            margin: 0;
+            padding: 6rem 1rem;
+            transform: translateX(100%);
+        }
+        .primary-navigation[data-visible="true"] {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-toggle {
+            display: block;
+            position: absolute;
+            z-index: 2000;
+            top: 1.5rem;
+            right: 1rem;
+            background:transparent;
+            background-image: url(/assests/icons/icon-hamburger.svg);
+            background-repeat: no-repeat;
+            width: 1.8rem;
+            aspect-ratio: 1;
+            border: 0;
+        }
+        
+        .mobile-nav-toggle[aria-expanded="true"]{
+            background-image: url(/assests/icons/icon-close.svg);
+        }
+
+        .logo-isro {
+            max-width: 4rem;
+        }
+
+        .home-main {
+            margin: 1.5rem;
+            padding: 4rem 0 3rem 0 ;
+            text-align: center;
+            display: flex;
+            place-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .home-div {
+            display: flex;
+            place-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .home-h1 {
+            font-size: 0.95rem;
+            letter-spacing: 1.2px;
+            line-height: 3rem;
+        }
+        
+        .home-h1  > span {
+            font-size: 6rem;
+            line-height: 5.5rem;
+            letter-spacing: 6px;
+            display: block;
+        }
+        
+        .home-main p {
+            max-width: none;
+            font-size: .9rem;
+        }
+        
+        .large-button {
+            font-size: 1.4rem;
+            position: relative;
+            z-index: 1;
+            display: inline-grid;
+            place-items: center;
+            width: 11rem;
+            margin: 3.5rem 0 0 0;
+            padding: 0 .8rem;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            text-decoration: none;
+        }
+        
+        .large-button::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: hsl( var(--clr-white) / .1);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 500ms linear, transform 750ms ease-in-out;
+        }
+        
+        .large-button:hover::after,
+        .large-button:focus::after {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+    /* -------------MISSION-PAGE-LAYOUT-------------- */
+        .mission-body {
+            background-image: url(/assests/mission/background-mission-mobile.jpg) ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .mission-main {
+            padding: 1rem 0.5rem;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-rows: minmax(5rem, auto);
+            grid-template-areas: 
+            'title title .'
+            '. image .'
+            '. tabs .'
+            '. content .'
+            '. extra .';
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: -2rem 0 2rem 0;
+        }
+
+        .mission-h1 {
+            grid-area: title;
+        }
+        
+        .mission-article {
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+
+        .mission-img {
+            grid-area: image;
+            padding: 0;
+            margin: 0 auto;
+            width: 55%;
+        }
+        
+        #mission-img-sun {
+            padding-top: 0;
+            width: 60%;
+        }
+
+        .mission-h1 {
+            font-size: 2rem;
+            line-height: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        
+        .mission-h1 > span {
+            margin-right: .8rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: 0 auto 0 auto;
+        }
+
+        .mission-h2 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 4rem;
+            line-height: 7rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .mission-p::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: 1.5rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .mission-meta {
+            flex-direction: column;
+            justify-content: space-between;;
+            text-align: center;
+            margin: 0.3rem;
+        }
+
+        .mission-meta h3 {
+            font-size : .8rem ;
+            letter-spacing: .9px;
+        }
+        
+        .mission-meta p {
+            font-size : 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .mission-info-extra-btn{
+            margin: 1rem auto ;
+            width: 9rem;
+            aspect-ratio: 3.5;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            color: hsl( var(--clr-white) / .7 );
+            border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
+            border-radius: .5rem;
+            box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
+            position: relative;
+            background-color: transparent;
+        }
+    /* ----------------------------------------------- */
+
+
+
+
+    /* ------------SATELLITE-PAGE-LAYOUT-------------- */
+        .satellite-body {
+            background-image: url(/assests/satellite/background-satellite-mobile.jpg) ;
+            background-size: cover;
+        }
+        .satellite-main {
+            padding: .5rem  2.5rem;
+            column-gap: 1rem;
+            row-gap: 0rem;
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-rows: minmax(5rem, auto);
+            grid-template-areas: 
+            'title title title'
+            'content content content'
+            'tabs tabs tabs'
+            'image image image';
+        }
+
+        .satellite-h1 {
+            grid-area: content;
+        }
+        
+        .satellite-article {
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+
+        .satellite-img {
+            grid-area: image;
+            padding: 0;
+            margin: 3rem auto;
+            width: 85%;
+        }
+
+        .satellite-h1 {
+            color: hsl( var(--clr-white) / .6);
+            margin: -2.8rem auto 0 auto ;
+            font-size: 1.5rem;
+            line-height: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        
+        .satellite-h1 > span {
+            margin-right: .8rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: 0 auto 0 auto;
+        }
+
+        .tab-mission {
+            background-color: transparent;
+            letter-spacing: 2px;
+            margin: 1rem 0.5rem 0 0;
+        }
+
+        .satellite-h2 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 3rem;
+            line-height: 4rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .satellite-p::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: .8rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .satellite-meta {
+            flex-direction: column;
+            justify-content: space-between;;
+            text-align: center;
+            margin: 0 0 .8rem 0;
+        }
+
+        .satellite-meta-2 {
+            margin: 0 0 1.5rem 0;
+        }
+
+        .satellite-meta h3,
+        .satellite-meta-2 h3 {
+            font-size : .8rem ;
+            letter-spacing: .7px;
+        }
+        
+        .satellite-meta p,
+        .satellite-meta-2 p {
+            font-size : 1rem;
+            letter-spacing: 1px;
+        }
+    /* ----------------------------------------------- */
+
+
+
+
+    /* -------------TECHNOLOGY-PAGE-LAYOUT-------------- */
+    .technology-body {
+        background-image: url(/assests/technology/background-technology-mobile.jpg) ;
+        background-size: cover;
+    }
+        
+        .technology-main {
+            margin: 0;
+            padding: 1rem 1rem;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns:  minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-areas: 
+            'title title .'
+            'image image image'
+            'tabs tabs tabs'
+            'content content content'
+            '. extra .' !important;
+        }
+        .tab-list-technology {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            grid-area: tabs;
+        }
+
+        .tab-technology {
+            padding: 0.4rem !important;
+            border-radius: 80%;
+            border-width: 0.1rem;
+            border-style: solid;
+            background-color: hsl( var(--clr-white) /.7 );
+            font-weight: 900;
+            font-size: 1rem;
+            margin: .6rem 0;
+            line-height: 2px;
+            width: 2.5rem;
+            aspect-ratio: 1;
+        }
+
+        .technology-h1 {
+            grid-area: title;
+        }
+
+        .technology-img {
+            grid-area: image;
+        }
+
+        .technology-img img {
+            margin: 0 auto;
+            width: 10rem; /* width of container */
+            height: 15rem; /* height of container */
+            object-position: 20% 80%;
+            object-fit: cover;
+        }
+
+        .technology-article {
+            margin-top: 1rem;
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+        .technology-info-extra {
+            grid-area: extra;
+        }
+
+        .technology-h1 {
+            font-size: 4rem;
+            line-height: 5rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .technology-h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            font-weight: 400;
+            letter-spacing: .8px;
+            word-spacing: 1px;
+        }
+        .technology-p {
+            font-size: 1.2rem;
+        }
+
+        .technology-meta {
+            flex-direction: column;
+        }
+        .technology-info-extra-p {
+            font-size: 1.1rem;
+        }
+    /* ----------------------------------------------- */
+
+
+
+    
+    /* -------------ABOUT-PAGE-LAYOUT-------------- */
+
+    /* ----------------------------------------------- */
+}
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+
+
+
+
+
+
+/* =====================FOR SMALLEST SCREEN SIZES========================  */
+@media (min-width: 0px) and (max-width: 319.999px) {
+    /* ------------HOME-PAGE-LAYOUT------------ */
+        .body-home {
+            display: block;
+            background-image: url(/assests/home/background-home-mobile.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .primary-link {
+            font-size: 0.9rem;
+        }
+
+        .primary-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 ;
+            padding: 1rem 0 0 1.5rem ;
+        }
+
+        .primary-header::after {
+            content: '';
+            height: 0;
+            width: 00;
+            margin: 0;
+            background: transparent;
+            order: 1;
+        }
+        
+        nav {
+        order: 2;
+        }
+
+        .primary-navigation {
+            flex-direction: column;
+            --underline-gap: .5rem;
+            inset: 0 0 0 30%;
+            position: fixed;
+            z-index: 1000;
+            background-color: hsl( var(--clr-dark) / .9);
+            margin: 0;
+            padding: 6rem 1rem;
+            transform: translateX(100%);
+        }
+        .primary-navigation[data-visible="true"] {
+            transform: translateX(0);
+        }
+        
+        .mobile-nav-toggle {
+            display: block;
+            position: absolute;
+            z-index: 2000;
+            top: 1.5rem;
+            right: 1rem;
+            background:transparent;
+            background-image: url(/assests/icons/icon-hamburger.svg);
+            background-repeat: no-repeat;
+            width: 1.8rem;
+            aspect-ratio: 1;
+            border: 0;
+        }
+        
+        .mobile-nav-toggle[aria-expanded="true"]{
+            background-image: url(/assests/icons/icon-close.svg);
+        }
+
+        .logo-isro {
+            max-width: 3.3rem;
+        }
+
+        .home-main {
+            margin: 1.5rem;
+            padding: 4rem 0 3rem 0 ;
+            text-align: center;
+            display: flex;
+            place-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .home-div {
+            display: flex;
+            place-content: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .home-h1 {
+            font-size: 0.95rem;
+            letter-spacing: 1.2px;
+            line-height: 3rem;
+        }
+        
+        .home-h1  > span {
+            font-size: 5rem;
+            line-height: 4.5rem;
+            letter-spacing: 6px;
+            display: block;
+        }
+        
+        .home-main p {
+            max-width: none;
+            font-size: .9rem;
+        }
+        
+        .large-button {
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+            display: inline-grid;
+            place-items: center;
+            width: 10rem;
+            margin: 3.5rem 0 0 0;
+            padding: 0 .8rem;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            text-decoration: none;
+        }
+        
+        .large-button::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background: hsl( var(--clr-white) / .1);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 500ms linear, transform 750ms ease-in-out;
+        }
+        
+        .large-button:hover::after,
+        .large-button:focus::after {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+
+    /* -------------MISSION-PAGE-LAYOUT-------------- */
+        .mission-body {
+            background-image: url(/assests/mission/background-mission-mobile.jpg) ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .mission-main {
+            padding: 1rem 0.5rem;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-rows: minmax(5rem, auto);
+            grid-template-areas: 
+            'title title .'
+            '. image .'
+            '. tabs .'
+            '. content .'
+            '. extra .';
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: -2rem 0 2rem 0;
+        }
+
+        .mission-h1 {
+            grid-area: title;
+        }
+        
+        .mission-article {
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+
+        .mission-img {
+            grid-area: image;
+            padding: 0;
+            margin: 0 auto;
+            width: 60%;
+        }
+        
+        #mission-img-sun {
+            padding-top: 0;
+            width: 65%;
+        }
+
+        .mission-h1 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        
+        .mission-h1 > span {
+            margin-right: .5rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: 0 ;
+        }
+
+        .tab-mission {
+            background-color: transparent;
+            font-size: 0.8rem;
+            letter-spacing: 0.2px;
+            margin: 0.8rem 0.2rem 0 0;
+        }
+
+        .mission-h2 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 3rem;
+            line-height: 5rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .mission-p::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: .5rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .mission-meta {
+            flex-direction: column;
+            justify-content: space-between;;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+
+        .mission-meta h3 {
+            font-size : .8rem ;
+            letter-spacing: .9px;
+        }
+        
+        .mission-meta p {
+            font-size : 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .mission-info-extra-btn{
+            margin: 1rem auto ;
+            width: 8rem;
+            aspect-ratio: 3.5;
+            font-size: .9rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            color: hsl( var(--clr-white) / .7 );
+            border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
+            border-radius: .5rem;
+            box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
+            position: relative;
+            background-color: transparent;
+    }
+    /* ----------------------------------------------- */
+
+
+
+
+    /* ------------SATELLITE-PAGE-LAYOUT-------------- */
+    .satellite-body {
+        background-image: url(/assests/satellite/background-satellite-mobile.jpg) ;
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: bottom bottom;
+    }
+        .satellite-main {
+            padding: .5rem  1rem;
+            column-gap: 1rem;
+            row-gap: 0rem;
+            grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-rows: minmax(5rem, auto);
+            grid-template-areas: 
+            'title title title'
+            'content content content'
+            'tabs tabs tabs'
+            'image image image';
+        }
+
+        .satellite-h1 {
+            grid-area: content;
+        }
+        
+        .satellite-article {
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+
+        .satellite-img {
+            grid-area: image;
+            padding: 0;
+            margin: 3rem auto;
+            width: 85%;
+        }
+
+        .satellite-h1 {
+            color: hsl( var(--clr-white) / .6);
+            margin: -1.8rem auto  0 auto;
+            font-size: 1.2rem;
+            line-height: 1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+        
+        .satellite-h1 > span {
+            margin-right: .2rem;
+            color: hsl( var(--clr-white) / .6);
+        }
+
+        .tab-list-mission {
+            grid-area: tabs;
+            margin: 0 auto 0 auto;
+        }
+
+        .tab-mission {
+            background-color: transparent;
+            letter-spacing: 2px;
+            margin: 1rem 0.5rem 0 0;
+        }
+
+        .satellite-h2 {
+            text-align: center;
+            margin: 0 auto;
+            font-size: 2.5rem;
+            line-height: 3rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .satellite-p::after {
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: .8rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .satellite-meta {
+            flex-direction: column;
+            justify-content: space-between;;
+            text-align: center;
+            margin: 0 0 .8rem 0;
+        }
+
+        .satellite-meta-2 {
+            margin: 0 0 1rem 0;
+        }
+
+        .satellite-meta h3,
+        .satellite-meta-2 h3 {
+            font-size : .7rem ;
+            letter-spacing: .7px;
+        }
+        
+        .satellite-meta p,
+        .satellite-meta-2 p {
+            font-size : .9rem;
+            letter-spacing: 1px;
+        }
+    /* ----------------------------------------------- */
+
+
+    
+
+    /* -------------TECHNOLOGY-PAGE-LAYOUT-------------- */
+        .technology-body {
+            background-image: url(/assests/technology/background-technology-mobile.jpg) ;
+            background-size: cover;
+        }
+        
+        .technology-main {
+            margin: 0;
+            padding: 1rem 1rem;
+            column-gap: 2rem;
+            row-gap: 0rem;
+            grid-template-columns:  minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+            grid-template-areas: 
+            'title title .'
+            'image image image'
+            'tabs tabs tabs'
+            'content content content'
+            'extra extra extra' !important;
+        }
+        .tab-list-technology {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            grid-area: tabs;
+        }
+
+        .tab-technology {
+            padding: 0rem !important;
+            border-radius: 80%;
+            border-width: 0.1rem;
+            border-style: solid;
+            background-color: hsl( var(--clr-white) /.7 );
+            font-weight: 900;
+            font-size: 1rem;
+            margin: .6rem 0;
+            line-height: 2px;
+            width: 2rem;
+            aspect-ratio: 1;
+        }
+
+        .technology-h1 {
+            grid-area: title;
+        }
+
+        .technology-img {
+            grid-area: image;
+        }
+
+        .technology-img img {
+            margin: 0 auto;
+            width: 10rem; /* width of container */
+            height: 15rem; /* height of container */
+            object-position: 20% 80%;
+            object-fit: cover;
+        }
+
+        .technology-article {
+            margin-top: 1rem;
+            grid-area: content;
+            justify-content: justify;
+            text-align: justify;
+        }
+        .technology-info-extra {
+            grid-area: extra;
+        }
+
+        .technology-h1 {
+            font-size: 3rem;
+            line-height: 4rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+        }
+
+        .technology-h2 {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            font-weight: 400;
+            letter-spacing: .8px;
+            word-spacing: 1px;
+        }
+        .technology-p {
+            font-size: 1.2rem;
+        }
+
+        .technology-meta {
+            flex-direction: column;
+        }
+        .technology-meta-h3 {
+            font-size: .9rem;
+        }
+        .technology-info-extra-p {
+            font-size: 1.1rem;
+        }
+    /* ----------------------------------------------- */
+    
+    /* -------------ABOUT-PAGE-LAYOUT-------------- */
+
+    /* ----------------------------------------------- */
+    
+}
+/* ========================================================================= */
+/* ========================================================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===============================TECHNOLOGY-PAGE-STYLE-LAYOUT============================== */
