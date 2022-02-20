@@ -105,7 +105,9 @@ picutre {
 input,
 button,
 textarea,
-select {
+select,
+ul,
+li {
     font: inherit;
 }
 
@@ -290,7 +292,7 @@ select {
 
     .home-main {
         margin: 0 1rem;
-        padding: 8rem 10rem 0 5rem ;
+        padding: 8rem 10rem 5rem 5rem ;
         text-align: justify;
         display: flex;
         flex-direction: row;
@@ -838,9 +840,250 @@ select {
 
 /* ----------------------------------------------- */
 
+
+
+
+
 /* -------------ABOUT-PAGE-LAYOUT-------------- */
 
+    .about-body {
+        background-image: url(/assests/technology/background-technology-desktop.jpg) ;
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: bottom bottom;
+    }
+
+    .about-main {
+        padding: 1rem 2.5rem 5rem 2.5rem;
+        flex-direction: column;
+    }
+    
+    .about-h1 {
+        text-align: left;
+        font-size: 2rem;
+    }
+    .about-h1 > span {
+        margin-left:  0.2rem;
+        color: hsl( var(--clr-white) / .5);
+        font-size: 3rem;
+    }
+
+    .about-h2 {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 6rem;
+        line-height: 4rem;
+    }
+
+    .about-h3 {
+        margin: 0;
+        text-align: center;
+        font-size: 1.5rem;
+        color: hsl( var(--clr-white) / .8);
+        letter-spacing: 4px;
+        font-weight: 700;
+    }
+
+    .about-p {
+        text-align: justify;
+        letter-spacing: 1px;
+    }
 /* ----------------------------------------------- */
+
+
+
+
+/*----------------------FOOTER-------------------------  */
+    .footer {
+        background-color: #080a13;
+        display: grid;
+        grid-template-columns: minmax(1rem, .5fr) minmax(1rem, 1.5fr) minmax(1rem, 1.2fr) ;
+        grid-template-areas: 
+        'left center right';
+        justify-content: space-between;
+        color: hsl( var(--clr-white) / .8 );
+        padding: 3rem  0 0.5rem 0 ;
+    }
+
+    .left {
+        grid-area: left;
+    }
+
+    .center {
+        grid-area: center;
+    }
+
+    .right {
+        align-items: center;
+        margin: 0 auto;
+        grid-area: right;
+    }
+
+    .footer-div > ul > li {
+        color: hsl( var(--clr-white) /.5 );
+        list-style: disc;
+    }
+    
+    .footer-div > ul > li > a:hover {
+        border-bottom: .02rem solid hsl( var(--clr-white) / 0 );
+        border-color: hsl( var(--clr-white) / .5);
+    }
+
+    .footer-div > ul > li > a {
+        font-size: 1rem;
+        line-height: 2rem;
+        letter-spacing: 1.2px;
+        cursor: pointer;
+        color: inherit;
+    }
+    
+
+    .footer-div h4 {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 300;
+        letter-spacing: 2px;
+    }
+
+    .social-links {
+        display: flex;
+    }
+
+    .social-links a {
+        background-color: #fff;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        text-decoration: none;
+        color: #000 !important;
+        box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.05);
+
+        border-radius: 50%;
+        margin: 1rem 1rem -1rem 0;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+    }    
+    
+    .social-links a .fab {
+        color: #000;
+        font-size: 1.5rem;
+        line-height: 5rem;
+        position: relative;
+        z-index: 10;
+    }
+
+    .social-links a::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: -5rem;
+        left: 0;
+        background-image: linear-gradient(
+        to right top,
+        #1f51ff,
+        #9a9ae1,
+        #8aa7ec,
+        #79b3f4,
+        #69bff8,
+        #52cffe,
+        #41dfff,
+        #a0ced1,
+        #bef0ec
+        );
+        position: absolute;
+        transition-property: all;
+        transition-duration: 0.5s !important;
+        transition-timing-function: ease;
+        transition-delay: 0s;
+    }
+
+    .social-links a:hover::after {
+        top: 0;
+    }
+
+    .social-links a:hover {
+        transform: translateY(-8px);
+        color: #fff;
+    }
+
+    .center p{
+        font-size: 1rem;
+        margin: 1rem auto;
+        letter-spacing: 1.5px;
+        text-align: justify;
+    }
+
+    .right figure{
+        margin: 2.5rem auto;
+        justify-content: center;
+        text-align: center;
+        font-size: inherit;
+        letter-spacing: 1px;
+    }
+
+    .right figure img {
+        margin: 0 auto;
+        width: 2rem;
+    }
+    
+    .footer-btn {
+        text-align: center;
+        padding: .5rem auto;
+        margin: 2rem auto;
+    }
+
+    .footer-btn > a {
+        font-size: 1.15rem;
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: none;
+        color: #1f51ff;
+        border: #1f51ff 0.25em solid;
+        padding: 0.25em 1em;
+        box-shadow: inset 0 0 0.5em #1f51ff, 0 0 0.5em #1f51ff;
+        position: relative;
+        transition: background-color 100ms linear;
+    }
+    .footer-btn a::before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background-color: #1f51ff;
+        top: 120%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: perspective(1em) rotateX("40deg") scale(1, 0.35);
+        filter: blur(1.6em);
+        opacity: 0.7;
+    }
+    .footer-btn a::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 0 2em 0.5em #1f51ff;
+        opacity: 0;
+        transition: opacity 100ms linear;
+    }
+    .footer-btn a:hover::after,
+    .footer-btn:focus:after {
+        opacity: 1;
+    }
+    .footer-btn a:hover,
+    .footer-btn:focus {
+        background-color: #1f51ff;
+        color: #fff;
+        text-shadow: none;
+    }
+    .footer-btn:hover::before,
+    .footer-btn:focus:before {
+        opacity: 1;
+    }
+/* ----------------------------   */
 
 /* ========================================================================= */
 /* ========================================================================= */
@@ -913,7 +1156,7 @@ select {
 
         .home-main {
             margin: 0 1rem;
-            padding: 8rem 10rem 0 5rem ;
+            padding: 8rem 10rem 5rem 5rem ;
             text-align: justify;
             display: flex;
             flex-direction: row !important;
@@ -982,7 +1225,51 @@ select {
     /* ----------------------------------------------- */
     
     /* -------------ABOUT-PAGE-LAYOUT-------------- */
+        /* NOTHING-HERE */
+    /* ----------------------------------------------- */
 
+    /* -------------------FOOTER---------------- */
+        .footer {
+            background-color: #080a13;
+            display: grid;
+            grid-template-columns: minmax(1rem, .5fr) minmax(1rem, 1.5fr) minmax(1rem, 1.2fr) ;
+            grid-template-areas: 
+            'left . right '
+            ' center center center';
+            justify-content: space-between;
+            color: hsl( var(--clr-white) / .8 );
+            padding: 1.5rem  5rem 0.5rem 5rem ;
+        }
+
+        .left {
+            grid-area: left;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .center {
+            grid-area: center;
+        }
+
+        .right {
+            align-items: center;
+            margin: 1rem auto 0  auto;
+            grid-area: right;
+        }
+        .social-links a {
+            background-color: #fff;
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+            text-decoration: none;
+            color: #000 !important;
+            box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            margin: 1rem 0.5rem -1rem 0;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+        }    
     /* ----------------------------------------------- */
 
 }
@@ -1057,7 +1344,7 @@ select {
 
         .home-main {
             margin: 1.5rem;
-            padding: 6rem 0 0 0 ;
+            padding: 6rem 0 5rem 0 ;
             text-align: justify;
             display: flex;
             flex-direction: row;
@@ -1331,6 +1618,58 @@ select {
     /* -------------ABOUT-PAGE-LAYOUT-------------- */
 
     /* ----------------------------------------------- */
+    /* ----------------footer -----------------------*/
+        .footer {
+            background-color: #080a13;
+            display: grid;
+            grid-template-columns: minmax(1rem, .5fr) minmax(1rem, 1.5fr) minmax(1rem, 1.2fr) ;
+            grid-template-areas: 
+            'left . right '
+            ' center center center';
+            justify-content: space-between;
+            color: hsl( var(--clr-white) / .8 );
+            padding: 1.5rem  5rem 0.5rem 2rem ;
+        }
+
+        .left {
+            grid-area: left;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .center {
+            grid-area: center;
+            margin: 0 -2rem 0 1rem ;
+        }
+
+        .right {
+            align-items: center;
+            margin: 0 auto ;
+            grid-area: right;
+        }
+
+        .social-links a {
+            background-color: #fff;
+            width: 4rem;
+            height: 4rem;
+            text-align: center;
+            text-decoration: none;
+            color: #000 !important;
+            box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            margin: 1rem 0.5rem -1rem 0;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+        } 
+        .social-links a .fab {
+            color: #000;
+            font-size: 1.7rem;
+            line-height: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+    /* ----------------------------------------------- */
 
 
 }
@@ -1358,7 +1697,7 @@ select {
 
         .home-main {
             margin: 1.5rem;
-            padding: 2rem 0 4rem 0 ;
+            padding: 2rem 0 5rem 0 ;
             text-align: center;
         }
         .primary-link {
@@ -1712,6 +2051,9 @@ select {
 
     /* ----------------------------------------------- */
 
+
+
+
     /* -------------TECHNOLOGY-PAGE-LAYOUT-------------- */
     .technology-body {
         background-image: url(/assests/technology/background-technology-tablet.jpg) ;
@@ -1806,8 +2148,130 @@ select {
     
     /* -------------ABOUT-PAGE-LAYOUT-------------- */
 
+        .about-body {
+            background-image: url(/assests/technology/background-technology-tablet.jpg) ;
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: bottom bottom;
+        }
+
+        .about-h1 {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+        .about-h1 > span {
+            margin-left:  0.1rem;
+            color: hsl( var(--clr-white) / .5);
+            font-size: 2.5rem;
+        }
+
+        .about-h2 {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 5rem;
+            line-height: 3rem;
+        }
+
+        .about-h3 {
+            margin: 0;
+            text-align: center;
+            font-size: 1.3rem;
+            color: hsl( var(--clr-white) / .8);
+            letter-spacing: 2.5px;
+            font-weight: 700;
+        }
+
     /* ----------------------------------------------- */
 
+    /* ---------------footer------------------------- */
+        .footer {
+            background-color: #080a13;
+            display: grid;
+            grid-template-columns: minmax(1rem, 1fr) minmax(1rem, 1fr) minmax(1rem, 1fr) ;
+            grid-template-areas: 
+            'left left left'
+            'right right right'
+            'center center center';
+            justify-content: space-between;
+            color: hsl( var(--clr-white) / .8 );
+            padding: 1.5rem 0 ;
+        }
+
+        .left {
+            grid-area: left;
+            align-items: center;
+            margin: 0 auto 1rem auto;
+        }
+
+        .left ul li {
+            display: inline;
+            margin: 1rem 0.5rem;
+        }
+        .left ul li a {
+            font-size: .8rem;
+        }
+
+        .left::after{
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: .1rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .center {
+            grid-area: center;
+            margin: 0 auto;
+            width: 50ch;
+        }
+
+        .right {
+            align-items: center;
+            margin: 0 auto ;
+            grid-area: right;
+        }
+        .right::after{
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: .5rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .social-links a {
+            background-color: #fff;
+            width: 4rem;
+            height: 4rem;
+            text-align: center;
+            text-decoration: none;
+            color: #000 !important;
+            box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            margin: 1rem 1rem -1rem 0;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+        } 
+        .social-links a .fab {
+            color: #000;
+            font-size: 1.7rem;
+            line-height: 4rem;
+            position: relative;
+            z-index: 10;
+        }
+        .center h4 {
+            font-size: 1rem;
+        }
+        .right h4 {
+            font-size: 1rem;
+        }
+    /* ----------------------------------------------- */
 }
 /* ========================================================================= */
 /* ========================================================================= */
@@ -2288,6 +2752,137 @@ select {
 
     
     /* -------------ABOUT-PAGE-LAYOUT-------------- */
+        .about-body {
+            background-image: url(/assests/technology/background-technology-tablet.jpg) ;
+            background-size: cover;
+            background-repeat: repeat;
+            background-position: bottom bottom;
+        }
+
+        .about-main{
+            padding: .5rem 1rem 2.5rem 1rem;
+        }
+        .about-h1 {
+            text-align: left;
+            font-size: 1.5rem;
+        }
+        .about-h1 > span {
+            margin-left:  0.;
+            color: hsl( var(--clr-white) / .5);
+            font-size: 2rem;
+        }
+
+        .about-h2 {
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 4rem;
+            line-height: 2rem;
+        }
+
+        .about-h3 {
+            margin: 0;
+            text-align: center;
+            font-size: 1.1rem;
+            color: hsl( var(--clr-white) / .8);
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .about-p {
+            font-size: 1rem;
+        }
+    /* ----------------------------------------------- */
+
+
+
+        /*------------------footer------------------------- */
+        .footer {
+            background-color: #080a13;
+            display: grid;
+            grid-template-columns: minmax(1rem, 1fr) minmax(1rem, 1fr) minmax(1rem, 1fr) ;
+            grid-template-areas: 
+            'left left left'
+            'right right right'
+            'center center center';
+            justify-content: space-between;
+            color: hsl( var(--clr-white) / .8 );
+            padding: 1.5rem 0 ;
+        }
+
+        .left {
+            grid-area: left;
+            align-items: center;
+            margin: 0 ;
+        }
+
+        .left ul li {
+            display: inline;
+            margin: 1rem 0.2rem;
+        }
+        .left ul li a {
+            font-size: .7rem;
+            letter-spacing: 0.3px;
+        }
+
+        .left::after{
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: .1rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .center {
+            grid-area: center;
+            margin: -2rem 1rem 0 1rem;
+        }
+
+        .right {
+            align-items: center;
+            margin: 0 auto ;
+            grid-area: right;
+        }
+        .right::after{
+            content: '';
+            display: block;
+            position: relative;
+            height: 1.5px;
+            width: 100%;
+            margin: .5rem 0;
+            background: hsl( var(--clr-white) / .25);
+            order: 1;
+        }
+
+        .social-links a {
+            background-color: #fff;
+            width: 2.5rem;
+            height: 2.5rem;
+            text-align: center;
+            text-decoration: none;
+            color: #000 !important;
+            box-shadow: 0 0 1rem .5rem rgba(0, 0, 0, 0.05);
+            border-radius: 50%;
+            margin: 0.5rem 1rem -1.5rem 0;
+            position: relative;
+            z-index: 10;
+            overflow: hidden;
+        } 
+        .social-links a .fab {
+            color: #000;
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            position: relative;
+            z-index: 10;
+        }
+        .center h4 {
+            font-size: 1rem;
+        }
+        .right h4 {
+            font-size: 1rem;
+        }
 
     /* ----------------------------------------------- */
 }
@@ -2775,7 +3370,44 @@ select {
     /* ----------------------------------------------- */
     
     /* -------------ABOUT-PAGE-LAYOUT-------------- */
+    .about-body {
+        background-image: url(/assests/technology/background-technology-tablet.jpg) ;
+        background-size: cover;
+        background-repeat: repeat;
+        background-position: bottom bottom;
+    }
 
+    .about-main{
+        padding: .5rem 1rem 2.5rem 1rem;
+    }
+    .about-h1 {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .about-h1 > span {
+        margin-left:  0.;
+        color: hsl( var(--clr-white) / .5);
+        font-size: 2rem;
+    }
+
+    .about-h2 {
+        margin-top: 1.5rem;
+        text-align: center;
+        font-size: 3.5rem;
+        line-height: 2.5rem;
+    }
+
+    .about-h3 {
+        margin: 0;
+        text-align: center;
+        font-size: 1rem;
+        color: hsl( var(--clr-white) / .8);
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    .about-p{
+        font-size: .8rem;
+    }
     /* ----------------------------------------------- */
     
 }
