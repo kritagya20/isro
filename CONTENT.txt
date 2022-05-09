@@ -1,47 +1,34 @@
-ISRO- INDIAN SPACE RESEARCH CENTER
+						ISRO- INDIAN SPACE RESEARCH CENTER
 
-PAGE-1 : HOME
+							PAGE-1 : HOME
 
-PAGE-2 : MISSION
+Indian Space Research Organisation
+ISRO
+ISRO was established in 1969. Since its founding, ISRO has been developing an Indian space program, launching 	more than 50 satellites for other countries. ISRO is responsible for the manufacturing and launch of satellites, as well as 	the research and development of space and planet related systems through space-based experiments.
+
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+
+							PAGE-2 : MISSION
+
 			TAB-1 : MOON = Chandrayaan-1
 			TAB-2 : MARS = MOM
 			TAB-3 :	SUN = Aditya-L1
 			TAB-4 : STAR = AstroSat
 			TAB-5 : VENUS = Shukrayaan-1
-
-PAGE-3 : SATELLITE 
-			TAB-1 : EOS-01 = Disaster Management System, Earth Observation | LEO | 7/11/2020
-			TAB-2 : IRNSS-1I = Navigation | GEO | 12/4/2018
-			TAB-3 : SCATSAT-1 = Climate & Environment | SSPO | 26/9/2016 
-			TAB-4 : INSAT = Communication Satellite Systems | GEO | 1983
-
-PAGE-4 : TECHNOLOGY
-			TAB-1 : SLV-3
-			TAB-2 : ASLV
-			TAB-3 : PSLV
-			TAB-4 : GSLV
-			TAB-5 : GSLV-3
-			TAB-6 : RLV-TD
-
-PAGE-5 : ABOUT
-			BRIEF :
-			HISTORY : 
-			ACHIEVEMENTS :
-			SUCCESSFUL-MISSIONS :
-			FUTURE-MISSIONS :
-
 -------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------
-
 MOON = Chandrayaan-1
 
 Chandrayaan-1 was the first lunar space probe of the ISRO and found water on the Moon. It mapped the Moon in infrared, visible, and X-ray light from lunar orbit and used reflected radiation to prospect for various elements, minerals, and ice. It operated in 2008–09. 
 
 A Polar Satellite Launch Vehicle launched the 590-kg (1,300-pound) Chandrayaan-1 on October 22, 2008, from the Satish Dhawan Space Centre on Sriharikota Island, Andhra Pradesh state. The probe then was boosted into an elliptical polar orbit around the Moon, 504 km (312 miles) high at its closest to the lunar surface and 7,502 km (4,651 miles) at its farthest. After checkout, it descended to a 100-km (60-mile) orbit. On November 14, 2008, Chandrayaan-1 launched a small craft, the Moon Impact Probe (MIP), that was designed to test systems for future landings and study the thin lunar atmosphere before crashing on the Moon’s surface. MIP impacted near the south pole, but, before it crashed, it discovered small amounts of water in the Moon’s atmosphere.
 The estimated cost for the project was ₹386 crore (US$51 million). It was intended to survey the lunar surface over a two-year period, to produce a complete map of the chemical composition at the surface and three-dimensional topography. The polar regions are of special interest as they might contain water ice.Among its many achievements was the discovery of widespread presence of water molecules in lunar soil.
-After almost a year, the orbiter started suffering from several technical issues including failure of the star tracker and poor thermal shielding; Chandrayaan-1 stopped communicating at about 20:00 UTC on 28 August 2009, shortly after which the ISRO officially declared that the mission was over. Chandrayaan-1 operated for 312 days as opposed to the intended two years, but the mission achieved most of its scientific objectives
--------------------------------------------------------------------------------------------------
+After almost a year, the orbiter started suffering from several technical issues including failure of the star tracker and poor thermal shielding; Chandrayaan-1 stopped communicating at about 20:00 UTC on 28 August 2009, shortly after which the ISRO officially declared that the mission was over. Chandrayaan-1 operated for 312 days as opposed to the intended two years, but the mission achieved most of its scientific objectives.
 
+-------------------------------------------------------------------------------------------------
 MARS = MOM
 
 Isro's Mangalyaan is the first successful Mars Orbiter mission. India is the fourth country to accomplish this feat and the first to do so on its very first attempt. The Mars Probe was launched successfully on November 5, 2013. The same was inserted into the orbit of Mars after a transit for 298  days, that is, on September 24, 2014. A total of 454 Crore was spent on the project, making it the cheapest mission to Mars ever.
@@ -49,8 +36,8 @@ Isro's Mangalyaan is the first successful Mars Orbiter mission. India is the fou
 The Mars Orbiter Mission (MOM), also called Mangalyaan ("Mars-craft", from mangala, "Mars" and yāna, "craft, vehicle"), is a space probe orbiting Mars since 24 September 2014. It was launched on 5 November 2013 by the Indian Space Research Organisation (ISRO). It is India's first interplanetary mission and it made it the fourth space agency to achieve Mars orbit, after Roscosmos, NASA, and the European Space Agency. It made India the first Asian nation to reach Martian orbit and the first nation in the world to do so on its maiden attempt.
 The Mars Orbiter Mission probe lifted-off from the First Launch Pad at Satish Dhawan Space Centre (Sriharikota Range SHAR), Andhra Pradesh, using a Polar Satellite Launch Vehicle (PSLV) rocket C25 at 09:08 UTC on 5 November 2013. The launch window was approximately 20 days long and started on 28 October 2013. The MOM probe spent about a month in Earth orbit, where it made a series of seven apogee-raising orbital manoeuvres before trans-Mars injection on 30 November 2013 (UTC). After a 298-day transit to Mars, it was put into Mars orbit on 24 September 2014.
 The mission is a "technology demonstrator" project to develop the technologies for designing, planning, management, and operations of an interplanetary mission. It carries five scientific instruments. The spacecraft is currently being monitored from the Spacecraft Control Centre at ISRO Telemetry, Tracking and Command Network (ISTRAC) in Bengaluru with support from the Indian Deep Space Network (IDSN) antennae at Bengaluru, Karnataka.
--------------------------------------------------------------------------------------------------
 
+-------------------------------------------------------------------------------------------------
 STAR = AstroSat
 
 The Astrosat satellite is a dedicated mission of ISRO on Astronomy. It will observe celestial sources simultaneously in X-Ray, Optical and UV Spectral bands. The Astrosat satellite was launched from Sriharikota, Andhra Pradesh. The satellite was launched using the Polar Satellite Launch Vehicle (PSLV) C-30. The satellite was placed into an orbit of 650 Km. The mission was planned for a period of 5 years.
@@ -58,8 +45,8 @@ The Astrosat satellite is a dedicated mission of ISRO on Astronomy. It will obse
 After the success of the satellite-borne Indian X-ray Astronomy Experiment (IXAE), which was launched in 1996, the Indian Space Research Organization (ISRO) approved further development for a full-fledged astronomy satellite, Astrosat, in 2004.
 A number of astronomy research institutions in India, and abroad have jointly built instruments for the satellite. Important areas requiring coverage include studies of astrophysical objects ranging from nearby Solar System objects to distant stars and objects at cosmological distances; timing studies of variables ranging from pulsations of hot white dwarfs to those of active galactic nuclei can be conducted with Astrosat as well, with time scales ranging from milliseconds to days.
 Astrosat is a multi-wavelength astronomy mission on an IRS-class satellite into a near-Earth, equatorial orbit. The five instruments on board cover the visible (320–530 nm), near UV (180–300 nm), far UV (130–180 nm), soft X-ray (0.3–8 keV and 2–10 keV) and hard X-ray (3–80 keV and 10–150 keV) regions of the electromagnetic spectrum. 
--------------------------------------------------------------------------------------------------
 
+-------------------------------------------------------------------------------------------------
 SUN = Aditya-L1
 
 Aditya L1 is an Indian coronagraphy spacecraft currently being designed and built by ISRO and various other Indian research institutes. It will study the solar atmosphere through a halo orbit in its L1 point between Earth and the Sun. The spacecraft will study coronal heating, solar wind acceleration, coronal magnetometry, origin and monitoring of near-UV solar radiation and continuously observe photosphere, chromosphere and corona, solar energetic particles and magnetic field of the Sun. 
@@ -67,8 +54,8 @@ Aditya L1 is an Indian coronagraphy spacecraft currently being designed and buil
 The Aditya-L1 mission will take around 109 Earth days after launch to reach the halo orbit around the L1 point, which is about 1,500,000 km (930,000 mi) from Earth. The 1,500 kg (3,300 lb) satellite carries seven science payloads with diverse objectives, including but not limited to, the coronal heating, solar wind acceleration, coronal magnetometry, origin and monitoring of near-UV solar radiation (which drives Earth's upper atmospheric dynamics and global climate), coupling of the solar photosphere to chromosphere and corona, in-situ characterisations of the space environment around Earth by measuring energetic particle fluxes and magnetic fields of the solar wind and solar magnetic storms that have adverse effects on space and ground-based technologies.
 Aditya-L1 will be able to provide observations of Sun's photosphere, chromosphere and corona. In addition, an instrument will study the solar energetic particles' flux reaching the L1 orbit, while a magnetometer payload will measure the variation in magnetic field strength at the halo orbit around L1. These payloads have to be placed outside the interference from the Earth's magnetic field and hence could not have been useful in the low Earth orbit as proposed on the original Aditya mission concept.
 One of the major unsolved issues in the field of solar physics is that the upper atmosphere of the Sun is 1,000,000 K (1,000,000 °C; 1,800,000 °F) hot whereas the lower atmosphere is just 6,000 K (5,730 °C; 10,340 °F). In addition, it is not understood how exactly the Sun's radiation affects the dynamics of the Earth's atmosphere on shorter as well as on longer time scale. The mission will obtain near simultaneous images of the different layers of the Sun's atmosphere, which reveal the ways in which the energy may be channeled and transferred from one layer to another. Thus the Aditya-L1 mission will enable a comprehensive understanding of the dynamical processes of the Sun and address some of the outstanding problems in solar physics and heliophysics. 
--------------------------------------------------------------------------------------------------
 
+-------------------------------------------------------------------------------------------------
 VENUS = Shukrayaan-1
 
 Shukrayaan-1 is an orbiter proposed by ISRO to study Venus's surface and atmosphere. Depending on its final configuration, it is expected to be able to carry approximately 100 kilograms (220 lbs) of science payload and generate 500 watts of power.Initially, Venus will orbit at a distance of 500 kilometers (310 miles) at periapsis and 60,000 kilometers (37,000 miles) at apoapsis.
@@ -79,30 +66,52 @@ Recently ISRO has shortlisted 20 international proposals that include collaborat
 
 -------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 
+							PAGE-3 : SATELLITE 
+
+			TAB-1 : EOS-01 = Disaster Management System, Earth Observation | LEO | 7/11/2020
+			TAB-2 : IRNSS-1I = Navigation | GEO | 12/4/2018
+			TAB-3 : SCATSAT-1 = Climate & Environment | SSPO | 26/9/2016 
+			TAB-4 : INSAT = Communication Satellite Systems | GEO | 1983
+
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 EOS-01 = Disaster Management System | LEO | (RADAR IMAGINING - 7/11/2020)
 
 A synthetic aperture radar (SAR) based all-weather Earth imaging satellite, EOS-01 was built by the Indian Space Research Organisation to support forestry, agricultural and disaster management operations.
--------------------------------------------------------------------------------------------------------------
 
+-------------------------------------------------------------------------------------------------------------
 IRNSS-1I = Navigation | GEO | (Navigation - 12/4/2018)
 
 IRNSS-1I is the eighth satellite in the Indian Regional Navigational Satellite System (IRNSS) series of satellites. The satellite's assembly, integration and testing is partly done by a consortium of six small firms led by Alpha Design Technologies, a Bengaluru-based aerospace firm under URSC's supervision. 
 
 -------------------------------------------------------------------------------------------------------------
-
 SCATSAT-1 = Climate & Environment | SSPO | (Earth Observation - 26/9/2016)
 
-Scatterometer Satellite-1 is a satellite providing weather forecasting, cyclone prediction, and tracking services to India. It has been developed by ISRO Satellite Centre, Bangalore whereas its payload was developed by Space Applications Centre, Ahmedabad. 
+Scatterometer Satellite-1 is a satellite providing weather forecasting, cyclone prediction, and tracking services to India. It has been developed by ISRO Satellite Centre, Bangalore whereas its payload was developed by Space Applications Centre, Ahmedabad.  
 -------------------------------------------------------------------------------------------------------------
-
 INSAT = Communication Satellite Systems | GEO | (Earth Observation - 10/4/1982)
 
 The Indian National Satellite System or INSAT, is a series of multipurpose geostationary satellites launched by ISRO to satisfy the telecommunications, broadcasting, meteorology, and search and rescue operations. It is a joint venture of the Department of Space, Department of Telecommunications, India Meteorological Department, All India Radio and Doordarshan.
 
 -------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 
+							PAGE-4 : TECHNOLOGY
+
+			TAB-1 : SLV-3
+			TAB-2 : ASLV
+			TAB-3 : PSLV
+			TAB-4 : GSLV
+			TAB-5 : GSLV-3
+			TAB-6 : RLV-TD
+
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 SLV (Total launches = 3/4)
 
 The Satellite Launch Vehicle or SLV was a small-lift launch vehicle project started in the early 1970s by the Indian Space Research Organisation to develop the technology needed to launch satellites. SLV was intended to reach a height of 400 kilometres (250 mi) and carry a payload of 40 kg (88 lb). The first experimental flight of SLV-3, in August 1979, was a failure. The first successful launch took place on 18 July, 1980. It was a four-stage rocket with all solid-propellant motors.
@@ -110,20 +119,18 @@ The Satellite Launch Vehicle or SLV was a small-lift launch vehicle project star
 The first launch of the SLV took place in Sriharikota on 10 August 1979. The fourth and final launch of the SLV took place on 17 April 1983. It has taken approximately seven years to realise the vehicle from start. The solid motor case for first and second stage are fabricated from 15 CDV6 steel sheets and third and fourth stages from fibre reinforced plastic. 
 
 -------------------------------------------------------------------------------------------------------------
-
 ASLV (Total launches = 2/4)
 
-The Augmented Satellite Launch Vehicle or Advanced Satellite Launch Vehicle, also known as ASLV, was a Small-lift launch vehicle five-stage solid-fuel rocket developed by the Indian Space Research Organisation (ISRO) to place 150 kg satellites into LEO. This project was started by India during the early 1980s to develop technologies needed for a payload to be placed into a geostationary orbit. Its design was based on Satellite Launch Vehicle. ISRO did not have sufficient funds for both the Polar Satellite Launch Vehicle programme and the ASLV programme at the same time and the ASLV programme was terminated after the initial developmental flights. The payloads of ASLV were Stretched Rohini Satellites.
+The Augmented Satellite Launch Vehicle or Advanced Satellite Launch Vehicle, also known as ASLV, was a Small-lift launch vehicle five-stage solid-fuel rocket developed by the Indian Space Research Organisation (ISRO) to place 150 kg satellites into LEO. This project was started by India during the early 1980s to develop technologies needed for a payload to be placed into a geostationary orbit. Its design was based on Satellite Launch Vehicle. ISRO did not have sufficient funds for both the Polar Satellite Launch Vehicle programme and the ASLV programme at the same time and the ASLV programme was terminated after the initial developmental flights. The payloads of ASLV were Stretched Rohini Satellites. 
 
 The ASLV was a five-stage vehicle. Two strap-on boosters acted as a first stage, with the core stage igniting after booster burn out. The payload capacity of the ASLV was approximately 150 kg (330 lb) to an orbit of 400 km (250 mi) with a 47-degree inclination.
 
 At liftoff, the ASLV generated 909.9 kN (204,500 lbf) of thrust. It was a 41,000-kilogram (90,000 lb) rocket, measuring 23.5 metres (77 ft) in length with a core diameter of one metre (3 ft 3 in). The height to diameter ratio of ASLV was very large which resulted in the vehicle being unstable in flight. This was compounded by the fact that many of the critical events during a launch like the core ignition and the booster separation happened at the Tropopause where the dynamic loads on the launcher was at the maximum.
 
 -------------------------------------------------------------------------------------------------------------
-
 PSLV (Total launches = 51/54)
 
-PSLV is an expendable medium-lift launch vehicle designed and operated by the Indian Space Research Organisation (ISRO). It was developed to allow India to launch its Indian Remote Sensing (IRS) satellites into sun-synchronous orbits, a service that was, until the advent of the PSLV in 1993, commercially available only from Russia. PSLV can also launch small size satellites into Geostationary Transfer Orbit (GTO).
+PSLV is an expendable medium-lift launch vehicle designed and operated by the Indian Space Research Organisation (ISRO). It was developed to allow India to launch its Indian Remote Sensing (IRS) satellites into sun-synchronous orbits, a service that was, until the advent of the PSLV in 1993, commercially available only from Russia. PSLV can also launch small size satellites into Geostationary Transfer Orbit (GTO). 
 
 Some notable payloads launched by PSLV include India's first lunar probe Chandrayaan-1, India's first interplanetary mission, Mars Orbiter Mission (Mangalyaan) and India's first space observatory, Astrosat.
 
@@ -132,7 +139,6 @@ PSLV has gained credibility as a leading provider of rideshare services for smal
 Payloads can be integrated in tandem configuration employing a Dual Launch Adapter. Smaller payloads are also placed on equipment deck and customized payload adapters.
 
 -------------------------------------------------------------------------------------------------------------
-
 GSLV (Total launches = 10/14)
 
 GSLV Mk II is the largest launch vehicle developed by India, which is currently in operation. This fourth generation launch vehicle is a three stage vehicle with four liquid strap-ons. The indigenously developed cryogenic Upper Stage (CUS), which is flight proven, forms the third stage of GSLV Mk II. From January 2014, the vehicle has achieved four consecutive successes.
@@ -140,7 +146,6 @@ GSLV Mk II is the largest launch vehicle developed by India, which is currently 
 GSLV rockets using the Russian Cryogenic Stage (CS) are designated as the GSLV Mark I while versions using the indigenous Cryogenic Upper Stage (CUS) are designated the GSLV Mark-II. GSLV MARK-II variant uses an Indian cryogenic engine, the CE-7.5, and is capable of launching 2500 kg into geostationary transfer orbit. Previous GSLV vehicles (GSLV Mark I) have used Russian cryogenic engines.
 
 -------------------------------------------------------------------------------------------------------------
-
 GSLV-3 (Total launches = 4/4)
 
 The GSLV Mk III, also referred to as the Launch Vehicle Mark 3 (LVM3), is a three-stage medium-lift launch vehicle developed by the Indian Space Research Organisation (ISRO). Primarily designed to launch communication satellites into geostationary orbit, it is also identified as the launch vehicle for crewed missions under the Indian Human Spaceflight Programme and dedicated science missions like Chandrayaan-2. The GSLV Mk III has a higher payload capacity than the similarly named GSLV Mk II.
@@ -150,12 +155,33 @@ After several delays and a sub-orbital test flight on 18 December 2014, ISRO suc
 GSLV Mk III launched CARE, India's space capsule recovery experiment module, Chandrayaan-2, India's second lunar mission and will be used to carry Gaganyaan, the first crewed mission under Indian Human Spaceflight Programme. In October 2021, UK-based global communication satellite provider OneWeb entered into an agreement with ISRO to launch OneWeb satellites aboard the GSLV Mk III along with the PSLV.
 
 -------------------------------------------------------------------------------------------------------------
-
 RLV-TD- (23 May 2016)
 
 RLV-TD is India's first uncrewed flying testbed developed for the Indian Space Research Organisation (ISRO)'s Reusable Launch Vehicle Technology Demonstration Programme. It is a scaled down prototype of an eventual two-stage-to-orbit (TSTO) reusable launch vehicle.The RLV-TD successfully completed its first atmospheric test flight on 23 May 2016, which lasted for 770 seconds and reached a maximum altitude of 65 kilometres (40 mi). 
 
 It was designed to evaluate various technologies, and development of the final version is expected to take 10 to 15 years. The fully developed RLV is expected to take off vertically like a rocket, deploy a satellite in orbit, return to Earth, and land on a runway. 
 
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+
+							PAGE-5 : ABOUT
+
+India decided to go to space when Indian National Committee for Space Research (INCOSPAR) was set up by the Government of India in 1962. With the visionary Dr Vikram Sarabhai at its helm, INCOSPAR set up the Thumba Equatorial Rocket Launching Station (TERLS) in Thiruvananthapuram for upper atmospheric research.
+
+Indian Space Research Organisation, formed in 1969, superseded the erstwhile INCOSPAR. Vikram Sarabhai, having identified the role and importance of space technology in a Nation's development, provided ISRO the necessary direction to function as an agent of development. ISRO then embarked on its mission to provide the Nation space based services and to develop the technologies to achieve the same independently.
+
+Throughout the years, ISRO has upheld its mission of bringing space to the service of the common man, to the service of the Nation. In the process, it has become one of the six largest space agencies in the world. ISRO maintains one of the largest fleet of communication satellites (INSAT) and remote sensing (IRS) satellites, that cater to the ever growing demand for fast and reliable communication and earth observation respectively. ISRO develops and delivers application specific satellite products and tools to the Nation: broadcasts, communications, weather forecasts, disaster management tools, Geographic Information Systems, cartography, navigation, telemedicine, dedicated distance education satellites being some of them.
+
+To achieve complete self reliance in terms of these applications, it was essential to develop cost efficient and reliable launch systems, which took shape in the form of the Polar Satellite Launch Vehicle (PSLV). The famed PSLV went on to become a favoured carrier for satellites of various countries due to its reliability and cost efficiency, promoting unprecedented international collaboration. The Geosynchronous Satellite Launch Vehicle (GSLV) was developed keeping in mind the heavier and more demanding Geosynchronous communication satellites.
+
+Apart from technological capability, ISRO has also contributed to science and science education in the country. Various dedicated research centres and autonomous institutions for remote sensing, astronomy and astrophysics, atmospheric sciences and space sciences in general function under the aegis of Department of Space. ISRO's own Lunar and interplanetary missions along with other scientific projects encourage and promote science education, apart from providing valuable data to the scientific community which in turn enriches science.
+
+Future readiness is the key to maintaining an edge in technology and ISRO endeavours to optimise and enhance its technologies as the needs and ambitions of the country evolve. Thus, ISRO is moving forward with the development of heavy lift launchers, human spaceflight projects, reusable launch vehicles, semi-cryogenic engines, single and two stage to orbit (SSTO and TSTO) vehicles, development and use of composite materials for space applications etc. 
+
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------
 

@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Research in India</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/satellite.css">
 
      <!-- JS -->
     <script src="js/index.js" defer></script>
 
     <!-- ICON -->
-    <link rel="icon" type="icon" href="assests/icons/ISRO-icon.png">
+    <link rel="icon" type="icon" href="./assets/icons/ISRO-icon.png">
 
     <!-- ICON-START --> 
     <script src="https://kit.fontawesome.com/1b1d9cd629.js" crossorigin="anonymous"></script>
@@ -26,7 +27,7 @@
 <body class="satellite-body" >
     <header class="primary-header">
         <div>
-            <img src="./assests/icons/ISRO-icon.png" alt="logo" class="logo-isro">
+            <img src="./assets/icons/ISRO-icon.png" alt="logo" class="logo-isro">
         </div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation" ><span class="sr-only" aria-expanded="false">Menu</span></button>
         <nav>
@@ -52,7 +53,7 @@
         <h1  class="first-tab satellite-h1 ff-sans-cond uppercase text-white " role="tabpanel"> <span>01</span> LEO SATELLITE</h1>
                 
         <picture  class="first-tab satellite-img"  role="tabpanel">
-            <img  src="/assests/satellite/EOS-01.jpg" alt="the satellite">
+            <img  src="./assets/satellite/EOS-01.jpg" alt="the satellite">
         </picture>
     
         <article  class="first-tab satellite-article" role="tabpanel">
@@ -81,21 +82,21 @@
 
         <!-- =====================================IRNSS-1I====================================== -->
 
-        <h1 hidden  class="second-tab satellite-h1 ff-sans-cond uppercase text-white" aria-details="mars" role="tabpanel"><span>02</span>GEO SATELLITE</h1>
+        <h1 hidden  class="second-tab satellite-h1 ff-sans-cond uppercase text-white" role="tabpanel"><span>02</span>GEO SATELLITE</h1>
             
-        <picture hidden  class="second-tab satellite-img" aria-details="mars" role="tabpanel">
-            <img id="mission-img-mars" src="/assests/satellite/IRNSS-1I.png" alt="the satellite">
+        <picture hidden  class="second-tab satellite-img" role="tabpanel">
+            <img src="./assets/satellite/IRNSS-1I.png" alt="the satellite">
         </picture>
         
 
-        <article hidden  class="second-tab mission-article" role="tabpanel" aria-details="mars" role="tabpanel">
+        <article hidden  class="second-tab satellite-article" role="tabpanel" role="tabpanel">
             <h2 class="satellite-h2 uppercase ff-serif">IRNSS-1I</h2>
-            <p class="mission-p">
+            <p class="satellite-p">
                 IRNSS-1I is the eighth satellite in the Indian Regional Navigational Satellite System (IRNSS) series of satellites. The satellite's assembly, integration and testing is partly done by a consortium of six small firms led by Alpha Design Technologies, a Bengaluru-based aerospace firm under URSC's supervision.             </p>
             <div class="satellite-meta flex">
                 <div>
                     <h3 class="text-accent uppercase">Satellite type</h3>
-                    <p class="uppercase  ff-serif">Navigation</p>
+                    <p class="uppercase ff-serif">Navigation</p>
                 </div>    
                 <div>
                     <h3 class="text-accent uppercase">Launch date</h3>
@@ -105,7 +106,7 @@
             <div class="satellite-meta-2">
                 <div>
                     <h3 class="text-accent uppercase">Purpose</h3>
-                    <p class="uppercase  ff-serif">Navigation System</p>
+                    <p class="uppercase ff-serif">Navigation System</p>
                 </div>    
             </div>
         </article>
@@ -116,15 +117,15 @@
         <h1 hidden class="third-tab satellite-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span>03</span>SSPO SATELLITE</h1>
             
         <picture hidden class="third-tab satellite-img" role="tabpanel">
-            <img id="mission-img-star" src="/assests/satellite/SSPO.jpg" alt="the satellite">
+            <img src="./assets/satellite/SSPO.jpg" alt="the satellite">
         </picture>
 
-        <article hidden class="third-tab mission-article" role="tabpanel">
+        <article hidden class="third-tab satellite-article" role="tabpanel">
             <h2 class="satellite-h2 uppercase ff-serif">SCATSAT-1</h2>
-            <p class="mission-p">
+            <p class="satellite-p">
                 Scatterometer Satellite-1 is a satellite providing weather forecasting, cyclone prediction, and tracking services to India. It has been developed by ISRO Satellite Centre, Bangalore whereas its payload was developed by Space Applications Centre, Ahmedabad.            </p>
             <div class="satellite-meta flex">
-                <div \>
+                <div>
                     <h3 class="text-accent uppercasse">Satellite type</h3>
                     <p class="uppercase  ff-serif">Earth Observation</p>
                 </div>    
@@ -145,13 +146,13 @@
         <h1 hidden  class="fifth-tab satellite-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span>04</span>GEO SATELLITE</h1>
             
         <picture hidden  class="fifth-tab satellite-img" role="tabpanel">
-            <img  src="/assests/satellite/INSAT.jpg" alt="the satellite">
+            <img  src="./assets/satellite/INSAT.jpg" alt="the satellite">
         </picture>
 
 
-        <article hidden  class="fifth-tab mission-article" role="tabpanel">
+        <article hidden  class="fifth-tab satellite-article" role="tabpanel">
             <h2 class="satellite-h2 uppercase ff-serif">INSAT</h2>
-            <p class="mission-p">
+            <p class="satellite-p">
                 The Indian National Satellite System or INSAT, is a series of multipurpose geostationary satellites launched by ISRO to satisfy the telecommunications, broadcasting, meteorology, and search and rescue operations. It is a joint venture of the Department of Space, Department of Telecommunications, India Meteorological Department, All India Radio and Doordarshan.
             </p>    
             <div class="satellite-meta flex">
@@ -177,15 +178,13 @@
     <footer class="footer ff-serif">
 
         <div class="footer-div left">
-            <p class="p1">
                 <ul class="ff-sans ">
                     <li> <a href="index.html">HOME</a></li>
                     <li><a href="mission.html">MISSION</a></li>
                     <li><a href="satellite.html">SATELLITE</a></li>
                     <li><a href="technology.html">TECHNOLOGY</a></li>
                     <li><a href="about.html">ABOUT</a></li>
-                </ul>
-            </p>       
+                </ul>      
         </div>
 
         <div class="footer-div center">
@@ -208,7 +207,7 @@
             </div>
             <figure>
                 <a target="_blank" href="https://www.google.com/maps/place/Indore,+Madhya+Pradesh/@22.7239117,75.7237624,11z/data=!3m1!4b1!4m5!3m4!1s0x3962fcad1b410ddb:0x96ec4da356240f4!8m2!3d22.7195687!4d75.8577258">
-                    <img class="social-icons" src="assests/footer/google-maps-icon.svg" >
+                    <img class="map-icon" src="./assets/footer/google-maps-icon.svg" >
                 </a>
                 <figcaption>Indore, India</figcaption>
             </figure>  
