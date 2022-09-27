@@ -1,0 +1,231 @@
+
+
+.mission-main {
+    padding: 1rem 1%;
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 30rem) minmax(1rem, 1fr);
+    grid-template-rows: minmax(5rem, auto);
+    grid-template-areas: 
+    'title title .'
+    '. image .'
+    '. tabs .'
+    '. content .'
+    '. extra .';
+}
+
+.tab-list-mission {
+    display: flex;
+    justify-content: center;
+    grid-area: tabs;
+    margin: 0 auto 1rem auto;
+}
+
+.mission-h1 {
+    grid-area: title;
+}
+
+.mission-img {
+    grid-area: image;
+    padding: 0;
+    margin: 5px auto;
+    width: 60%;
+}
+
+#mission-img-sun {
+    padding-top: 0;
+    width: 65%;
+}
+
+
+.mission-article {
+    grid-area: content;
+    justify-content: justify;
+    text-align: justify;
+}
+
+.mission-info-extra {
+    grid-area: extra;
+}
+
+.no-display {
+    display: none;
+}
+
+.tab-mission {
+    font-size: clamp(1rem, 1vw, .75rem);
+    background-color: transparent;
+    letter-spacing: 2px;
+    margin: 1rem 0.5rem 0 0;
+}
+
+.mission-h1 {
+    font-size: clamp(2.5rem, 2vw, 1.2rem);
+    line-height: 1.2;
+    font-weight: 400;
+    word-spacing: 4px;
+    letter-spacing: 1.5px;
+}
+
+.mission-h1 > span {
+    font-size: clamp(2.4rem, 2vw, 1.05rem);
+    color: hsl( var(--clr-white) / .6);
+    margin-right: .5rem;
+}
+
+.mission-h2 {
+    font-size: clamp(2.5rem, 2vw, 4rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.mission-meta {
+    flex-direction: column;
+    justify-content: space-between;;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.mission-p::after {
+    content: '';
+    display: block;
+    position: relative;
+    height: 1.5px;
+    width: 100%;
+    margin: 2.35rem 0;
+    background: hsl( var(--clr-white) / .25);
+    order: 1;
+}
+
+.mission-meta h3 {
+    font-size : clamp(.6rem, 1vw, 1rem);
+    letter-spacing: .5px;
+    margin-bottom: 5px;
+}
+
+.mission-meta p {
+    font-size : clamp(.85rem, 1.5vw, 2rem);
+    word-spacing: 1px;
+}
+
+.mission-info-extra {
+    text-align: center;
+}
+
+.mission-info-extra p {
+    text-align: justify;
+}
+
+
+.mission-info-extra-btn{
+    margin: 1rem auto ;
+    font-size: var(--fs-400);
+    letter-spacing: 1px;
+    padding: .75rem .75rem;
+    cursor: pointer;
+    color: hsl( var(--clr-white) / .7 );
+    border: hsl( var(--clr-white) / .7 ) 0.2rem solid;
+    border-radius: .5rem;
+    box-shadow: inset 0 0 0.5em hsl( var(--clr-white) / .3 ), 0 0 0.5em hsl( var(--clr-white) / .3 );
+    position: relative;
+    background-color: transparent;
+}
+
+.mission-info-extra-btn::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background-color: hsl( var(--clr-white) / .15 );
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform:  perspective(1em) rotateX("40deg") scale(1, 0.35);
+    filter: blur(1.1rem);
+    opacity: 0.7;
+}
+
+.mission-info-extra-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 0.01rem 0.01rem hsl( var(--clr-white) / .3 );/* offset-x | offset-y | blur-radius | spread-radius | color */
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+
+.mission-info-extra-btn:hover::after,
+.mission-info-extra-btn:focus::after{
+    opacity: 1;
+}
+
+.mission-info-extra-btn:hover,
+.mission-info-extra-btn:focus{
+    background-color: transparent;
+    color: hsl( var(--clr-white) );
+    text-shadow: none;
+}
+
+.mission-info-extra-btn:hover::before,
+.mission-info-extra-btn:focus:before {
+    opacity: 1;
+}
+/* ----------------------------------------------- */
+
+
+@media (min-width: 860px) {
+
+    .mission-main {
+        padding: 3.5rem 0;
+        column-gap: 2rem;
+        row-gap: 0rem;
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+        grid-template-rows: minmax(5rem, auto);
+        grid-template-areas: 
+        '. title title .'
+        '. image tabs .'
+        '. image content .'
+        '. extra extra .';
+    }
+
+    
+    .mission-h1 > span {
+        margin-right: 1rem;
+    }
+
+    .tab-list-mission {
+        margin: 0 0 1rem 0;
+        justify-content: left;
+        gap: 1%;
+    }
+
+    .tab-mission {
+        letter-spacing: 2px;
+    }
+
+    .mission-img {
+        padding-top: 3rem;
+        width: 85%;
+    }
+    
+    #mission-img-sun {
+        padding-top: 1.5rem;
+        width: 90%;
+    }
+
+    .mission-h2 {
+        text-align: left;
+    }
+
+    .mission-meta {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 1rem 0;
+    }
+
+    .mission-info-extra-btn{
+        margin: 1.5rem auto 1.5rem auto;
+    }
+}

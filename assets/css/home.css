@@ -1,0 +1,391 @@
+ /* Bellefair, Barlow Condensed, Barlow  */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Bellefair&family=Roboto+Slab:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* -------------------Custom properties------------------- */
+
+:root {
+    /* colors */
+    --clr-dark: 230 35% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+    
+    /* font-sizes */
+    --fs-900: clamp(4.5rem, 7vw + 1rem, 9.375rem);
+    --fs-800: clamp(3.5rem, 3vw + 1rem, 5rem);
+    --fs-700: clamp(1.5rem, 2vw + 1rem, 1.5rem);
+    --fs-600: clamp(1.5rem, 1vw , 1.2rem);
+    --fs-500: clamp(1rem, 1vw , 1.35rem);
+    --fs-400: clamp (0.75rem, 1vw, 1rem);
+    
+    /* font-families */
+    --ff-serif: "Bellefair", serif;
+    --ff-sans-cond: "Barlow Condensed", sans-serif;
+    --ff-sans-normal: "Barlow", sans-serif;
+}
+
+/*------------------- Reset -------------------*/
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+.title { font-size: var(--fs-900); }
+h1 { font-size: var(--fs-800); }
+h2 { font-size: var(--fs-700); }
+h3 { font-size: var(--fs-600); }
+
+a,
+p{ font-size: var(--fs-400); }
+
+
+/* set up the body */
+body {
+    font-family: var(--ff-sans-normal);
+    color: hsl( var(--clr-white) );
+    background-color: hsl( var(--clr-dark) );
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select,
+ul,
+li {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*------------------- Utility classes-------------------     */
+
+/* general */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* colors */
+
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-accent { background-color: hsl( var(--clr-light) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-accent { color: hsl( var(--clr-light) );}
+.text-white { color: hsl( var(--clr-white) );}
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+/*------------------- Components -------------------*/
+
+.underline-indicators > * {
+    cursor: pointer;
+    padding: var(--underline-gap, 1rem) 0;
+    border: 0;
+    border-bottom: .2rem solid hsl( var(--clr-white) / 0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+    border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+    color: hsl( var(--clr-white) / 1);
+    border-color: hsl( var(--clr-white) / 1); 
+}
+
+.dot-indicators > * {
+    margin: 0;
+    width: 1rem;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    padding: 0;
+    background-color: hsl( var(--clr-white) / .25);
+    aspect-ratio: 1;
+}
+ 
+.dot-indicators > *:hover,
+.dot-indicators > *:focus { 
+    background-color: hsl( var(--clr-white) / .5);
+}
+
+.dot-indicators > .active,
+.dot-indicators >[aria-selected="true"] {
+    background-color: hsl( var(--clr-white) / 1); 
+    color: hsl( var(--clr-dark) / 1);
+}
+
+/* =====================FOR LARGE SCREEN SIZES========================  */
+
+.body-home {
+    display: block;
+    background-image: url('../images/home/background-home-desktop.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+.primary-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0 0 0 ;
+    padding: 1rem 0 0 2rem ;
+}
+
+
+
+.primary-navigation {
+    --gap: clamp(1.5rem, 5vw, 3.5rem);
+    --underline-gap: 1.3rem;
+    list-style: none;
+    padding: 0 4rem;
+    margin: 0;
+    background: hsl( var(--clr-white) / 0.2);
+    backdrop-filter: blur(1.5rem);
+    font-weight: 500;
+}
+
+nav {
+    align-items:flex-end;
+    order: 2;
+}
+
+.logo-isro {
+    max-width: 3rem;
+    min-width: 2.5rem;
+    aspect-ratio: 1;
+}
+
+.home-main {
+    margin: 0 1%;  
+    padding: 4rem 2% 2rem 2% ;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.home-div {
+    flex: 4;
+}
+
+.home-div-btn {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+}
+
+.home-h1  > span {
+    letter-spacing: 6px;
+    display: block;
+}
+
+.home-main p { 
+    text-align: justify;
+}
+
+
+.large-button {
+    position: relative;
+    z-index: 1;
+    display: inline-grid;
+    place-items: center;
+    margin: 6.5rem 0 0 0;
+    padding: 2rem;
+    max-width: 15rem;
+    min-width: 5rem;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    text-decoration: none;
+    color: hsl( var(--clr-dark) );
+    font-size: clamp(1.5rem, 2vw, 1rem);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.large-button::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: hsl( var(--clr-white) / .1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+    
+.large-button:hover::after,
+.large-button:focus::after {
+    opacity: 1;
+    transform: scale(1.5);
+}
+
+/* =====================FOR TABLET SCREEN SIZES========================  */
+@media screen and (max-width: 860px) {
+
+    .body-home {
+        background-image: url('../images/home/background-home-desktop.jpg');
+        background-position:  bottom;
+    }
+
+    .primary-header {
+        margin: 0 ;
+        padding: 1rem 0 0 .75rem ;
+    }
+
+    .primary-navigation {
+        flex-direction: column;
+        --underline-gap: .5rem;
+        inset: 0 0 0 30%;
+        position: fixed;
+        z-index: 1000;
+        background-color: hsl( var(--clr-dark) / .9);
+        margin: 0;
+        padding: 6rem 1rem;
+        transform: translateX(100%);
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+    
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 200000;
+        top: 1.5rem;
+        right: 1rem;
+        background:transparent;
+        background-image: url('../images/icons/icon-hamburger.svg');
+        background-repeat: no-repeat;
+        width: 1.8rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+    
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url('../images/icons/icon-close.svg');
+    }    
+}
+/* ========================================================================= */
+@media (min-width: 860px){
+
+    .primary-header::after {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1.5px;
+        width: 100%;
+        margin-right: -1.5rem;
+        margin-top: 2.35rem;
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
+    }
+
+
+    .home-main {
+        flex-direction: row;
+        text-align: left;
+        padding: 8rem 2rem 2rem 2rem ;
+    }
+
+    .logo-isro {
+        max-width: 5rem;
+    }
+
+    .home-main p {
+        max-width: 60ch;
+        text-align: inherit;
+    }
+
+    .large-button {
+        margin: 6.5rem 0 0 0;
+        padding: 2.5rem;
+        max-width: 18rem;
+    }
+}

@@ -1,0 +1,39 @@
+
+.about-main {
+    padding: 2rem 8%;
+    flex-direction: column;
+}
+.about-h1 > span {
+    margin-left:  0.2rem;
+    color: hsl( var(--clr-white) / .5);    
+}
+
+.about-h2 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.about-h3 {
+    margin: 0;
+    text-align: center;
+    color: hsl( var(--clr-white) / .8);
+    letter-spacing: 2px;
+    font-weight: 700;    
+    font-size: clamp(1.25rem, 1vw , 1.5rem);
+}
+
+.about-p {
+    word-spacing: 1px;
+    line-height: 1.5;
+}
+
+
+@media (min-width: 800px) {
+    .about-main {
+        padding: 2rem;
+    }
+
+    .about-p {
+        text-align: justify;
+    }
+}

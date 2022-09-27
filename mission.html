@@ -1,87 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Space Research in India</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/mission.css">
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/mission.css">
 
     <!-- JS -->
-    <script src="js/index.js" defer></script>
+    <script src="./assets/js/index.js" defer></script>
 
     <!-- ICON -->
-    <link rel="icon" type="icon" href="assets/icons/ISRO-icon.png">
-
-    <!-- ICON-START --> 
-    <script src="https://kit.fontawesome.com/1b1d9cd629.js" crossorigin="anonymous"></script>
-
-    <!-- GOOGLE-GONTS -->
-    <!-- Bellefair, Barlow Condensed, Barlow -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">  
+    <link rel="icon" type="icon" href="./assets/images/icons/ISRO-icon.png">
 </head>
-<body class="mission-body" >
+
+<body class="mission-body">
     <header class="primary-header">
         <div>
-            <img src="./assets/icons/ISRO-icon.png" alt="logo" class="logo-isro">
+            <img src="./assets/images/icons/ISRO-icon.png" alt="logo" class="logo-isro">
         </div>
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation" ><span class="sr-only" aria-expanded="false">Menu</span></button>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only"
+                aria-expanded="false">Menu</span></button>
         <nav>
             <ul id="primary-navigation" class="primary-navigation underline-indicators flex" data-visible="false">
-                <li ><a  class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"> Home</a></li>
-                <li class="active" ><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="mission.html">Mission</a></li>
-                <li ><a  class="ff-sans-cond uppercase text-white letter-spacing-2" href="satellite.html">Satellite</a></li>
-                <li ><a  class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html">Technology</a></li>
-                <li ><a  class="ff-sans-cond uppercase text-white letter-spacing-2" href="about.html">About</a></li>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"> Home</a></li>
+                <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2"
+                        href="mission.html">Mission</a></li>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="satellite.html">Satellite</a>
+                </li>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html">Technology</a>
+                </li>
+                <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="about.html">About</a></li>
             </ul>
         </nav>
     </header>
     <main class="mission-main grid">
-        <div class="tab-list-mission underline-indicators flex" role="tablist" >
+        <div class="tab-list-mission underline-indicators" role="tablist">
             <!-- tabs -->
-            <button   role="tab" aria-controls="moon-tab" tabindex="0" class="active uppercase ff-sans-cond text-accent tab-mission  " aria-selected="true">Moon</button>
-            <button   role="tab" aria-controls="mars-tab" tabindex="-1" class="uppercase ff-sans-cond text-accent tab-mission" aria-selected="false">Mars</button>
-            <button   role="tab" aria-controls="star-tab" tabindex="-1" class="uppercase ff-sans-cond text-accent tab-mission " aria-selected="false">Star</button>
-            <button   role="tab" aria-controls="sun-tab" tabindex="-1" class="uppercase ff-sans-cond text-accent tab-mission" aria-selected="false">Sun</button>
-            <button   role="tab" aria-controls="venus-tab" tabindex="-1" class="uppercase ff-sans-cond text-accent tab-mission" aria-selected="false">Venus</button>
+            <button role="tab" aria-controls="moon-tab" tabindex="0"
+                class="active uppercase ff-sans-cond text-accent tab-mission  " aria-selected="true">Moon</button>
+            <button role="tab" aria-controls="mars-tab" tabindex="-1"
+                class="uppercase ff-sans-cond text-accent tab-mission" aria-selected="false">Mars</button>
+            <button role="tab" aria-controls="star-tab" tabindex="-1"
+                class="uppercase ff-sans-cond text-accent tab-mission " aria-selected="false">Star</button>
+            <button role="tab" aria-controls="sun-tab" tabindex="-1"
+                class="uppercase ff-sans-cond text-accent tab-mission" aria-selected="false">Sun</button>
+            <button role="tab" aria-controls="venus-tab" tabindex="-1"
+                class="uppercase ff-sans-cond text-accent tab-mission" aria-selected="false">Venus</button>
         </div>
         <!-- =====================================MOON====================================== -->
-    
-        <h1  class="moon-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span aria-hidden="true">01</span> Chandrayaan-1</h1>
-                
-        <picture  class="moon-tab mission-img"  role="tabpanel">
-            <img  id="mission-img-moon" src="./assets/mission/image-moon.png" alt="the moon">
+
+        <h1 class="moon-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span
+                aria-hidden="true">01</span>Chandrayaan-1</h1>
+
+        <picture class="moon-tab mission-img" role="tabpanel">
+            <img id="mission-img-moon" src="./assets/images/mission/image-moon.png" alt="the moon">
         </picture>
-    
-        <article  class="moon-tab mission-article" role="tabpanel">
+
+        <article class="moon-tab mission-article" role="tabpanel">
             <h2 class="mission-h2 uppercase ff-serif">Moon</h2>
             <p class="mission-p">
-                Chandrayaan-1 was India's first lunar space probe and it found water on the Moon. 
-                It mapped the Moon in infrared, visible, and X-ray light from lunar orbit and used reflected radiation to prospect for several elements, minerals, and ice. 
+                Chandrayaan-1 was India's first lunar space probe and it found water on the Moon.
+                It mapped the Moon in infrared, visible, and X-ray light from lunar orbit and used reflected radiation
+                to prospect for several elements, minerals, and ice.
                 It operated from 2008 to 2009.
             </p>
             <div class="mission-meta flex">
                 <div>
                     <h3 class="text-accent uppercase">Mission type</h3>
                     <p class="uppercase  ff-serif">Lunar Orbiter</p>
-                </div>    
+                </div>
                 <div>
                     <h3 class="text-accent uppercase">Launch date</h3>
                     <p class="uppercase ff-serif">22 oct 2008</p>
                 </div>
             </div>
         </article>
-    
-        <section  class="moon-tab mission-info-extra" role="tabpanel">
-            <button id="moon-extra-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
-            <p id="moon-extra"  class="mission-info-extra-p ff-sans no-display" data-visible="false">
-                A Polar Satellite Launch Vehicle (PSLV)  launched the 590-kg (1,300-pound) Chandrayaan-1 on October 22, 2008, from the Satish Dhawan Space Centre on Sriharikota Island, Andhra Pradesh state. The probe then was boosted into an elliptical polar orbit around the Moon, 504 km (312 miles) high at its closest to the lunar surface and 7,502 km (4,651 miles) at its farthest. After checkout, it descended to a 100-km (60-mile) orbit. On November 14, 2008, Chandrayaan-1 launched a small craft, the Moon Impact Probe (MIP), that was designed to test systems for future landings and study the thin lunar atmosphere before crashing on the Moon’s surface. MIP impacted near the south pole, but, before it crashed, it discovered small amounts of water in the Moon’s atmosphere. <br> <br>
-                The estimated cost for the project was ₹386 crore (US$51 million). It was intended to survey the lunar surface over a two-year period, to produce a complete map of the chemical composition at the surface and three-dimensional topography. The polar regions are of special interest as they might contain water ice.Among its many achievements was the discovery of widespread presence of water molecules in lunar soil. <br> <br>
-                After almost a year, the orbiter started suffering from several technical issues including failure of the star tracker and poor thermal shielding; Chandrayaan-1 stopped communicating at about 20:00 UTC on 28 August 2009, shortly after which the ISRO officially declared that the mission was over. Chandrayaan-1 operated for 312 days as opposed to the intended two years, but the mission achieved most of its scientific objectives
+
+        <section class="moon-tab mission-info-extra" role="tabpanel">
+            <button id="moon-extra-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button"
+                aria-controls="moon-extra">Show Details</button>
+            <p id="moon-extra" class="mission-info-extra-p ff-sans no-display" data-visible="false">
+                A Polar Satellite Launch Vehicle (PSLV) launched the 590-kg (1,300-pound) Chandrayaan-1 on October 22,
+                2008, from the Satish Dhawan Space Centre on Sriharikota Island, Andhra Pradesh state. The probe then
+                was boosted into an elliptical polar orbit around the Moon, 504 km (312 miles) high at its closest to
+                the lunar surface and 7,502 km (4,651 miles) at its farthest. After checkout, it descended to a 100-km
+                (60-mile) orbit. On November 14, 2008, Chandrayaan-1 launched a small craft, the Moon Impact Probe
+                (MIP), that was designed to test systems for future landings and study the thin lunar atmosphere before
+                crashing on the Moon’s surface. MIP impacted near the south pole, but, before it crashed, it discovered
+                small amounts of water in the Moon’s atmosphere. <br> <br>
+                The estimated cost for the project was ₹386 crore (US$51 million). It was intended to survey the lunar
+                surface over a two-year period, to produce a complete map of the chemical composition at the surface and
+                three-dimensional topography. The polar regions are of special interest as they might contain water
+                ice.Among its many achievements was the discovery of widespread presence of water molecules in lunar
+                soil. <br> <br>
+                After almost a year, the orbiter started suffering from several technical issues including failure of
+                the star tracker and poor thermal shielding; Chandrayaan-1 stopped communicating at about 20:00 UTC on
+                28 August 2009, shortly after which the ISRO officially declared that the mission was over.
+                Chandrayaan-1 operated for 312 days as opposed to the intended two years, but the mission achieved most
+                of its scientific objectives
             </p>
         </section>
 
@@ -89,23 +109,28 @@
 
         <!-- =====================================MARS====================================== -->
 
-        <h1 hidden  class="mars-tab mission-h1 ff-sans-cond uppercase text-white" aria-details="mars" role="tabpanel"><span aria-hidden="true">02</span> Mangalyaan</h1>
-            
-        <picture hidden  class="mars-tab mission-img" aria-details="mars" role="tabpanel">
-            <img id="mission-img-mars" src="./assets/mission/image-mars.png" alt="the mars">
-        </picture>
-        
+        <h1 hidden class="mars-tab mission-h1 ff-sans-cond uppercase text-white" aria-details="mars" role="tabpanel">
+            <span aria-hidden="true">02</span>Mangalyaan
+        </h1>
 
-        <article hidden  class="mars-tab mission-article" role="tabpanel" aria-details="mars" role="tabpanel">
+        <picture hidden class="mars-tab mission-img" aria-details="mars" role="tabpanel">
+            <img id="mission-img-mars" src="./assets/images/mission/image-mars.png" alt="the mars">
+        </picture>
+
+
+        <article hidden class="mars-tab mission-article" role="tabpanel" aria-details="mars" role="tabpanel">
             <h2 class="mission-h2 uppercase ff-serif">Mars</h2>
             <p class="mission-p">
-                Isro's Mangalyaan is the first successful Mars Orbiter mission. India is the fourth country to accomplish this feat and the first to do so on its very first attempt. The Mars Probe was inserted into the orbit of Mars after a transit for 298  days, that is, on September 24, 2014. A total of 454 Crore was spent on the project, making it the cheapest mission to Mars ever.
+                Isro's Mangalyaan is the first successful Mars Orbiter mission. India is the fourth country to
+                accomplish this feat and the first to do so on its very first attempt. The Mars Probe was inserted into
+                the orbit of Mars after a transit for 298 days, that is, on September 24, 2014. A total of 454 Crore was
+                spent on the project, making it the cheapest mission to Mars ever.
             </p>
             <div class="mission-meta flex">
                 <div>
                     <h3 class="text-accent uppercase">Mission type</h3>
                     <p class="uppercase  ff-serif">Mars Orbiter</p>
-                </div>    
+                </div>
                 <div>
                     <h3 class="text-accent uppercase">Launch date</h3>
                     <p class="uppercase ff-serif">05 NOV 2013</p>
@@ -113,33 +138,52 @@
             </div>
         </article>
 
-        <section hidden  class="mars-tab mission-info-extra" aria-details="mars" role="tabpanel">
-            <button id="mars-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
-            <p id="mars-extra"  class="mission-info-extra-p ff-sans no-display" data-visible="false">
-                The Mars Orbiter Mission (MOM), also called Mangalyaan ("Mars-craft", from mangala, "Mars" and yāna, "craft, vehicle"), is a space probe orbiting Mars since 24 September 2014. It was launched on 5 November 2013 by the Indian Space Research Organisation (ISRO). It is India's first interplanetary mission and it made it the fourth space agency to achieve Mars orbit, after Roscosmos, NASA, and the European Space Agency. It made India the first Asian nation to reach Martian orbit and the first nation in the world to do so on its maiden attempt. <br> <br>
-                The Mars Orbiter Mission probe lifted-off from the First Launch Pad at Satish Dhawan Space Centre (Sriharikota Range SHAR), Andhra Pradesh, using a Polar Satellite Launch Vehicle (PSLV) rocket C25 at 09:08 UTC on 5 November 2013. The launch window was approximately 20 days long and started on 28 October 2013. The MOM probe spent about a month in Earth orbit, where it made a series of seven apogee-raising orbital manoeuvres before trans-Mars injection on 30 November 2013 (UTC). After a 298-day transit to Mars, it was put into Mars orbit on 24 September 2014. <br> <br>
-                The mission is a "technology demonstrator" project to develop the technologies for designing, planning, management, and operations of an interplanetary mission. It carries five scientific instruments. The spacecraft is currently being monitored from the Spacecraft Control Centre at ISRO Telemetry, Tracking and Command Network (ISTRAC) in Bengaluru with support from the Indian Deep Space Network (IDSN) antennae at Bengaluru, Karnataka.
+        <section hidden class="mars-tab mission-info-extra" aria-details="mars" role="tabpanel">
+            <button id="mars-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button"
+                aria-controls="moon-extra">Show Details</button>
+            <p id="mars-extra" class="mission-info-extra-p ff-sans no-display" data-visible="false">
+                The Mars Orbiter Mission (MOM), also called Mangalyaan ("Mars-craft", from mangala, "Mars" and yāna,
+                "craft, vehicle"), is a space probe orbiting Mars since 24 September 2014. It was launched on 5 November
+                2013 by the Indian Space Research Organisation (ISRO). It is India's first interplanetary mission and it
+                made it the fourth space agency to achieve Mars orbit, after Roscosmos, NASA, and the European Space
+                Agency. It made India the first Asian nation to reach Martian orbit and the first nation in the world to
+                do so on its maiden attempt. <br> <br>
+                The Mars Orbiter Mission probe lifted-off from the First Launch Pad at Satish Dhawan Space Centre
+                (Sriharikota Range SHAR), Andhra Pradesh, using a Polar Satellite Launch Vehicle (PSLV) rocket C25 at
+                09:08 UTC on 5 November 2013. The launch window was approximately 20 days long and started on 28 October
+                2013. The MOM probe spent about a month in Earth orbit, where it made a series of seven apogee-raising
+                orbital manoeuvres before trans-Mars injection on 30 November 2013 (UTC). After a 298-day transit to
+                Mars, it was put into Mars orbit on 24 September 2014. <br> <br>
+                The mission is a "technology demonstrator" project to develop the technologies for designing, planning,
+                management, and operations of an interplanetary mission. It carries five scientific instruments. The
+                spacecraft is currently being monitored from the Spacecraft Control Centre at ISRO Telemetry, Tracking
+                and Command Network (ISTRAC) in Bengaluru with support from the Indian Deep Space Network (IDSN)
+                antennae at Bengaluru, Karnataka.
             </p>
-            </section>
+        </section>
         <!-- ================================================================================= -->
 
         <!-- =====================================STAR====================================== -->
-        <h1 hidden id="star-tab" class="star-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span aria-hidden="true">03</span> AstroSat</h1>
-            
+        <h1 hidden id="star-tab" class="star-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span
+                aria-hidden="true">03</span>AstroSat</h1>
+
         <picture hidden id="star-tab" class="star-tab mission-img" role="tabpanel">
-            <img id="mission-img-star" src="./assets/mission/image-star.png" alt="the star">
+            <img id="mission-img-star" src="./assets/images/mission/image-star.png" alt="the star">
         </picture>
 
         <article hidden id="star-tab" class="star-tab mission-article" role="tabpanel">
             <h2 class="mission-h2 uppercase ff-serif">Star</h2>
             <p class="mission-p">
-                The Astrosat satellite is a dedicated mission of ISRO on Astronomy. It will observe celestial sources simultaneously in X-Ray, Optical and UV Spectral bands. The Astrosat satellite was launched from Sriharikota, Andhra Pradesh. The satellite was launched using the Polar Satellite Launch Vehicle (PSLV) C-30. The satellite was placed into an orbit of 650 Km. The mission was planned for a period of 5 years.
+                The Astrosat satellite is a dedicated mission of ISRO on Astronomy. It will observe celestial sources
+                simultaneously in X-Ray, Optical and UV Spectral bands. The Astrosat satellite was launched from
+                Sriharikota, Andhra Pradesh. The satellite was launched using the Polar Satellite Launch Vehicle (PSLV)
+                C-30. The satellite was placed into an orbit of 650 Km. The mission was planned for a period of 5 years.
             </p>
             <div class="mission-meta flex">
                 <div>
                     <h3 class="text-accent uppercasse">Mission type</h3>
                     <p class="uppercase  ff-serif">Space Orbiter</p>
-                </div>    
+                </div>
                 <div>
                     <h3 class="text-accent uppercase">Launch date</h3>
                     <p class="uppercase ff-serif">23 Sept 2015</p>
@@ -147,125 +191,138 @@
             </div>
         </article>
         <section hidden id="star-tab" class="star-tab mission-info-extra" role="tabpanel">
-            <button id="star-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
-            <p id="star-extra"  class="mission-info-extra-p ff-sans no-display" data-visible="false">
-                After the success of the satellite-borne Indian X-ray Astronomy Experiment (IXAE), which was launched in 1996, the Indian Space Research Organization (ISRO) approved further development for a full-fledged astronomy satellite, Astrosat, in 2004. <br> <br>
-                A number of astronomy research institutions in India, and abroad have jointly built instruments for the satellite. Important areas requiring coverage include studies of astrophysical objects ranging from nearby Solar System objects to distant stars and objects at cosmological distances; timing studies of variables ranging from pulsations of hot white dwarfs to those of active galactic nuclei can be conducted with Astrosat as well, with time scales ranging from milliseconds to days. <br> <br>
-                Astrosat is a multi-wavelength astronomy mission on an IRS-class satellite into a near-Earth, equatorial orbit. The five instruments on board cover the visible (320–530 nm), near UV (180–300 nm), far UV (130–180 nm), soft X-ray (0.3–8 keV and 2–10 keV) and hard X-ray (3–80 keV and 10–150 keV) regions of the electromagnetic spectrum.                 
+            <button id="star-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button"
+                aria-controls="moon-extra">Show Details</button>
+            <p id="star-extra" class="mission-info-extra-p ff-sans no-display" data-visible="false">
+                After the success of the satellite-borne Indian X-ray Astronomy Experiment (IXAE), which was launched in
+                1996, the Indian Space Research Organization (ISRO) approved further development for a full-fledged
+                astronomy satellite, Astrosat, in 2004. <br> <br>
+                A number of astronomy research institutions in India, and abroad have jointly built instruments for the
+                satellite. Important areas requiring coverage include studies of astrophysical objects ranging from
+                nearby Solar System objects to distant stars and objects at cosmological distances; timing studies of
+                variables ranging from pulsations of hot white dwarfs to those of active galactic nuclei can be
+                conducted with Astrosat as well, with time scales ranging from milliseconds to days. <br> <br>
+                Astrosat is a multi-wavelength astronomy mission on an IRS-class satellite into a near-Earth, equatorial
+                orbit. The five instruments on board cover the visible (320–530 nm), near UV (180–300 nm), far UV
+                (130–180 nm), soft X-ray (0.3–8 keV and 2–10 keV) and hard X-ray (3–80 keV and 10–150 keV) regions of
+                the electromagnetic spectrum.
             </p>
         </section>
-    
+
         <!-- =====================================SUN====================================== -->
-        <h1 hidden  class="sun-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span aria-hidden="true">04</span>Aditya-L1</h1>
-            
-        <picture hidden id="mission-img-sun"  class="sun-tab mission-img" role="tabpanel">
-            <img  src="./assets/mission/image-sun.png" alt="the sun">
+        <h1 hidden class="sun-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span
+                aria-hidden="true">04</span>Aditya-L1</h1>
+
+        <picture hidden id="mission-img-sun" class="sun-tab mission-img" role="tabpanel">
+            <img src="./assets/images/mission/image-sun.png" alt="the sun">
         </picture>
 
 
-        <article hidden  class="sun-tab mission-article" role="tabpanel">
+        <article hidden class="sun-tab mission-article" role="tabpanel">
             <h2 class="mission-h2 uppercase ff-serif">Sun</h2>
             <p class="mission-p">
-                Aditya L1 is an Indian coronagraphy spacecraft currently being designed and built by ISRO and various other Indian research institutes. It will study the solar atmosphere through a halo orbit in its L1 point between Earth and the Sun. During the mission, the spacecraft will monitor solar radiation, coronal heating, solar wind acceleration, and coronal magnetometry, as well as continuously observe the Sun's photosphere, chromosphere, and corona, as well as solar energetic particles and its magnetic field. 
+                Aditya L1 is an Indian coronagraphy spacecraft currently being designed and built by ISRO and various
+                other Indian research institutes. It will study the solar atmosphere through a halo orbit in its L1
+                point between Earth and the Sun. During the mission, the spacecraft will monitor solar radiation,
+                coronal heating, solar wind acceleration, and coronal magnetometry, as well as continuously observe the
+                Sun's photosphere, chromosphere, and corona, as well as solar energetic particles and its magnetic
+                field.
             </p>
             <div class="mission-meta flex">
                 <div>
                     <h3 class="text-accent uppercase">Mission type</h3>
                     <p class="uppercase  ff-serif">Solar Orbitor</p>
-                </div>    
+                </div>
                 <div>
                     <h3 class="text-accent uppercase">Launch date</h3>
                     <p class="uppercase ff-serif">22 oct 2022</p>
                 </div>
             </div>
         </article>
-        <section hidden  class="sun-tab mission-info-extra" role="tabpanel">
-            <button id="sun-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
-            <p id="sun-extra"  class="mission-info-extra-p ff-sans no-display" data-visible="false">
-                The Aditya-L1 mission will take around 109 Earth days after launch to reach the halo orbit around the L1 point, which is about 1,500,000 km (930,000 mi) from Earth. The 1,500 kg (3,300 lb) satellite carries seven science payloads with diverse objectives, including but not limited to, the coronal heating, solar wind acceleration, coronal magnetometry, origin and monitoring of near-UV solar radiation (which drives Earth's upper atmospheric dynamics and global climate), coupling of the solar photosphere to chromosphere and corona, in-situ characterisations of the space environment around Earth by measuring energetic particle fluxes and magnetic fields of the solar wind and solar magnetic storms that have adverse effects on space and ground-based technologies. <br> <br>
-                Aditya-L1 will be able to provide observations of Sun's photosphere, chromosphere and corona. In addition, an instrument will study the solar energetic particles' flux reaching the L1 orbit, while a magnetometer payload will measure the variation in magnetic field strength at the halo orbit around L1. These payloads have to be placed outside the interference from the Earth's magnetic field and hence could not have been useful in the low Earth orbit as proposed on the original Aditya mission concept. <br> <br>
-                One of the major unsolved issues in the field of solar physics is that the upper atmosphere of the Sun is 1,000,000 K (1,000,000 °C; 1,800,000 °F) hot whereas the lower atmosphere is just 6,000 K (5,730 °C; 10,340 °F). In addition, it is not understood how exactly the Sun's radiation affects the dynamics of the Earth's atmosphere on shorter as well as on longer time scale. The mission will obtain near simultaneous images of the different layers of the Sun's atmosphere, which reveal the ways in which the energy may be channeled and transferred from one layer to another. Thus the Aditya-L1 mission will enable a comprehensive understanding of the dynamical processes of the Sun and address some of the outstanding problems in solar physics and heliophysics.  
+        <section hidden class="sun-tab mission-info-extra" role="tabpanel">
+            <button id="sun-btn" class="mission-info-extra-btn ff-sans-cond uppercase" type="button"
+                aria-controls="moon-extra">Show Details</button>
+            <p id="sun-extra" class="mission-info-extra-p ff-sans no-display" data-visible="false">
+                The Aditya-L1 mission will take around 109 Earth days after launch to reach the halo orbit around the L1
+                point, which is about 1,500,000 km (930,000 mi) from Earth. The 1,500 kg (3,300 lb) satellite carries
+                seven science payloads with diverse objectives, including but not limited to, the coronal heating, solar
+                wind acceleration, coronal magnetometry, origin and monitoring of near-UV solar radiation (which drives
+                Earth's upper atmospheric dynamics and global climate), coupling of the solar photosphere to
+                chromosphere and corona, in-situ characterisations of the space environment around Earth by measuring
+                energetic particle fluxes and magnetic fields of the solar wind and solar magnetic storms that have
+                adverse effects on space and ground-based technologies. <br> <br>
+                Aditya-L1 will be able to provide observations of Sun's photosphere, chromosphere and corona. In
+                addition, an instrument will study the solar energetic particles' flux reaching the L1 orbit, while a
+                magnetometer payload will measure the variation in magnetic field strength at the halo orbit around L1.
+                These payloads have to be placed outside the interference from the Earth's magnetic field and hence
+                could not have been useful in the low Earth orbit as proposed on the original Aditya mission concept.
+                <br> <br>
+                One of the major unsolved issues in the field of solar physics is that the upper atmosphere of the Sun
+                is 1,000,000 K (1,000,000 °C; 1,800,000 °F) hot whereas the lower atmosphere is just 6,000 K (5,730 °C;
+                10,340 °F). In addition, it is not understood how exactly the Sun's radiation affects the dynamics of
+                the Earth's atmosphere on shorter as well as on longer time scale. The mission will obtain near
+                simultaneous images of the different layers of the Sun's atmosphere, which reveal the ways in which the
+                energy may be channeled and transferred from one layer to another. Thus the Aditya-L1 mission will
+                enable a comprehensive understanding of the dynamical processes of the Sun and address some of the
+                outstanding problems in solar physics and heliophysics.
             </p>
         </section>
-        
+
         <!-- ================================================================================= -->
 
         <!-- =====================================VENUS====================================== -->
 
 
-        <h1 hidden  class="venus-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span aria-hidden="true">05</span>Shukrayaan-1</h1>
-            
-        <picture hidden  class="venus-tab mission-img" role="tabpanel">
-            <img id="mission-img-venus" src="./assets/mission/image-venus.png" alt="the venus">
-        </picture>
-        
+        <h1 hidden class="venus-tab mission-h1 ff-sans-cond uppercase text-white " role="tabpanel"><span
+                aria-hidden="true">05</span>Shukrayaan-1</h1>
 
-        <article hidden  class="venus-tab mission-article" role="tabpanel">
+        <picture hidden class="venus-tab mission-img" role="tabpanel">
+            <img id="mission-img-venus" src="./assets/images/mission/image-venus.png" alt="the venus">
+        </picture>
+
+
+        <article hidden class="venus-tab mission-article" role="tabpanel">
             <h2 class="mission-h2 uppercase ff-serif">Venus</h2>
             <p class="mission-p">
-                Shukrayaan-1 is an orbiter proposed by ISRO to study Venus's surface and atmosphere. Depending on its final configuration, it is expected to be able to carry approximately 100 kilograms (220 lbs) of science payload and generate 500 watts of power.Initially, Venus will orbit at a distance of 500 kilometers (310 miles) at periapsis and 60,000 kilometers (37,000 miles) at apoapsis.
+                Shukrayaan-1 is an orbiter proposed by ISRO to study Venus's surface and atmosphere. Depending on its
+                final configuration, it is expected to be able to carry approximately 100 kilograms (220 lbs) of science
+                payload and generate 500 watts of power.Initially, Venus will orbit at a distance of 500 kilometers (310
+                miles) at periapsis and 60,000 kilometers (37,000 miles) at apoapsis.
             </p>
-                <div class="mission-meta flex">
+            <div class="mission-meta flex">
                 <div>
                     <h3 class="text-accent uppercase">Mission type</h3>
                     <p class="uppercase  ff-serif">Venus Orbiter</p>
-                </div>    
+                </div>
                 <div>
                     <h3 class="text-accent uppercase">Launch date</h3>
                     <p class="uppercase ff-serif">20 dec 2025</p>
                 </div>
             </div>
         </article>
-        <section hidden  class="venus-tab mission-info-extra" role="tabpanel">
-            <button id="venus-btn" class="mission-info-extra-btn  ff-sans-cond uppercase" type="button" aria-controls="moon-extra">Show Details</button>
-            <p id="venus-extra"  class="mission-info-extra-p ff-sans no-display" data-visible="false">
-                The three broad research areas of interest for this mission include surface/subsurface stratigraphy and re-surfacing processes; second: study the atmospheric chemistry, dynamics and compositional variations, and third: study of solar irradiance and solar wind interaction with Venus ionosphere while studying the structure, composition and dynamics of the atmosphere. <br> <br>       
-                The space agencies of India (ISRO) and France (CNES) were holding in 2018 discussions to collaborate on this mission and jointly develop autonomous navigation and aerobraking technologies. In addition, French astrophysicist Jacques Blamont, with his experience from the Vega program, expressed his interest to U R Rao to use inflated balloons to help study the Venusian atmosphere. Just like during the Vega missions, these instrumented balloons could be deployed from an orbiter and take prolonged observations while floating in the relatively mild upper atmosphere of the planet. ISRO agreed to consider the proposal to use a balloon probe carrying 10 kilograms (22 lb) payload to study the Venusian atmosphere at 55 kilometres (34 mi) altitude. <br> <br>
-                Recently ISRO has shortlisted 20 international proposals that include collaboration with Russia, France, Sweden and Germany.
+        <section hidden class="venus-tab mission-info-extra" role="tabpanel">
+            <button id="venus-btn" class="mission-info-extra-btn  ff-sans-cond uppercase" type="button"
+                aria-controls="moon-extra">Show Details</button>
+            <p id="venus-extra" class="mission-info-extra-p ff-sans no-display" data-visible="false">
+                The three broad research areas of interest for this mission include surface/subsurface stratigraphy and
+                re-surfacing processes; second: study the atmospheric chemistry, dynamics and compositional variations,
+                and third: study of solar irradiance and solar wind interaction with Venus ionosphere while studying the
+                structure, composition and dynamics of the atmosphere. <br> <br>
+                The space agencies of India (ISRO) and France (CNES) were holding in 2018 discussions to collaborate on
+                this mission and jointly develop autonomous navigation and aerobraking technologies. In addition, French
+                astrophysicist Jacques Blamont, with his experience from the Vega program, expressed his interest to U R
+                Rao to use inflated balloons to help study the Venusian atmosphere. Just like during the Vega missions,
+                these instrumented balloons could be deployed from an orbiter and take prolonged observations while
+                floating in the relatively mild upper atmosphere of the planet. ISRO agreed to consider the proposal to
+                use a balloon probe carrying 10 kilograms (22 lb) payload to study the Venusian atmosphere at 55
+                kilometres (34 mi) altitude. <br> <br>
+                Recently ISRO has shortlisted 20 international proposals that include collaboration with Russia, France,
+                Sweden and Germany.
             </p>
         </section>
-        
+
         <!-- ================================================================================= -->
     </main>
-    <!-- ================================FOOTER-START================================ -->    
-    <footer class="footer ff-serif">
-
-        <div class="footer-div left">
-                <ul class="ff-sans ">
-                    <li> <a href="index.html">HOME</a></li>
-                    <li><a href="mission.html">MISSION</a></li>
-                    <li><a href="satellite.html">SATELLITE</a></li>
-                    <li><a href="technology.html">TECHNOLOGY</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                </ul>      
-        </div>
-
-        <div class="footer-div center">
-        <h4 class="uppercase">Kritagya Singh Chouhan</h4>
-            <p class="p">
-                Developed the above website from scratch. Lets build fascinating, responsive, fast and secure websites. Open to Collabrate with other brilliant developing minds. Open to contribute in building websites for others.
-            </p>
-            <div class="footer-btn"> 
-                <a href="https://mail.google.com/mail/u/4/#inbox?compose=GTvVlcRzDQqPlTtxxRwzsRxrSxQXGQHbFnplRMrdnkpqRZtPFxkPgxZxpwfRsBNJDKGxdrVtPLLbW" type="button">Get In Touch</a>
-            </div>
-        </div>
-
-        <div class="footer-div right">
-            <h4 class="uppercase">Social Handles</h4>
-            <div class="social-links">
-                <a href="https://www.instagram.com/kritagya_chouhan"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/kritagyachouhan"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/kritagya-singh-chouhan-b90666202/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/kritagya20"><i class="fab fa-github"></i></a>              
-            </div>
-            <figure>
-                <a target="_blank" href="https://www.google.com/maps/place/Indore,+Madhya+Pradesh/@22.7239117,75.7237624,11z/data=!3m1!4b1!4m5!3m4!1s0x3962fcad1b410ddb:0x96ec4da356240f4!8m2!3d22.7195687!4d75.8577258">
-                    <img class="map-icon" src="./assets/footer/google-maps-icon.svg" >
-                </a>
-                <figcaption>Indore, India</figcaption>
-            </figure>  
-        </div>
-                
-    </footer>
 </body>
+
 </html>
